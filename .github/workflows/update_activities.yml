@@ -26,7 +26,6 @@ jobs:
       - name: Run update script
         env:
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: python scripts/update_activities.py
 
       - name: Commit and push
