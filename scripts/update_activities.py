@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""每天定时任务：联网搜索最新茶饮资讯 -> 千问提取活动 -> 抓官方海报 -> 更新 activities.json
+"""每天定时任务：千问联网搜索最新茶饮资讯 -> 提取活动 -> 必应定位文章页抓官方配图 -> 更新 activities.json
 
 由 .github/workflows/update_activities.yml 调用（每天 0/6/12/18 点，北京时间）。
-仅依赖阿里云百炼（qwen-max 联网搜索 + 结构化提取）：
+搜索与提取全部由千问（qwen-max）完成；图片从文章页抓取官方宣传图。
+依赖环境变量：
   DASHSCOPE_API_KEY
 """
 import datetime
@@ -10,7 +11,7 @@ import io
 import json
 import os
 import re
-import time
+import urllib.parse
 import urllib.request
 
 DASHSCOPE_KEY = os.environ["DASHSCOPE_API_KEY"]
@@ -44,24 +45,9 @@ def qwen_chat(prompt, system="你是茶饮行业情报分析师。", max_tokens=
     }
     if search:
         body["enable_search"] = True
-        body["search_options"] = {
-            "forced_search": True,
-            "enable_source": True,
-            "search_strategy": "pro",
-        }
+        body["search_options"] = {"forced_search": True, "search_strategy": "pro"}
     resp = _post(DASHSCOPE_CHAT, body, DASHSCOPE_KEY)
-    content = resp["choices"][0]["message"]["content"]
-    # 搜索模式下响应带 citations（真实来源链接列表），提取出来供后续使用
-    urls = []
-    for c in resp.get("citations", []) or []:
-        if isinstance(c, dict):
-            u = c.get("url") or c.get("link") or ""
-        else:
-            u = str(c)
-        u = u.strip()
-        if u.startswith("http"):
-            urls.append(u)
-    return content, urls
+    return resp["choices"][0]["message"]["content"]
 
 
 def extract_json(text):
@@ -73,8 +59,30 @@ def extract_json(text):
     return json.loads(text[start:end + 1])
 
 
+def bing_search(query, n=3):
+    """必应搜索，返回前 n 个外部文章链接（过滤必应/微软内部链接）"""
+    links = []
+    try:
+        url = "https://www.bing.com/search?q=" + urllib.parse.quote(query)
+        req = urllib.request.Request(url, headers=UA)
+        html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
+        for m in re.finditer(r'<a[^>]+href="(https?://[^"]+)"', html):
+            u = m.group(1)
+            low = u.lower()
+            if any(x in low for x in ("bing.com", "microsoft.com", "msn.com",
+                                      "go.microsoft", "r.msn", "bingj.com")):
+                continue
+            if u not in links:
+                links.append(u)
+            if len(links) >= n:
+                break
+    except Exception as e:
+        print("bing search fail:", query, e)
+    return links
+
+
 def fetch_page_images(page_url):
-    """抓取页面所有候选图：og:image -> 第一张 <img>，返回列表（去重）"""
+    """抓取页面候选图：og:image -> 前几张 <img>，返回去重列表"""
     cands = []
     try:
         req = urllib.request.Request(page_url, headers=UA)
@@ -100,7 +108,7 @@ def fetch_page_images(page_url):
 
 
 def valid_image(data):
-    """校验图片是海报级别：用 Pillow 检查分辨率（>300px 且 >120k 像素）"""
+    """海报级别校验：分辨率 >300px 且 >120k 像素（过滤小 logo/图标）"""
     try:
         from PIL import Image
         im = Image.open(io.BytesIO(data))
@@ -137,7 +145,7 @@ def download_image(img_url, out_path):
 
 
 def try_download(candidates, out_path):
-    """按候选顺序尝试下载，成功返回 True"""
+    """按候选顺序尝试下载，成功返回保存路径"""
     for u in candidates:
         if not u:
             continue
@@ -159,47 +167,39 @@ def main():
     os.makedirs("images", exist_ok=True)
     os.makedirs("data", exist_ok=True)
 
-    # 1. qwen-max 联网搜索最近动态（响应自带 citations 真实来源链接）
+    # 1. 千问联网搜索最近动态（搜索+提取全部交给千问）
     search_prompt = (
         f"现在是{today}。请联网搜索最近 7 天内（尤其最近 3 天）中国茶饮行业品牌的最新动态："
         "新品上市、品牌联名、限定饮品、买赠优惠、门店活动等。"
         "只保留发布日期在最近 7 天内的真实新动态，历史旧闻一律不要。"
-        "尽量多列（5-8 条），每条包含：品牌名、活动或新品名、开始/截止时间（有则给具体日期）、"
-        "官方宣传图/海报图片直链 URL（http 开头，找不到写'无'）。"
+        "尽量多列（5-8 条），每条包含：品牌名、活动或新品名、开始/截止时间（有则给具体日期）。"
     )
-    news, citations = qwen_chat(search_prompt, search=True)
+    news = qwen_chat(search_prompt, search=True)
     print("== NEWS ==")
     print(news[:1000])
-    print("== CITATIONS ==")
-    for u in citations[:10]:
-        print(" -", u)
 
-    # 2. qwen-max 提取结构化 JSON（source_url 必须从可信来源列表中选择，禁止编造）
-    trusted = "\n".join(citations[:12]) or "（无）"
+    # 2. 千问提取结构化 JSON
     parse_prompt = (
         "根据下面的茶饮资讯，提取 3 个最值得收藏的品牌活动，输出严格的 JSON 数组（只输出 JSON，不要其他文字）：\n"
         '[{"brand":"品牌名","title":"活动名","category":"茶饮或咖啡",'
         '"startDate":"YYYY-MM-DD（资讯未给具体日期时用今天，若活动早于 7 天前开始则整体排除该条）",'
         '"endDate":"YYYY-MM-DD（未给时用 startDate 加 30 天）",'
-        '"description":"不超过 40 字的官方活动介绍",'
-        '"image_url":"官方宣传图/海报图片直链 URL（资讯里有就原样给出，没有填空字符串）",'
-        '"source_url":"从下面的可信来源链接列表中选择与该条最匹配的一个，逐字复制；不得编造链接"}]。\n'
-        f"可信来源链接列表：\n{trusted}\n\n"
+        '"description":"不超过 40 字的官方活动介绍"}]。\n'
         f"资讯：\n{news}"
     )
-    raw, _ = qwen_chat(parse_prompt)
+    raw = qwen_chat(parse_prompt)
     print("== PARSE ==")
     print(raw[:600])
     acts = extract_json(raw)[:5]
 
-    # 3. 逐条处理：旧闻过滤 + 去重 + 抓图
+    # 3. 逐条处理：旧闻过滤 + 去重 + 必应定位文章页抓官方配图
     items = []
     seen_titles = set()
     for i, a in enumerate(acts):
         title = str(a.get("title", "")).strip()
+        brand = str(a.get("brand", "")).strip()
         if not title or title in seen_titles:
             continue
-        # 旧闻过滤：开始日期早于 7 天前则跳过
         sd = str(a.get("startDate", "")).strip()
         try:
             start_dt = datetime.datetime.strptime(sd, "%Y-%m-%d").replace(tzinfo=bj)
@@ -210,21 +210,19 @@ def main():
             pass
         seen_titles.add(title)
 
-        img_url = str(a.get("image_url", "")).strip()
-        src = str(a.get("source_url", "")).strip()
-        candidates = [img_url] if img_url else []
-        # 可信来源页面的 og:image / 首图作为兜底
-        for c in (citations[:12] + ([src] if src else [])):
-            if c and c not in candidates:
-                candidates += fetch_page_images(c)
-                if len(candidates) >= 12:
-                    break
+        # 用必应找该活动的文章页，抓官方配图
+        candidates = []
+        for page in bing_search(f"{brand} {title}", n=3):
+            candidates += fetch_page_images(page)
+        if not candidates:
+            print("skip activity (no page found):", title)
+            continue
         poster = try_download(candidates, f"images/poster_{today}_{i}")
         if not poster:
             print("skip activity (no image):", title)
             continue
         items.append({
-            "brand": str(a.get("brand", "")),
+            "brand": brand,
             "title": title,
             "category": "咖啡" if "咖啡" in str(a.get("category", "")) else "茶饮",
             "startDate": sd or today,
