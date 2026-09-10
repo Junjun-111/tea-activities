@@ -50,7 +50,18 @@ def qwen_chat(prompt, system="你是茶饮行业情报分析师。", max_tokens=
             "search_strategy": "pro",
         }
     resp = _post(DASHSCOPE_CHAT, body, DASHSCOPE_KEY)
-    return resp["choices"][0]["message"]["content"]
+    content = resp["choices"][0]["message"]["content"]
+    # 搜索模式下响应带 citations（真实来源链接列表），提取出来供后续使用
+    urls = []
+    for c in resp.get("citations", []) or []:
+        if isinstance(c, dict):
+            u = c.get("url") or c.get("link") or ""
+        else:
+            u = str(c)
+        u = u.strip()
+        if u.startswith("http"):
+            urls.append(u)
+    return content, urls
 
 
 def extract_json(text):
@@ -148,21 +159,23 @@ def main():
     os.makedirs("images", exist_ok=True)
     os.makedirs("data", exist_ok=True)
 
-    # 1. qwen-max 联网搜索最近动态（不设搜索时间窗口，靠 prompt + 脚本校验保证最新）
+    # 1. qwen-max 联网搜索最近动态（响应自带 citations 真实来源链接）
     search_prompt = (
         f"现在是{today}。请联网搜索最近 7 天内（尤其最近 3 天）中国茶饮行业品牌的最新动态："
         "新品上市、品牌联名、限定饮品、买赠优惠、门店活动等。"
         "只保留发布日期在最近 7 天内的真实新动态，历史旧闻一律不要。"
-        "尽量多列（5-8 条），每条必须给出："
-        "1) 品牌名 2) 活动或新品名 3) 开始/截止时间（有则写具体日期，没有写'未知'）"
-        "4) 该活动的官方宣传图/海报图片直链 URL（必须 http 开头、真实可访问的图片链接，找不到写'无'）"
-        "5) 资讯来源链接 URL（必须 http 开头、真实可访问的新闻/文章/公众号链接）。"
+        "尽量多列（5-8 条），每条包含：品牌名、活动或新品名、开始/截止时间（有则给具体日期）、"
+        "官方宣传图/海报图片直链 URL（http 开头，找不到写'无'）。"
     )
-    news = qwen_chat(search_prompt, search=True)
+    news, citations = qwen_chat(search_prompt, search=True)
     print("== NEWS ==")
     print(news[:1000])
+    print("== CITATIONS ==")
+    for u in citations[:10]:
+        print(" -", u)
 
-    # 2. qwen-max 提取结构化 JSON
+    # 2. qwen-max 提取结构化 JSON（source_url 必须从可信来源列表中选择，禁止编造）
+    trusted = "\n".join(citations[:12]) or "（无）"
     parse_prompt = (
         "根据下面的茶饮资讯，提取 3 个最值得收藏的品牌活动，输出严格的 JSON 数组（只输出 JSON，不要其他文字）：\n"
         '[{"brand":"品牌名","title":"活动名","category":"茶饮或咖啡",'
@@ -170,10 +183,11 @@ def main():
         '"endDate":"YYYY-MM-DD（未给时用 startDate 加 30 天）",'
         '"description":"不超过 40 字的官方活动介绍",'
         '"image_url":"官方宣传图/海报图片直链 URL（资讯里有就原样给出，没有填空字符串）",'
-        '"source_url":"资讯来源链接 URL（必须是真实 http 链接，没有填空字符串）"}]。\n'
+        '"source_url":"从下面的可信来源链接列表中选择与该条最匹配的一个，逐字复制；不得编造链接"}]。\n'
+        f"可信来源链接列表：\n{trusted}\n\n"
         f"资讯：\n{news}"
     )
-    raw = qwen_chat(parse_prompt)
+    raw, _ = qwen_chat(parse_prompt)
     print("== PARSE ==")
     print(raw[:600])
     acts = extract_json(raw)[:5]
@@ -199,8 +213,12 @@ def main():
         img_url = str(a.get("image_url", "")).strip()
         src = str(a.get("source_url", "")).strip()
         candidates = [img_url] if img_url else []
-        if src:
-            candidates += fetch_page_images(src)
+        # 可信来源页面的 og:image / 首图作为兜底
+        for c in (citations[:12] + ([src] if src else [])):
+            if c and c not in candidates:
+                candidates += fetch_page_images(c)
+                if len(candidates) >= 12:
+                    break
         poster = try_download(candidates, f"images/poster_{today}_{i}")
         if not poster:
             print("skip activity (no image):", title)
