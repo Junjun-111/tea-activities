@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""每天定时任务：搜索当天茶饮资讯 -> 提取活动 -> 生成海报 -> 更新 activities.json
+"""每天定时任务：搜索当天茶饮资讯 -> 提取活动 -> 抓取官方配图 -> 更新 activities.json
 
 由 .github/workflows/update_activities.yml 调用（每天 0/6/12/18 点，北京时间）。
 依赖环境变量：
-  DASHSCOPE_API_KEY  阿里云百炼 key（qwen-max 联网搜索 + 通义万相文生图）
-  DEEPSEEK_API_KEY   DeepSeek key（提取结构化活动 + 文案）
+  DASHSCOPE_API_KEY  阿里云百炼 key（qwen-max 联网搜索）
+  DEEPSEEK_API_KEY   DeepSeek key（提取结构化活动）
 """
 import json
 import os
+import re
 import time
 import urllib.request
 
@@ -15,11 +16,10 @@ DASHSCOPE_KEY = os.environ["DASHSCOPE_API_KEY"]
 DEEPSEEK_KEY = os.environ["DEEPSEEK_API_KEY"]
 
 DASHSCOPE_CHAT = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
-DASHSCOPE_T2I = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis"
-DASHSCOPE_TASK = "https://dashscope.aliyuncs.com/api/v1/tasks/"
 DEEPSEEK_CHAT = "https://api.deepseek.com/chat/completions"
 
 RAW_BASE = "https://raw.githubusercontent.com/Junjun-111/tea-activities/main/images"
+UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 
 
 def _post(url, body, key, timeout=90):
@@ -35,7 +35,7 @@ def _post(url, body, key, timeout=90):
         return json.loads(r.read().decode("utf-8"))
 
 
-def qwen_chat(prompt, system="你是茶饮行业情报分析师。", enable_search=False, max_tokens=1200):
+def qwen_chat(prompt, system="你是茶饮行业情报分析师。", enable_search=False, max_tokens=1500):
     resp = _post(DASHSCOPE_CHAT, {
         "model": "qwen-max",
         "messages": [
@@ -57,32 +57,6 @@ def deepseek_chat(prompt, max_tokens=2000):
     return resp["choices"][0]["message"]["content"]
 
 
-def gen_poster(prompt, out_path):
-    """通义万相文生图（异步任务轮询），成功返回 True"""
-    resp = _post(DASHSCOPE_T2I, {
-        "model": "wanx2.1-t2i-turbo",
-        "input": {"prompt": prompt},
-        "parameters": {"size": "768*1024", "n": 1},
-    }, DASHSCOPE_KEY, timeout=120)
-    task_id = resp["output"]["task_id"]
-    for _ in range(40):
-        time.sleep(6)
-        st = _post(DASHSCOPE_TASK + task_id, {}, DASHSCOPE_KEY, timeout=60)
-        status = st["output"]["task_status"]
-        if status == "SUCCEEDED":
-            img_url = st["output"]["results"][0]["url"]
-            with urllib.request.urlopen(img_url, timeout=90) as r:
-                data = r.read()
-            os.makedirs(os.path.dirname(out_path), exist_ok=True)
-            with open(out_path, "wb") as f:
-                f.write(data)
-            return True
-        if status == "FAILED":
-            print("poster failed:", st)
-            return False
-    return False
-
-
 def extract_json(text):
     """从模型输出中截取第一个 JSON 数组"""
     start = text.find("[")
@@ -92,29 +66,76 @@ def extract_json(text):
     return json.loads(text[start:end + 1])
 
 
+def fetch_og_image(page_url):
+    """访问资讯来源页，提取 og:image（或第一张图片）"""
+    try:
+        req = urllib.request.Request(page_url, headers=UA)
+        html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
+        m = re.search(
+            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+            html,
+        )
+        if not m:
+            m = re.search(
+                r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+                html,
+            )
+        if m:
+            return m.group(1)
+        m = re.search(r'<img[^>]+src=["\']([^"\']+)', html)
+        if m:
+            return m.group(1)
+    except Exception as e:
+        print("og fetch fail:", page_url, e)
+    return None
+
+
+def download_image(img_url, out_path):
+    """下载图片并校验（扩展名、大小、魔数），成功返回 True"""
+    try:
+        if img_url.startswith("//"):
+            img_url = "https:" + img_url
+        if not img_url.lower().startswith("http"):
+            return False
+        req = urllib.request.Request(img_url, headers=UA)
+        data = urllib.request.urlopen(req, timeout=45).read()
+        if len(data) < 10 * 1024:
+            print("image too small:", len(data))
+            return False
+        if not data[:3] in (b"\xff\xd8\xff", b"\x89PN") and data[:2] != b"BM":
+            print("not an image, head:", data[:8])
+            return False
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        with open(out_path, "wb") as f:
+            f.write(data)
+        return True
+    except Exception as e:
+        print("image download fail:", img_url, e)
+        return False
+
+
 def main():
     today = time.strftime("%Y-%m-%d")
     os.makedirs("images", exist_ok=True)
     os.makedirs("data", exist_ok=True)
 
-    # 1. qwen-max 联网搜索当天真实茶饮资讯
+    # 1. qwen-max 联网搜索当天真实茶饮资讯（要求带来源链接）
     search_prompt = (
         f"今天是{today}。请联网搜索最近 3 天内中国茶饮行业（喜茶、霸王茶姬、瑞幸、蜜雪冰城、"
         "茶百道、古茗、沪上阿姨、奈雪的茶、一点点、书亦烧仙草等）的真实最新动态：新品上市、"
-        "品牌联名、限定活动、买赠优惠等。要求信息真实具体，至少列出 5 条，"
-        "每条包含品牌名、活动/产品名、开始或截止时间（如有）。"
+        "品牌联名、限定活动、买赠优惠等。要求：信息真实具体，至少列出 5 条，"
+        "每条包含：品牌名、活动/产品名、开始或截止时间（如有）、以及该条资讯的来源链接 URL。"
     )
-    news = qwen_chat(search_prompt, enable_search=True, max_tokens=1500)
+    news = qwen_chat(search_prompt, enable_search=True, max_tokens=2000)
     print("== NEWS ==")
-    print(news[:500])
+    print(news[:600])
 
-    # 2. DeepSeek 提取 3 个结构化活动（含海报提示词）
+    # 2. DeepSeek 提取 3 个结构化活动（含来源链接）
     parse_prompt = (
-        "根据下面的茶饮资讯，提取 3 个最值得收藏的活动，输出严格的 JSON 数组（只输出 JSON，不要其他文字）：\n"
+        "根据下面的茶饮资讯，提取 3 个最值得收藏的品牌活动，输出严格的 JSON 数组（只输出 JSON，不要其他文字）：\n"
         '[{"brand":"品牌名","title":"活动名","category":"茶饮或咖啡",'
         '"startDate":"YYYY-MM-DD（资讯未给时用今天）","endDate":"YYYY-MM-DD（未给时用 startDate 加 30 天）",'
-        '"description":"不超过 40 字的官方活动介绍","poster_prompt":"统一风格的竖版茶饮活动海报提示词：'
-        '包含主视觉主体、品牌 logo 文字占位、活动标题文字占位、活动时间文字占位，色彩明快符合品牌调性"}]。\n'
+        '"description":"不超过 40 字的官方活动介绍","source_url":"该条资讯的来源链接 URL（必须是真实存在的 http/https 链接）"}]。\n'
         f"资讯：\n{news}"
     )
     raw = deepseek_chat(parse_prompt)
@@ -122,12 +143,20 @@ def main():
     print(raw[:300])
     acts = extract_json(raw)[:3]
 
-    # 3. 逐条生成海报，失败则跳过该条
+    # 3. 逐条抓取官方配图，成功才写入
     items = []
     for i, a in enumerate(acts):
-        poster = f"images/poster_{today}_{i}.png"
-        ok = gen_poster(a.get("poster_prompt", "茶饮新品活动海报"), poster)
-        if not ok:
+        page = str(a.get("source_url", "")).strip()
+        img = fetch_og_image(page) if page else None
+        if not img:
+            print("no og image for", a.get("title"))
+            continue
+        ext = ".jpg"
+        mm = re.search(r"\.(png|jpe?g|webp)(\?|$)", img.lower())
+        if mm:
+            ext = ".png" if mm.group(1) == "png" else ".jpg"
+        poster = f"images/poster_{today}_{i}{ext}"
+        if not download_image(img, poster):
             continue
         items.append({
             "brand": str(a.get("brand", "")),
@@ -135,7 +164,7 @@ def main():
             "category": "咖啡" if "咖啡" in str(a.get("category", "")) else "茶饮",
             "startDate": str(a.get("startDate", today)),
             "endDate": str(a.get("endDate", today)),
-            "image": f"{RAW_BASE}/poster_{today}_{i}.png",
+            "image": f"{RAW_BASE}/poster_{today}_{i}{ext}",
             "description": str(a.get("description", "")),
             "ratio": 1.2,
         })
