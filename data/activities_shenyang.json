@@ -1,0 +1,56 @@
+{
+  "updated_at": "2026-09-11",
+  "city": "沈阳",
+  "activities": [
+    {
+      "brand": "瑞幸",
+      "title": "瑞幸YOYO联名得主题杯套",
+      "category": "咖啡",
+      "startDate": "2026-09-07",
+      "endDate": "2026-10-07",
+      "image": "",
+      "description": "沈阳门店购联名款饮品得YOYO主题杯套，配套周边上线",
+      "ratio": 1.2
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬「凤凰栖梧」系列上新抽奖",
+      "category": "茶饮",
+      "startDate": "2026-08-18",
+      "endDate": "2026-09-17",
+      "image": "https://raw.githubusercontent.com/Junjun-111/tea-activities/main/images/poster_shenyang_2026-09-11_1.jpg",
+      "description": "沈阳门店售凤凰栖梧系列，9.4-14小程序抽买一送一券",
+      "ratio": 1.2
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪霸气小红杏酸奶冰新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-02",
+      "endDate": "2026-10-02",
+      "image": "https://raw.githubusercontent.com/Junjun-111/tea-activities/main/images/poster_shenyang_2026-09-11_2.jpg",
+      "description": "沈阳门店同步上新霸气小红杏酸奶冰，为新品销量TOP1",
+      "ratio": 1.2
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪秋日特调美团外卖买一送一",
+      "category": "茶饮",
+      "startDate": "2026-09-08",
+      "endDate": "2026-10-08",
+      "image": "https://raw.githubusercontent.com/Junjun-111/tea-activities/main/images/poster_shenyang_2026-09-11_3.jpg",
+      "description": "沈阳门店参与美团外卖指定秋日特调买一送一，折后约8.99元",
+      "ratio": 1.2
+    },
+    {
+      "brand": "星巴克",
+      "title": "星巴克两款茶拿铁新品上市",
+      "category": "咖啡",
+      "startDate": "2026-09-03",
+      "endDate": "2026-10-03",
+      "image": "",
+      "description": "沈阳门店同步上新脆玄米焙茶拿铁、花漾伯爵茶拿铁",
+      "ratio": 1.2
+    }
+  ]
+}
