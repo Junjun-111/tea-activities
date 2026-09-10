@@ -1,4 +1,15 @@
 {
-  "updated_at": "2026-09-11",
-  "activities": []
+  "updated_at": "2026-09-10",
+  "activities": [
+    {
+      "brand": "霸王茶姬",
+      "title": "白雾红尘茶叶蛋上市",
+      "category": "茶饮",
+      "startDate": "2026-09-07",
+      "endDate": "2026-09-21",
+      "image": "https://raw.githubusercontent.com/Junjun-111/tea-activities/main/images/poster_2026-09-10_0.png",
+      "description": "上海7家门店试点，大红袍茶底慢煮，单点5元，搭配正价饮品享优惠。",
+      "ratio": 1.2
+    }
+  ]
 }
