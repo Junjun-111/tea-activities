@@ -1,32 +1,45 @@
 #!/usr/bin/env python3
-"""每天定时任务：千问联网搜索最新茶饮资讯 -> 提取活动 -> 必应定位文章页抓官方配图 -> 更新 activities.json
+"""每天定时任务：抓饮品报最新文章 -> 千问提取活动 -> 抓官方配图 -> 更新 activities.json
 
-由 .github/workflows/update_activities.yml 调用（每天 0/6/12/18 点，北京时间）。
-搜索与提取全部由千问（qwen-max）完成；图片从文章页抓取官方宣传图。
-依赖环境变量：
-  DASHSCOPE_API_KEY
+数据源：饮品报移动版 m.drinknewspaper.com（茶饮行业垂直媒体，日更，文章配图多为品牌官方宣传图）。
+搜索与提取全部由千问（qwen-max）完成，不再使用必应/DeepSeek。
+依赖环境变量：DASHSCOPE_API_KEY
 """
 import datetime
+import gzip
 import io
 import json
 import os
 import re
-import urllib.parse
 import urllib.request
 
 DASHSCOPE_KEY = os.environ["DASHSCOPE_API_KEY"]
 DASHSCOPE_CHAT = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
-
 RAW_BASE = "https://raw.githubusercontent.com/Junjun-111/tea-activities/main/images"
-UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+
+MOBILE_UA = ("Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
+             "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1")
+LIST_URL = "http://m.drinknewspaper.com/"
+ART_URL = "http://m.drinknewspaper.com/news/{id}.html"
 
 
-def _post(url, body, key, timeout=90):
+def _get(url, timeout=30):
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": MOBILE_UA, "Accept-Encoding": "gzip"},
+    )
+    data = urllib.request.urlopen(req, timeout=timeout).read()
+    if data[:2] == b"\x1f\x8b":
+        data = gzip.decompress(data)
+    return data
+
+
+def _post(url, body, timeout=90):
     req = urllib.request.Request(
         url,
         data=json.dumps(body).encode("utf-8"),
         headers={
-            "Authorization": "Bearer " + key,
+            "Authorization": "Bearer " + DASHSCOPE_KEY,
             "Content-Type": "application/json",
         },
     )
@@ -34,7 +47,7 @@ def _post(url, body, key, timeout=90):
         return json.loads(r.read().decode("utf-8"))
 
 
-def qwen_chat(prompt, system="你是茶饮行业情报分析师。", max_tokens=2500, search=False):
+def qwen_chat(prompt, system="你是茶饮行业情报分析师。", max_tokens=2500):
     body = {
         "model": "qwen-max",
         "messages": [
@@ -43,15 +56,10 @@ def qwen_chat(prompt, system="你是茶饮行业情报分析师。", max_tokens=
         ],
         "max_tokens": max_tokens,
     }
-    if search:
-        body["enable_search"] = True
-        body["search_options"] = {"forced_search": True, "search_strategy": "pro"}
-    resp = _post(DASHSCOPE_CHAT, body, DASHSCOPE_KEY)
-    return resp["choices"][0]["message"]["content"]
+    return _post(DASHSCOPE_CHAT, body)["choices"][0]["message"]["content"]
 
 
 def extract_json(text):
-    """从模型输出中截取第一个 JSON 数组"""
     start = text.find("[")
     end = text.rfind("]")
     if start == -1 or end == -1:
@@ -59,56 +67,50 @@ def extract_json(text):
     return json.loads(text[start:end + 1])
 
 
-def bing_search(query, n=3):
-    """必应搜索，返回前 n 个外部文章链接（过滤必应/微软内部链接）"""
-    links = []
+def fetch_news_list():
+    """抓列表页，返回 [{id,title,href,cover}]（按页面出现顺序）"""
+    html = _get(LIST_URL).decode("utf-8", "ignore")
+    items = {}
+    for m in re.finditer(r'newsId="(\d+)"[^>]*newsName="([^"]*)"', html):
+        nid, title = m.group(1), m.group(2)
+        if not title.strip():
+            continue
+        seg = html[m.end():m.end() + 2500]
+        href = re.search(r'href="([^"]+?/news/\d+\.html)"', seg)
+        img = re.search(r'src-original="(//[^"]+|https?://[^"]+)"', seg)
+        items.setdefault(nid, {
+            "id": nid,
+            "title": title.strip(),
+            "href": href.group(1) if href else ART_URL.format(id=nid),
+            "cover": img.group(1) if img else None,
+        })
+    return list(items.values())[:10]
+
+
+def fetch_article(art):
+    """抓文章页：补充发布时间与正文图片列表"""
     try:
-        url = "https://www.bing.com/search?q=" + urllib.parse.quote(query)
-        req = urllib.request.Request(url, headers=UA)
-        html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
-        for m in re.finditer(r'<a[^>]+href="(https?://[^"]+)"', html):
-            u = m.group(1)
-            low = u.lower()
-            if any(x in low for x in ("bing.com", "microsoft.com", "msn.com",
-                                      "go.microsoft", "r.msn", "bingj.com")):
-                continue
-            if u not in links:
-                links.append(u)
-            if len(links) >= n:
-                break
+        html = _get(art["href"]).decode("utf-8", "ignore")
     except Exception as e:
-        print("bing search fail:", query, e)
-    return links
+        print("article fetch fail:", art["href"], e)
+        return art
+    mt = re.search(r'(\d{4})-(\d{2})-(\d{2})T\d{2}:\d{2}', html)
+    if mt:
+        art["date"] = "%s/%s/%s" % (mt.group(1), mt.group(2), mt.group(3))
+    imgs = []
+    for m in re.finditer(
+            r'(?:src|src-original)="(//[^"]+\.(?:jpg|jpeg|png|webp|gif)[^"]*|https?://[^"]+\.(?:jpg|jpeg|png|webp|gif)[^"]*)"',
+            html):
+        u = m.group(1)
+        if u.startswith("//"):
+            u = "https:" + u
+        imgs.append(u)
+    if imgs:
+        art["images"] = imgs
+    return art
 
 
-def fetch_page_images(page_url):
-    """抓取页面候选图：og:image -> 前几张 <img>，返回去重列表"""
-    cands = []
-    try:
-        req = urllib.request.Request(page_url, headers=UA)
-        html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
-        m = re.search(
-            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
-            html,
-        )
-        if not m:
-            m = re.search(
-                r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
-                html,
-            )
-        if m:
-            cands.append(m.group(1))
-        for m in re.finditer(r'<img[^>]+src=["\']([^"\']+)["\']', html):
-            cands.append(m.group(1))
-            if len(cands) >= 6:
-                break
-    except Exception as e:
-        print("page fetch fail:", page_url, e)
-    return cands
-
-
-def valid_image(data):
-    """海报级别校验：分辨率 >300px 且 >120k 像素（过滤小 logo/图标）"""
+def is_qualified(data):
     try:
         from PIL import Image
         im = Image.open(io.BytesIO(data))
@@ -121,43 +123,34 @@ def valid_image(data):
         return len(data) >= 30 * 1024
 
 
-def download_image(img_url, out_path):
-    """下载并校验图片，成功返回 True"""
+def download_image(img_url):
+    """下载并校验图片，成功返回 bytes，失败返回 None"""
     try:
-        if img_url.startswith("//"):
-            img_url = "https:" + img_url
+        img_url = img_url.strip()
         if not img_url.lower().startswith("http"):
-            return False
-        req = urllib.request.Request(img_url, headers=UA)
-        data = urllib.request.urlopen(req, timeout=45).read()
-        if data[:3] != b"\xff\xd8\xff" and data[:3] != b"\x89PN":
-            print("not an image, head:", data[:8])
-            return False
-        if not valid_image(data):
-            return False
-        os.makedirs(os.path.dirname(out_path), exist_ok=True)
-        with open(out_path, "wb") as f:
-            f.write(data)
-        return True
+            return None
+        low = img_url.lower()
+        if any(x in low for x in ("loading", "transparent", "placeholder",
+                                  "logo", "icon", "qrcode", "banner.png", "spacer")):
+            print("skip placeholder url:", img_url[:100])
+            return None
+        candidates = [img_url]
+        m = re.search(r"![\w\d]+(\?|$)", img_url)
+        if m:
+            candidates.insert(0, img_url[:m.start()])
+        for u in candidates:
+            try:
+                data = _get(u, timeout=45)
+            except Exception:
+                continue
+            if data[:3] == b"\xff\xd8\xff" or data[:3] == b"\x89PN" or data[:4] == b"RIFF":
+                if is_qualified(data):
+                    return data
+                return None
+        return None
     except Exception as e:
         print("image download fail:", img_url[:120], e)
-        return False
-
-
-def try_download(candidates, out_path):
-    """按候选顺序尝试下载，成功返回保存路径"""
-    for u in candidates:
-        if not u:
-            continue
-        u = u.strip()
-        ext = ".jpg"
-        mm = re.search(r"\.(png|jpe?g|webp)(\?|$)", u.lower())
-        if mm:
-            ext = ".png" if mm.group(1) == "png" else ".jpg"
-        path = out_path + ext
-        if download_image(u, path):
-            return path
-    return None
+        return None
 
 
 def main():
@@ -167,70 +160,92 @@ def main():
     os.makedirs("images", exist_ok=True)
     os.makedirs("data", exist_ok=True)
 
-    # 1. 千问联网搜索最近动态（搜索+提取全部交给千问）
-    search_prompt = (
-        f"现在是{today}。请联网搜索最近 7 天内（尤其最近 3 天）中国茶饮行业品牌的最新动态："
-        "新品上市、品牌联名、限定饮品、买赠优惠、门店活动等。"
-        "只保留发布日期在最近 7 天内的真实新动态，历史旧闻一律不要。"
-        "尽量多列（5-8 条），每条包含：品牌名、活动或新品名、开始/截止时间（有则给具体日期）。"
-    )
-    news = qwen_chat(search_prompt, search=True)
-    print("== NEWS ==")
-    print(news[:1000])
+    # 1. 抓最新文章列表（真实、最新）
+    news = fetch_news_list()
+    print("== LIST ==")
+    print("got", len(news), "articles")
+    if not news:
+        print("no articles fetched, keep old data")
+        return
 
-    # 2. 千问提取结构化 JSON
+    # 2. 逐篇抓详情（发布时间 + 图片）
+    for art in news:
+        fetch_article(art)
+
+    # 3. 千问提取：只保留真实品牌活动
+    lines = []
+    for art in news:
+        d = art.get("date", "")
+        lines.append(f"- [{d}] {art['title']}")
+    sample = "\n".join(lines)
     parse_prompt = (
-        "根据下面的茶饮资讯，提取 3 个最值得收藏的品牌活动，输出严格的 JSON 数组（只输出 JSON，不要其他文字）：\n"
-        '[{"brand":"品牌名","title":"活动名","category":"茶饮或咖啡",'
-        '"startDate":"YYYY-MM-DD（资讯未给具体日期时用今天，若活动早于 7 天前开始则整体排除该条）",'
-        '"endDate":"YYYY-MM-DD（未给时用 startDate 加 30 天）",'
-        '"description":"不超过 40 字的官方活动介绍"}]。\n'
-        f"资讯：\n{news}"
+        "下面是茶饮行业媒体《饮品报》最新文章标题清单（带发布日期）。\n"
+        "请提取其中属于「真实品牌营销活动/新品/联名」的条目，输出严格 JSON 数组（只输出 JSON）：\n"
+        '[{"title":"活动名(用文章标题概括,不超过25字)","brand":"品牌名","category":"茶饮或咖啡",'
+        '"startDate":"YYYY-MM-DD(按文章发布日期,若文章写明活动时间用文中时间)","endDate":"YYYY-MM-DD(未给则startDate加30天)",'
+        '"description":"不超过40字的官方活动介绍(基于标题合理概括)"}]\n'
+        "规则：\n"
+        "1. 只保留有具体品牌和产品/活动的条目；行业分析、论坛、展会、纯财务/开店报道、无具体活动的文章一律排除；\n"
+        "2. 每篇最多一条，总共最多 4 条；\n"
+        "3. 日期必须是 2026 年；发布超过 10 天的文章排除。\n"
+        f"文章清单：\n{sample}"
     )
     raw = qwen_chat(parse_prompt)
     print("== PARSE ==")
-    print(raw[:600])
-    acts = extract_json(raw)[:5]
+    print(raw[:800])
+    try:
+        acts = extract_json(raw)
+    except Exception as e:
+        print("parse fail:", e, "->", raw[:300])
+        return
 
-    # 3. 逐条处理：旧闻过滤 + 去重 + 必应定位文章页抓官方配图
+    # 4. 对每条提取结果匹配文章，下载配图
     items = []
-    seen_titles = set()
-    for i, a in enumerate(acts):
+    seen = set()
+    for a in acts:
         title = str(a.get("title", "")).strip()
-        brand = str(a.get("brand", "")).strip()
-        if not title or title in seen_titles:
+        if not title or title in seen:
             continue
-        sd = str(a.get("startDate", "")).strip()
-        try:
-            start_dt = datetime.datetime.strptime(sd, "%Y-%m-%d").replace(tzinfo=bj)
-            if (now - start_dt).days > 7:
-                print("skip old news:", title, sd)
-                continue
-        except Exception:
-            pass
-        seen_titles.add(title)
-
-        # 用必应找该活动的文章页，抓官方配图
-        candidates = []
-        for page in bing_search(f"{brand} {title}", n=3):
-            candidates += fetch_page_images(page)
-        if not candidates:
-            print("skip activity (no page found):", title)
+        seen.add(title)
+        matched = None
+        for art in news:
+            t = art["title"]
+            if title[:8] in t or a.get("brand", "") in t or t[:8] in title:
+                matched = art
+                break
+        if matched is None:
+            print("no article matched, skip:", title)
             continue
-        poster = try_download(candidates, f"images/poster_{today}_{i}")
-        if not poster:
+        cands = list(matched.get("images", []))
+        if matched.get("cover"):
+            cands.append(matched["cover"])
+        data = None
+        for u in cands:
+            data = download_image(u)
+            if data:
+                break
+        if not data:
             print("skip activity (no image):", title)
             continue
+        poster = f"images/poster_{today}_{len(items)}.jpg"
+        with open(poster, "wb") as f:
+            f.write(data)
+        sd = str(a.get("startDate", "")).strip()
+        ed = str(a.get("endDate", "")).strip()
+        if not sd:
+            sd = today
         items.append({
-            "brand": brand,
+            "brand": str(a.get("brand", "")).strip(),
             "title": title,
             "category": "咖啡" if "咖啡" in str(a.get("category", "")) else "茶饮",
-            "startDate": sd or today,
-            "endDate": str(a.get("endDate", "")).strip() or sd or today,
+            "startDate": sd,
+            "endDate": ed or sd,
             "image": RAW_BASE + "/" + poster,
-            "description": str(a.get("description", "")),
+            "description": str(a.get("description", "")).strip(),
             "ratio": 1.2,
         })
+        if len(items) >= 4:
+            break
 
     if not items:
         print("no activities generated, keep old data")
