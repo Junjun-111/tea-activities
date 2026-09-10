@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""每天定时任务：联网搜索当天最新茶饮资讯 -> 千问提取活动 + 官方海报直链 -> 更新 activities.json
+"""每天定时任务：联网搜索最新茶饮资讯 -> 千问提取活动 -> 抓官方海报 -> 更新 activities.json
 
 由 .github/workflows/update_activities.yml 调用（每天 0/6/12/18 点，北京时间）。
 仅依赖阿里云百炼（qwen-max 联网搜索 + 结构化提取）：
   DASHSCOPE_API_KEY
 """
 import datetime
+import io
 import json
 import os
 import re
@@ -32,8 +33,7 @@ def _post(url, body, key, timeout=90):
         return json.loads(r.read().decode("utf-8"))
 
 
-def qwen_chat(prompt, system="你是茶饮行业情报分析师。", max_tokens=2000,
-              search=False, start_time=None, end_time=None):
+def qwen_chat(prompt, system="你是茶饮行业情报分析师。", max_tokens=2500, search=False):
     body = {
         "model": "qwen-max",
         "messages": [
@@ -48,8 +48,6 @@ def qwen_chat(prompt, system="你是茶饮行业情报分析师。", max_tokens=
             "forced_search": True,
             "enable_source": True,
             "search_strategy": "pro",
-            "start_time": start_time,
-            "end_time": end_time,
         }
     resp = _post(DASHSCOPE_CHAT, body, DASHSCOPE_KEY)
     return resp["choices"][0]["message"]["content"]
@@ -64,8 +62,9 @@ def extract_json(text):
     return json.loads(text[start:end + 1])
 
 
-def fetch_og_image(page_url):
-    """访问资讯来源页，提取 og:image（兜底用；模型给直链时优先直链）"""
+def fetch_page_images(page_url):
+    """抓取页面所有候选图：og:image -> 第一张 <img>，返回列表（去重）"""
+    cands = []
     try:
         req = urllib.request.Request(page_url, headers=UA)
         html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
@@ -79,14 +78,32 @@ def fetch_og_image(page_url):
                 html,
             )
         if m:
-            return m.group(1)
+            cands.append(m.group(1))
+        for m in re.finditer(r'<img[^>]+src=["\']([^"\']+)["\']', html):
+            cands.append(m.group(1))
+            if len(cands) >= 6:
+                break
     except Exception as e:
-        print("og fetch fail:", page_url, e)
-    return None
+        print("page fetch fail:", page_url, e)
+    return cands
+
+
+def valid_image(data):
+    """校验图片是海报级别：用 Pillow 检查分辨率（>300px 且 >120k 像素）"""
+    try:
+        from PIL import Image
+        im = Image.open(io.BytesIO(data))
+        w, h = im.size
+        ok = w >= 300 and w * h >= 120000
+        if not ok:
+            print("rejected by size:", w, "x", h)
+        return ok
+    except Exception:
+        return len(data) >= 30 * 1024
 
 
 def download_image(img_url, out_path):
-    """下载并校验图片：>30KB 且为常见图片格式（过滤小 logo/图标），成功返回 True"""
+    """下载并校验图片，成功返回 True"""
     try:
         if img_url.startswith("//"):
             img_url = "https:" + img_url
@@ -94,11 +111,10 @@ def download_image(img_url, out_path):
             return False
         req = urllib.request.Request(img_url, headers=UA)
         data = urllib.request.urlopen(req, timeout=45).read()
-        if len(data) < 30 * 1024:
-            print("image too small (maybe logo):", len(data), img_url[:120])
-            return False
         if data[:3] != b"\xff\xd8\xff" and data[:3] != b"\x89PN":
             print("not an image, head:", data[:8])
+            return False
+        if not valid_image(data):
             return False
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
         with open(out_path, "wb") as f:
@@ -109,75 +125,93 @@ def download_image(img_url, out_path):
         return False
 
 
+def try_download(candidates, out_path):
+    """按候选顺序尝试下载，成功返回 True"""
+    for u in candidates:
+        if not u:
+            continue
+        u = u.strip()
+        ext = ".jpg"
+        mm = re.search(r"\.(png|jpe?g|webp)(\?|$)", u.lower())
+        if mm:
+            ext = ".png" if mm.group(1) == "png" else ".jpg"
+        path = out_path + ext
+        if download_image(u, path):
+            return path
+    return None
+
+
 def main():
     bj = datetime.timezone(datetime.timedelta(hours=8))
     now = datetime.datetime.now(bj)
     today = now.strftime("%Y-%m-%d")
-    start = (now - datetime.timedelta(days=2)).strftime("%Y-%m-%d")
     os.makedirs("images", exist_ok=True)
     os.makedirs("data", exist_ok=True)
 
-    # 1. qwen-max 联网搜索最近 3 天最新资讯（限定时间窗口，杜绝旧闻）
+    # 1. qwen-max 联网搜索最近动态（不设搜索时间窗口，靠 prompt + 脚本校验保证最新）
     search_prompt = (
-        f"请联网搜索 {start} 至 {today}（最近 3 天）中国茶饮行业的最新动态："
-        "品牌新品上市、联名活动、限定饮品、买赠优惠、门店活动等。"
-        "只保留这 3 天内新发布/新开始的动态，历史旧闻一律不要。"
-        "要求真实具体，尽量多列（3-6 条），每条必须包含："
-        "1) 品牌名 2) 活动或新品名 3) 开始/截止时间（有则给，没有就标注未知）"
-        "4) 该活动的官方宣传图或海报图片直链 URL（http 开头，尽量给，没有就写无）"
-        "5) 资讯来源链接 URL。"
+        f"现在是{today}。请联网搜索最近 7 天内（尤其最近 3 天）中国茶饮行业品牌的最新动态："
+        "新品上市、品牌联名、限定饮品、买赠优惠、门店活动等。"
+        "只保留发布日期在最近 7 天内的真实新动态，历史旧闻一律不要。"
+        "尽量多列（5-8 条），每条必须给出："
+        "1) 品牌名 2) 活动或新品名 3) 开始/截止时间（有则写具体日期，没有写'未知'）"
+        "4) 该活动的官方宣传图/海报图片直链 URL（必须 http 开头、真实可访问的图片链接，找不到写'无'）"
+        "5) 资讯来源链接 URL（必须 http 开头、真实可访问的新闻/文章/公众号链接）。"
     )
-    news = qwen_chat(search_prompt, search=True,
-                     start_time=f"{start} 00:00:00", end_time=f"{today} 23:59:59")
+    news = qwen_chat(search_prompt, search=True)
     print("== NEWS ==")
-    print(news[:800])
+    print(news[:1000])
 
-    # 2. qwen-max 提取为结构化 JSON（含官方海报直链）
+    # 2. qwen-max 提取结构化 JSON
     parse_prompt = (
         "根据下面的茶饮资讯，提取 3 个最值得收藏的品牌活动，输出严格的 JSON 数组（只输出 JSON，不要其他文字）：\n"
         '[{"brand":"品牌名","title":"活动名","category":"茶饮或咖啡",'
-        '"startDate":"YYYY-MM-DD（资讯未给时用今天）","endDate":"YYYY-MM-DD（未给时用 startDate 加 30 天）",'
+        '"startDate":"YYYY-MM-DD（资讯未给具体日期时用今天，若活动早于 7 天前开始则整体排除该条）",'
+        '"endDate":"YYYY-MM-DD（未给时用 startDate 加 30 天）",'
         '"description":"不超过 40 字的官方活动介绍",'
-        '"image_url":"官方宣传图或海报图片直链 URL（资讯里有就原样给出，没有就填空字符串）",'
-        '"source_url":"资讯来源链接 URL"}]。\n'
+        '"image_url":"官方宣传图/海报图片直链 URL（资讯里有就原样给出，没有填空字符串）",'
+        '"source_url":"资讯来源链接 URL（必须是真实 http 链接，没有填空字符串）"}]。\n'
         f"资讯：\n{news}"
     )
     raw = qwen_chat(parse_prompt)
     print("== PARSE ==")
-    print(raw[:400])
-    acts = extract_json(raw)[:3]
+    print(raw[:600])
+    acts = extract_json(raw)[:5]
 
-    # 3. 逐条下载官方海报（直链优先，来源页 og:image 兜底）
+    # 3. 逐条处理：旧闻过滤 + 去重 + 抓图
     items = []
+    seen_titles = set()
     for i, a in enumerate(acts):
-        ext = ".jpg"
-        url = str(a.get("image_url", "")).strip()
-        mm = re.search(r"\.(png|jpe?g|webp)(\?|$)", url.lower())
-        if mm:
-            ext = ".png" if mm.group(1) == "png" else ".jpg"
-        poster = f"images/poster_{today}_{i}{ext}"
-        ok = False
-        if url:
-            ok = download_image(url, poster)
-        if not ok:
-            src = str(a.get("source_url", "")).strip()
-            og = fetch_og_image(src) if src else None
-            if og:
-                mm = re.search(r"\.(png|jpe?g|webp)(\?|$)", og.lower())
-                if mm:
-                    ext = ".png" if mm.group(1) == "png" else ".jpg"
-                poster = f"images/poster_{today}_{i}{ext}"
-                ok = download_image(og, poster)
-        if not ok:
-            print("skip activity (no image):", a.get("title"))
+        title = str(a.get("title", "")).strip()
+        if not title or title in seen_titles:
+            continue
+        # 旧闻过滤：开始日期早于 7 天前则跳过
+        sd = str(a.get("startDate", "")).strip()
+        try:
+            start_dt = datetime.datetime.strptime(sd, "%Y-%m-%d").replace(tzinfo=bj)
+            if (now - start_dt).days > 7:
+                print("skip old news:", title, sd)
+                continue
+        except Exception:
+            pass
+        seen_titles.add(title)
+
+        img_url = str(a.get("image_url", "")).strip()
+        src = str(a.get("source_url", "")).strip()
+        candidates = [img_url] if img_url else []
+        if src:
+            candidates += fetch_page_images(src)
+        poster = try_download(candidates, f"images/poster_{today}_{i}")
+        if not poster:
+            print("skip activity (no image):", title)
             continue
         items.append({
             "brand": str(a.get("brand", "")),
-            "title": str(a.get("title", "")),
+            "title": title,
             "category": "咖啡" if "咖啡" in str(a.get("category", "")) else "茶饮",
-            "startDate": str(a.get("startDate", today)),
-            "endDate": str(a.get("endDate", today)),
-            "image": f"{RAW_BASE}/poster_{today}_{i}{ext}",
+            "startDate": sd or today,
+            "endDate": str(a.get("endDate", "")).strip() or sd or today,
+            "image": RAW_BASE + "/" + poster,
             "description": str(a.get("description", "")),
             "ratio": 1.2,
         })
