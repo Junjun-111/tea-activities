@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12",
+  "updated_at": "2026-09-13",
   "activities": [
     {
       "brand": "奈雪的茶",
@@ -7,58 +7,58 @@
       "category": "茶饮",
       "startDate": "2026-08-26",
       "endDate": "2026-09-25",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_0.jpg",
-      "description": "奈雪的茶联名yuy玉推出治愈酸奶昔，引发全网刷屏关注",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-13_0.jpg",
+      "description": "奈雪联名yuy玉推出治愈酸奶昔，引发全网刷屏关注",
       "ratio": 1.2
     },
     {
       "brand": "喜茶",
-      "title": "喜茶上海双店同开，推出手工鲜果gelato",
+      "title": "喜茶上海开出喜拉朵实验室双店",
       "category": "茶饮",
       "startDate": "2026-08-21",
       "endDate": "2026-09-20",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_1.jpg",
-      "description": "喜茶在上海开出喜拉朵实验室等新店，推出手工鲜果gelato产品",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-13_1.jpg",
+      "description": "上海双店同开，推出手工鲜果gelato相关产品",
       "ratio": 1.2
     },
     {
       "brand": "甜啦啦",
-      "title": "甜啦啦荔枝系列上新，享七夕限定福利",
+      "title": "甜啦啦荔枝系列上新享七夕福利",
       "category": "茶饮",
       "startDate": "2026-08-14",
       "endDate": "2026-09-13",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_2.jpg",
-      "description": "甜啦啦推出荔枝系列新品，七夕期间可享13.14元限定福利",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-13_2.jpg",
+      "description": "推出荔枝系列饮品，七夕期间可享13.14限定福利",
       "ratio": 1.2
     },
     {
       "brand": "林里LINLEE",
-      "title": "林里LINLEE×鹅鸭杀联名上新桃系冰柠茶",
+      "title": "林里LINLEE×《鹅鸭杀》联名上新",
       "category": "茶饮",
       "startDate": "2026-08-19",
       "endDate": "2026-09-18",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_3.jpg",
-      "description": "林里LINLEE联名《鹅鸭杀》推出新品，桃系冰柠茶清爽回归",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-13_3.jpg",
+      "description": "联名《鹅鸭杀》推出新品，桃系冰柠茶清爽回归",
       "ratio": 1.2
     },
     {
       "brand": "甜啦啦",
-      "title": "甜啦啦推出清风茉白产品锚定开学季",
+      "title": "甜啦啦推出清风茉白锚定开学季",
       "category": "茶饮",
       "startDate": "2026-09-01",
       "endDate": "2026-10-01",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_4.jpg",
-      "description": "开学季期间甜啦啦推出清风茉白产品，契合Z世代仪式感需求",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-13_4.jpg",
+      "description": "开学季推出清风茉白产品，契合Z世代仪式感需求",
       "ratio": 1.2
     },
     {
-      "brand": "甜啦啦",
-      "title": "甜啦啦真茉莉好茶溯源品质升级",
+      "brand": "沪上阿姨",
+      "title": "沪上阿姨联合一米八推益生菌茶饮",
       "category": "茶饮",
-      "startDate": "2026-09-04",
-      "endDate": "2026-10-04",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_5.jpg",
-      "description": "甜啦啦开展真茉莉茶饮溯源升级，强化产品自然茉莉香品质",
+      "startDate": "2026-08-12",
+      "endDate": "2026-09-11",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-13_5.jpg",
+      "description": "跨界一米八应用植物基益生菌发酵技术打造新品",
       "ratio": 1.2
     }
   ]

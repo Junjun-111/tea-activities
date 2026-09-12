@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12",
+  "updated_at": "2026-09-13",
   "city": "沈阳",
   "activities": [
     {
@@ -37,14 +37,14 @@
     },
     {
       "brand": "茉莉奶白",
-      "title": "花香茶咖系列新品上市",
+      "title": "花香茶咖2.0系列新品上市",
       "category": "茶饮",
       "startDate": "2026-09-10",
       "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-12_2.jpg",
-      "description": "全国门店同步上新两款花香茶咖饮品",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-13_2.jpg",
+      "description": "上新两款花茶与咖啡结合的饮品，搭配茉莉/白兰茶底",
       "ratio": 1.2,
-      "lastSeen": "2026-09-12"
+      "lastSeen": "2026-09-13"
     },
     {
       "brand": "茉莉奶白",
@@ -70,14 +70,14 @@
     },
     {
       "brand": "爷爷不泡茶",
-      "title": "×美图秀秀联名周边上线",
+      "title": "×美图秀秀联名周边活动",
       "category": "茶饮",
       "startDate": "2026-09-09",
       "endDate": "",
       "image": "",
-      "description": "辽宁等区域上线联名化妆包、气垫梳周边",
+      "description": "推出联名化妆包、气垫梳周边，辽宁属于可购买区域范围",
       "ratio": 1.2,
-      "lastSeen": "2026-09-12"
+      "lastSeen": "2026-09-13"
     },
     {
       "brand": "喜茶",
@@ -119,9 +119,9 @@
       "startDate": "2026-09-04",
       "endDate": "",
       "image": "",
-      "description": "沈阳门店上新橙香玉露秋日系列，为开学季限定款",
+      "description": "推出两款秋日橙香茶饮，采用南非鲜橙搭配恩施玉露茶底",
       "ratio": 1.2,
-      "lastSeen": "2026-09-12"
+      "lastSeen": "2026-09-13"
     },
     {
       "brand": "爷爷不泡茶",
