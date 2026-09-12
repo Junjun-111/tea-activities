@@ -8,32 +8,32 @@
       "startDate": "2026-08-26",
       "endDate": "2026-09-25",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_0.jpg",
-      "description": "奈雪联名yuy玉推出治愈酸奶昔，相关话题全网刷屏热度高",
+      "description": "奈雪的茶联名yuy玉推出治愈酸奶昔，引发全网刷屏关注",
       "ratio": 1.2
     },
     {
       "brand": "喜茶",
-      "title": "喜茶上海开出喜拉朵实验室双新店",
+      "title": "喜茶上海双店同开，推出手工鲜果gelato",
       "category": "茶饮",
       "startDate": "2026-08-21",
       "endDate": "2026-09-20",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_1.jpg",
-      "description": "喜茶于上海开出喜拉朵实验室等新店，推出手工鲜果gelato",
+      "description": "喜茶在上海开出喜拉朵实验室等新店，推出手工鲜果gelato产品",
       "ratio": 1.2
     },
     {
       "brand": "甜啦啦",
-      "title": "甜啦啦荔枝系列上新享七夕限定福利",
+      "title": "甜啦啦荔枝系列上新，享七夕限定福利",
       "category": "茶饮",
       "startDate": "2026-08-14",
       "endDate": "2026-09-13",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_2.jpg",
-      "description": "甜啦啦上线荔枝系列新品，七夕可享13.14元限定福利",
+      "description": "甜啦啦推出荔枝系列新品，七夕期间可享13.14元限定福利",
       "ratio": 1.2
     },
     {
       "brand": "林里LINLEE",
-      "title": "林里LINLEE联名鹅鸭杀上新桃系冰柠茶",
+      "title": "林里LINLEE×鹅鸭杀联名上新桃系冰柠茶",
       "category": "茶饮",
       "startDate": "2026-08-19",
       "endDate": "2026-09-18",
@@ -43,22 +43,22 @@
     },
     {
       "brand": "甜啦啦",
-      "title": "甜啦啦开学季推出清风茉白新品",
+      "title": "甜啦啦推出清风茉白产品锚定开学季",
       "category": "茶饮",
       "startDate": "2026-09-01",
       "endDate": "2026-10-01",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_4.jpg",
-      "description": "开学季甜啦啦推出清风茉白新品，锚定Z世代仪式感消费需求",
+      "description": "开学季期间甜啦啦推出清风茉白产品，契合Z世代仪式感需求",
       "ratio": 1.2
     },
     {
-      "brand": "沪上阿姨",
-      "title": "沪上阿姨联合一米八开展植物基益生菌实验",
+      "brand": "甜啦啦",
+      "title": "甜啦啦真茉莉好茶溯源品质升级",
       "category": "茶饮",
-      "startDate": "2026-08-12",
-      "endDate": "2026-09-11",
+      "startDate": "2026-09-04",
+      "endDate": "2026-10-04",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_5.jpg",
-      "description": "沪上阿姨联合一米八，探索植物基益生菌发酵技术在茶饮的应用",
+      "description": "甜啦啦开展真茉莉茶饮溯源升级，强化产品自然茉莉香品质",
       "ratio": 1.2
     }
   ]
