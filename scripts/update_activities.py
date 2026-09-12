@@ -15,8 +15,8 @@ import urllib.request
 
 ARK_KEY = os.environ["ARK_API_KEY"]
 ARK_RESPONSES = "https://ark.cn-beijing.volces.com/api/v3/responses"
-DOUBAO_MODEL = "doubao-seed-2-0-lite-260428"
-RAW_BASE = "https://raw.githubusercontent.com/Junjun-111/tea-activities/main"
+DOUBAO_MODEL = "doubao-seed-2-1-pro-260628"
+RAW_BASE = "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com"
 
 MOBILE_UA = ("Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
              "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1")

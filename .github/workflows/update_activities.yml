@@ -21,14 +21,21 @@ jobs:
         with:
           python-version: '3.12'
 
-      - run: pip install requests pillow
+      - run: pip install requests pillow oss2
 
-      - name: Run update script
+      - name: Run update script (Shenyang only)
         env:
           ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
+          CITY_KEYS: shenyang
         run: python scripts/update_activities.py
 
-      - name: Commit and push
+      - name: Upload to Aliyun OSS
+        env:
+          ALIYUN_AK: ${{ secrets.ALIYUN_AK }}
+          ALIYUN_SK: ${{ secrets.ALIYUN_SK }}
+        run: python scripts/upload_oss.py . .
+
+      - name: Commit and push (mirror backup)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
