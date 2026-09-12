@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11",
+  "updated_at": "2026-09-12",
   "city": "沈阳",
   "activities": [
     {
@@ -26,6 +26,17 @@
     },
     {
       "brand": "茉莉奶白",
+      "title": "花香茶咖系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-10",
+      "endDate": "",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-12_2.jpg",
+      "description": "全国门店同步上新两款花香茶咖饮品",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-12"
+    },
+    {
+      "brand": "茉莉奶白",
       "title": "「针王与维也纳」「白兰与维也纳」花香茶咖新品上市",
       "category": "茶饮",
       "startDate": "2026-09-10",
@@ -45,6 +56,17 @@
       "description": "推出5款联名蔬果酸奶昔，购联名饮品赠对应联名杯贴等周边",
       "ratio": 1.2,
       "lastSeen": "2026-09-11"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "×美图秀秀联名周边上线",
+      "category": "茶饮",
+      "startDate": "2026-09-09",
+      "endDate": "",
+      "image": "",
+      "description": "辽宁等区域上线联名化妆包、气垫梳周边",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-12"
     },
     {
       "brand": "喜茶",
@@ -78,6 +100,17 @@
       "description": "全国门店上新限定时令冰奶产品，内含23颗岭南石硖龙眼",
       "ratio": 1.2,
       "lastSeen": "2026-09-11"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "橙香玉露系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-04",
+      "endDate": "",
+      "image": "",
+      "description": "全国门店同步上新两款橙香风味饮品",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-12"
     },
     {
       "brand": "爷爷不泡茶",

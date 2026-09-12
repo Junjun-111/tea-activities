@@ -1,104 +1,65 @@
 {
-  "updated_at": "2026-09-11",
+  "updated_at": "2026-09-12",
   "activities": [
     {
-      "brand": "茶百道",
-      "title": "茶百道×《天官赐福》动画限定联名",
-      "category": "茶饮",
-      "startDate": "2026-09-12",
-      "endDate": "",
-      "image": "",
-      "description": "上线联名套餐，随餐附赠双杯纸袋、镭射票组、限定徽章等周边",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "9.11全场无券直享买一送一",
-      "category": "茶饮",
-      "startDate": "2026-09-11",
-      "endDate": "2026-09-11",
-      "image": "",
-      "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减免低价一杯，无需领券，每账号限1次",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
-    },
-    {
-      "brand": "茉莉奶白",
-      "title": "「针王与维也纳」「白兰与维也纳」花香茶咖新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "",
-      "description": "全国门店同步上线两款全新花香茶咖饮品，融入特色花香风味",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
-    },
-    {
       "brand": "奈雪的茶",
-      "title": "奈雪的茶×酷乐潮玩×豚豚崽联名系列",
+      "title": "奈雪联名yuy玉推出治愈酸奶昔",
       "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "",
-      "description": "推出5款联名蔬果酸奶昔，购联名饮品赠对应联名杯贴等周边",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
+      "startDate": "2026-08-26",
+      "endDate": "2026-09-25",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_0.jpg",
+      "description": "奈雪联名yuy玉推出治愈酸奶昔，相关话题全网刷屏热度高",
+      "ratio": 1.2
     },
     {
       "brand": "喜茶",
-      "title": "喜柿多多时令回归及喜柿多多蛋糕上新",
+      "title": "喜茶上海开出喜拉朵实验室双新店",
       "category": "茶饮",
-      "startDate": "2026-09-08",
-      "endDate": "",
-      "image": "",
-      "description": "喜柿多多冰沙回归，同系列蛋糕上新，到店下单组合直享买一送一",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
+      "startDate": "2026-08-21",
+      "endDate": "2026-09-20",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_1.jpg",
+      "description": "喜茶于上海开出喜拉朵实验室等新店，推出手工鲜果gelato",
+      "ratio": 1.2
     },
     {
-      "brand": "瑞幸",
-      "title": "沈阳大悦城限定YOYO联名活动",
-      "category": "咖啡",
-      "startDate": "2026-09-08",
-      "endDate": "",
-      "image": "",
-      "description": "沈阳大悦城门店购指定饮品得YOYO联名杯套，可联动打卡收集周边",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
-    },
-    {
-      "brand": "茶百道",
-      "title": "时令新品「岭南龙眼冰奶」上市",
+      "brand": "甜啦啦",
+      "title": "甜啦啦荔枝系列上新享七夕限定福利",
       "category": "茶饮",
-      "startDate": "2026-09-07",
-      "endDate": "2026-10-17",
-      "image": "https://raw.githubusercontent.com/Junjun-111/tea-activities/main/images/poster_shenyang_2026-09-11_2.jpg",
-      "description": "全国门店上新限定时令冰奶产品，内含23颗岭南石硖龙眼",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
+      "startDate": "2026-08-14",
+      "endDate": "2026-09-13",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_2.jpg",
+      "description": "甜啦啦上线荔枝系列新品，七夕可享13.14元限定福利",
+      "ratio": 1.2
     },
     {
-      "brand": "爷爷不泡茶",
-      "title": "橙香玉露系列新品上市+打卡赠限定收藏护照",
+      "brand": "林里LINLEE",
+      "title": "林里LINLEE联名鹅鸭杀上新桃系冰柠茶",
       "category": "茶饮",
-      "startDate": "2026-09-04",
-      "endDate": "",
-      "image": "",
-      "description": "沈阳门店在内的指定门店购新品可领限定收藏护照，每家限量100本",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
+      "startDate": "2026-08-19",
+      "endDate": "2026-09-18",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_3.jpg",
+      "description": "林里LINLEE联名《鹅鸭杀》推出新品，桃系冰柠茶清爽回归",
+      "ratio": 1.2
     },
     {
-      "brand": "爷爷不泡茶",
-      "title": "限定橙意小卡到店赠活动",
+      "brand": "甜啦啦",
+      "title": "甜啦啦开学季推出清风茉白新品",
       "category": "茶饮",
       "startDate": "2026-09-01",
-      "endDate": "2026-09-30",
-      "image": "",
-      "description": "沈阳门店到店开学生卡可领限定橙意小卡，单店限量100张",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
+      "endDate": "2026-10-01",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_4.jpg",
+      "description": "开学季甜啦啦推出清风茉白新品，锚定Z世代仪式感消费需求",
+      "ratio": 1.2
+    },
+    {
+      "brand": "沪上阿姨",
+      "title": "沪上阿姨联合一米八开展植物基益生菌实验",
+      "category": "茶饮",
+      "startDate": "2026-08-12",
+      "endDate": "2026-09-11",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-12_5.jpg",
+      "description": "沪上阿姨联合一米八，探索植物基益生菌发酵技术在茶饮的应用",
+      "ratio": 1.2
     }
   ]
 }
