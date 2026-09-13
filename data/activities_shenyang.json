@@ -3,6 +3,17 @@
   "city": "沈阳",
   "activities": [
     {
+      "brand": "柠季",
+      "title": "莓果系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-13",
+      "endDate": "",
+      "image": "",
+      "description": "全国上新莓果风味系列，含冰柠茶与可可奶两款",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-13"
+    },
+    {
       "brand": "茶百道",
       "title": "茶百道×《天官赐福》动画限定联名",
       "category": "茶饮",
@@ -12,17 +23,6 @@
       "description": "上线联名套餐，随餐附赠双杯纸袋、镭射票组、限定徽章等周边",
       "ratio": 1.2,
       "lastSeen": "2026-09-11"
-    },
-    {
-      "brand": "柠季",
-      "title": "柠季莓果系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-11",
-      "endDate": "",
-      "image": "",
-      "description": "推出莓果缤纷冰柠茶、莓果可可奶等新品，随单赠限量周边",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-13"
     },
     {
       "brand": "cubic3立方咖啡",
@@ -163,7 +163,18 @@
       "startDate": "2026-09-04",
       "endDate": "",
       "image": "",
-      "description": "推出两款秋日橙香新品，南非鲜橙搭配恩施玉露茶底",
+      "description": "全国上新橙香风味系列新品，含芝士奶盖款与冰茶款",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "开学季主题门店打卡赠礼",
+      "category": "茶饮",
+      "startDate": "2026-09-04",
+      "endDate": "",
+      "image": "",
+      "description": "沈阳参与的主题门店学生购新品可领限量收藏护照",
       "ratio": 1.2,
       "lastSeen": "2026-09-13"
     },
