@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13",
+  "updated_at": "2026-09-14",
   "city": "沈阳",
   "activities": [
     {
@@ -23,6 +23,28 @@
       "description": "上线联名套餐，随餐附赠双杯纸袋、镭射票组、限定徽章等周边",
       "ratio": 1.2,
       "lastSeen": "2026-09-11"
+    },
+    {
+      "brand": "700cc",
+      "title": "赵继伟一日店长活动预热",
+      "category": "茶饮",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-20",
+      "image": "",
+      "description": "沈阳恒隆门店9月20日赵继伟任店长，首发周边与新品",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-14"
+    },
+    {
+      "brand": "cubic3立方咖啡",
+      "title": "秋日季节限定新品上市",
+      "category": "咖啡",
+      "startDate": "2026-09-11",
+      "endDate": "",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-14_3.jpg",
+      "description": "推出秋日季节限定咖啡新品，沈阳门店同步上市",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-14"
     },
     {
       "brand": "cubic3立方咖啡",
@@ -199,6 +221,17 @@
       "description": "沈阳门店到店开学生卡可领限定橙意小卡，单店限量100张",
       "ratio": 1.2,
       "lastSeen": "2026-09-11"
+    },
+    {
+      "brand": "茉莉奶白",
+      "title": "针王葡萄系列新品上新",
+      "category": "茶饮",
+      "startDate": "2026-08-07",
+      "endDate": "",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-14_1.jpg",
+      "description": "与施华洛世奇联名推葡萄风味果奶，配限定周边热卖",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-14"
     }
   ]
 }
