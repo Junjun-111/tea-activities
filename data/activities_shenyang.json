@@ -114,25 +114,14 @@
     },
     {
       "brand": "爷爷不泡茶",
-      "title": "爷爷不泡茶×美图秀秀联名周边上线",
+      "title": "X美图秀秀联名周边上线",
       "category": "茶饮",
       "startDate": "2026-09-09",
       "endDate": "",
       "image": "",
-      "description": "9月9日起上线联名化妆包、气垫梳，辽宁区域门店可购",
+      "description": "推出联名化妆包、气垫梳周边，辽宁沈阳门店可购",
       "ratio": 1.2,
-      "lastSeen": "2026-09-13"
-    },
-    {
-      "brand": "爷爷不泡茶",
-      "title": "×美图秀秀联名周边活动",
-      "category": "茶饮",
-      "startDate": "2026-09-09",
-      "endDate": "",
-      "image": "",
-      "description": "推出联名化妆包、气垫梳周边，辽宁属于可购买区域范围",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-14"
     },
     {
       "brand": "爷爷不泡茶",
@@ -185,9 +174,9 @@
       "startDate": "2026-09-04",
       "endDate": "",
       "image": "",
-      "description": "全国上新橙香风味系列新品，含芝士奶盖款与冰茶款",
+      "description": "全国上新两款秋季橙香主题茶饮，沈阳门店同步参与",
       "ratio": 1.2,
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-14"
     },
     {
       "brand": "爷爷不泡茶",
@@ -230,6 +219,17 @@
       "endDate": "",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-14_1.jpg",
       "description": "与施华洛世奇联名推葡萄风味果奶，配限定周边热卖",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-14"
+    },
+    {
+      "brand": "柠季",
+      "title": "×大力水手联名系列上市",
+      "category": "茶饮",
+      "startDate": "2026-08-06",
+      "endDate": "",
+      "image": "",
+      "description": "联名推出大力捶奇迹果蔬杯，配套主题包装周边，沈阳门店参与",
       "ratio": 1.2,
       "lastSeen": "2026-09-14"
     }

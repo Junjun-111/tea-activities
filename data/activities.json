@@ -2,13 +2,23 @@
   "updated_at": "2026-09-14",
   "activities": [
     {
-      "brand": "奈雪的茶",
-      "title": "奈雪联名yuy玉推出治愈酸奶昔",
+      "brand": "林里LINLEE",
+      "title": "林里LINLEE联名鹅鸭杀桃系冰柠茶上新",
       "category": "茶饮",
-      "startDate": "2026-08-26",
-      "endDate": "2026-09-25",
+      "startDate": "2026-08-19",
+      "endDate": "2026-09-18",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-14_0.jpg",
-      "description": "联名yuy玉推出治愈酸奶昔产品，引发全网刷屏热度",
+      "description": "联名《鹅鸭杀》推出桃系冰柠茶，打造天选CP主题活动",
+      "ratio": 1.2
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "甜啦啦荔枝系列上新享七夕限定福利",
+      "category": "茶饮",
+      "startDate": "2026-08-14",
+      "endDate": "2026-09-13",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-14_1.jpg",
+      "description": "推出荔枝系列饮品，七夕期间可享13.14元限定福利",
       "ratio": 1.2
     },
     {
@@ -17,28 +27,18 @@
       "category": "茶饮",
       "startDate": "2026-08-21",
       "endDate": "2026-09-20",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-14_1.jpg",
-      "description": "上海双店同开，推出手工鲜果gelato相关产品",
-      "ratio": 1.2
-    },
-    {
-      "brand": "甜啦啦",
-      "title": "甜啦啦荔枝系列七夕上新享限定福利",
-      "category": "茶饮",
-      "startDate": "2026-08-14",
-      "endDate": "2026-09-13",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-14_2.jpg",
-      "description": "七夕推出荔枝系列新品，可享13.14元限定优惠福利",
+      "description": "上海双店同开，新店推出手工鲜果gelato相关产品",
       "ratio": 1.2
     },
     {
-      "brand": "林里LINLEE",
-      "title": "林里LINLEE联名《鹅鸭杀》上新桃系冰柠茶",
+      "brand": "奈雪的茶",
+      "title": "奈雪联名yuy玉推出治愈酸奶昔产品",
       "category": "茶饮",
-      "startDate": "2026-08-19",
-      "endDate": "2026-09-18",
+      "startDate": "2026-08-26",
+      "endDate": "2026-09-25",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-14_3.jpg",
-      "description": "联名《鹅鸭杀》推出桃系冰柠茶新品，主打清爽口感",
+      "description": "联名yuy玉推出治愈酸奶昔，相关话题全网刷屏热度高",
       "ratio": 1.2
     },
     {
@@ -52,13 +52,13 @@
       "ratio": 1.2
     },
     {
-      "brand": "沪上阿姨",
-      "title": "沪上阿姨联合一米八推植物基益生菌饮品",
+      "brand": "甜啦啦",
+      "title": "甜啦啦开展真茉莉好茶溯源升级活动",
       "category": "茶饮",
-      "startDate": "2026-08-12",
-      "endDate": "2026-09-11",
+      "startDate": "2026-09-04",
+      "endDate": "2026-10-04",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-14_5.jpg",
-      "description": "跨界合作一米八，应用植物基益生菌发酵技术开发新品",
+      "description": "升级茉莉茶底原料品质，推出真茉莉自然香系列好茶",
       "ratio": 1.2
     }
   ]
