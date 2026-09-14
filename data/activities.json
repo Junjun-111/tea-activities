@@ -3,62 +3,62 @@
   "activities": [
     {
       "brand": "奈雪的茶",
-      "title": "奈雪联名yuy玉推出治愈酸奶昔",
+      "title": "奈雪的茶推出咖啡+佛卡夏组合产品",
       "category": "茶饮",
-      "startDate": "2026-08-26",
-      "endDate": "2026-09-25",
+      "startDate": "2026-09-11",
+      "endDate": "2026-10-11",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-15_0.jpg",
-      "description": "联名yuy玉推出治愈酸奶昔，相关内容全网刷屏引发关注",
-      "ratio": 1.2
-    },
-    {
-      "brand": "喜茶",
-      "title": "喜茶上海开出喜拉朵实验室双新店",
-      "category": "茶饮",
-      "startDate": "2026-08-21",
-      "endDate": "2026-09-20",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-15_1.jpg",
-      "description": "上海双店同开，带来手工鲜果gelato产品体验",
+      "description": "门店月月上新咖啡搭配佛卡夏产品，市场反响良好",
       "ratio": 1.2
     },
     {
       "brand": "甜啦啦",
-      "title": "甜啦啦荔枝系列上新引爆粉色经济",
-      "category": "茶饮",
-      "startDate": "2026-08-21",
-      "endDate": "2026-09-20",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-15_2.jpg",
-      "description": "推出荔枝系列饮品，七夕节点上线首周销量达70万杯",
-      "ratio": 1.2
-    },
-    {
-      "brand": "林里LINLEE",
-      "title": "林里LINLEE联名鹅鸭杀上新桃系冰柠茶",
-      "category": "茶饮",
-      "startDate": "2026-08-19",
-      "endDate": "2026-09-18",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-15_3.jpg",
-      "description": "与《鹅鸭杀》开展联名，桃系冰柠茶产品清爽回归",
-      "ratio": 1.2
-    },
-    {
-      "brand": "甜啦啦",
-      "title": "甜啦啦推清风茉白布局开学季营销",
+      "title": "甜啦啦推出“清风茉白”产品开学季活动",
       "category": "茶饮",
       "startDate": "2026-09-01",
       "endDate": "2026-10-01",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-15_4.jpg",
-      "description": "开学季推出清风茉白产品，锚定Z世代仪式感消费需求",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-15_1.jpg",
+      "description": "开学季推出清风茉白新品，瞄准Z世代消费需求",
       "ratio": 1.2
     },
     {
       "brand": "奈雪的茶",
-      "title": "奈雪推出咖啡+佛卡夏组合产品",
-      "category": "咖啡",
-      "startDate": "2026-09-11",
-      "endDate": "2026-10-11",
+      "title": "奈雪联名yuy玉推出治愈酸奶昔",
+      "category": "茶饮",
+      "startDate": "2026-08-26",
+      "endDate": "2026-09-25",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-15_2.jpg",
+      "description": "联名yuy玉推出治愈酸奶昔产品，上线后全网刷屏",
+      "ratio": 1.2
+    },
+    {
+      "brand": "喜茶",
+      "title": "喜茶上海开出喜拉朵实验室系列新店",
+      "category": "茶饮",
+      "startDate": "2026-08-21",
+      "endDate": "2026-09-20",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-15_3.jpg",
+      "description": "上海双店同开，推出手工鲜果gelato等新产品",
+      "ratio": 1.2
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "甜啦啦推出荔枝系列七夕营销活动",
+      "category": "茶饮",
+      "startDate": "2026-08-21",
+      "endDate": "2026-09-20",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-15_4.jpg",
+      "description": "荔枝系列饮品七夕上市，首周销量达70万杯",
+      "ratio": 1.2
+    },
+    {
+      "brand": "林里LINLEE",
+      "title": "林里LINLEE联名《鹅鸭杀》上新桃系冰柠茶",
+      "category": "茶饮",
+      "startDate": "2026-08-19",
+      "endDate": "2026-09-18",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_national_2026-09-15_5.jpg",
-      "description": "高频上新，咖啡搭配佛卡夏的组合成为门店热门产品",
+      "description": "联名《鹅鸭杀》推出桃系冰柠茶，打造天选CP主题",
       "ratio": 1.2
     }
   ]

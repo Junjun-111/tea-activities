@@ -15,6 +15,17 @@
     },
     {
       "brand": "cubic3立方咖啡",
+      "title": "秋日季节限定咖啡新品上市",
+      "category": "咖啡",
+      "startDate": "2026-09-11",
+      "endDate": "",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-15_3.jpg",
+      "description": "推出秋季限定咖啡饮品，主打丝滑入秋的季节风味",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-15"
+    },
+    {
+      "brand": "cubic3立方咖啡",
       "title": "秋季季节限定新品预告",
       "category": "咖啡",
       "startDate": "2026-09-11",
@@ -36,35 +47,13 @@
       "lastSeen": "2026-09-14"
     },
     {
-      "brand": "cubic3立方咖啡",
-      "title": "秋日季节限定新品上市",
-      "category": "咖啡",
-      "startDate": "2026-09-11",
-      "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-14_3.jpg",
-      "description": "推出秋日季节限定咖啡新品，沈阳门店同步上市",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-14"
-    },
-    {
-      "brand": "cubic3立方咖啡",
-      "title": "入秋季节限定咖啡系列上市",
-      "category": "咖啡",
-      "startDate": "2026-09-11",
-      "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-13_3.jpg",
-      "description": "推出秋季限定款咖啡产品，主打适配入秋的丝滑风味",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-13"
-    },
-    {
       "brand": "茉莉奶白",
       "title": "花香茶咖2.0系列新品上市",
       "category": "茶饮",
       "startDate": "2026-09-10",
       "endDate": "",
-      "image": "",
-      "description": "全国门店同步上线两款融合东方花香的茶咖新品",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-15_2.jpg",
+      "description": "两款花茶搭配维也纳咖啡的新品，全国门店同步上架",
       "ratio": 1.2,
       "lastSeen": "2026-09-15"
     },
@@ -92,14 +81,14 @@
     },
     {
       "brand": "爷爷不泡茶",
-      "title": "爷爷不泡茶×美图秀秀联名周边上线",
+      "title": "×美图秀秀联名周边上线",
       "category": "茶饮",
       "startDate": "2026-09-09",
       "endDate": "",
       "image": "",
-      "description": "上线联名化妆包、气垫梳周边，辽宁黑吉辽蒙在可购范围",
+      "description": "联名推出化妆包、气垫梳周边，黑吉辽蒙门店可参与",
       "ratio": 1.2,
-      "lastSeen": "2026-09-14"
+      "lastSeen": "2026-09-15"
     },
     {
       "brand": "柠季",
@@ -125,12 +114,12 @@
     },
     {
       "brand": "爷爷不泡茶",
-      "title": "橙香玉露系列新品上市",
+      "title": "橙香玉露系列秋日新品上市",
       "category": "茶饮",
       "startDate": "2026-09-04",
       "endDate": "",
       "image": "",
-      "description": "全国门店上新楚韵风味橙香玉露系列开学季特调",
+      "description": "两款以南非鲜橙搭配恩施玉露茶底的秋日新品",
       "ratio": 1.2,
       "lastSeen": "2026-09-15"
     },
