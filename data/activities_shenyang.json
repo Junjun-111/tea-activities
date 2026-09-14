@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14",
+  "updated_at": "2026-09-15",
   "city": "沈阳",
   "activities": [
     {
@@ -12,17 +12,6 @@
       "description": "公布新品三条线索，谜底将于9月15日正式揭晓",
       "ratio": 1.2,
       "lastSeen": "2026-09-14"
-    },
-    {
-      "brand": "茶百道",
-      "title": "茶百道×《天官赐福》动画限定联名",
-      "category": "茶饮",
-      "startDate": "2026-09-12",
-      "endDate": "",
-      "image": "",
-      "description": "上线联名套餐，随餐附赠双杯纸袋、镭射票组、限定徽章等周边",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
     },
     {
       "brand": "cubic3立方咖啡",
@@ -69,15 +58,15 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "brand": "霸王茶姬",
-      "title": "9.11全场无券直享买一送一",
+      "brand": "茉莉奶白",
+      "title": "花香茶咖2.0系列新品上市",
       "category": "茶饮",
-      "startDate": "2026-09-11",
-      "endDate": "2026-09-11",
+      "startDate": "2026-09-10",
+      "endDate": "",
       "image": "",
-      "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减免低价一杯，无需领券，每账号限1次",
+      "description": "全国门店同步上线两款融合东方花香的茶咖新品",
       "ratio": 1.2,
-      "lastSeen": "2026-09-11"
+      "lastSeen": "2026-09-15"
     },
     {
       "brand": "柠季",
@@ -102,39 +91,6 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "brand": "茉莉奶白",
-      "title": "花香茶咖2.0系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-13_2.jpg",
-      "description": "推出两款花茶与咖啡结合的新品，搭配维也纳奶油等配料",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-13"
-    },
-    {
-      "brand": "茉莉奶白",
-      "title": "「针王与维也纳」「白兰与维也纳」花香茶咖新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "",
-      "description": "全国门店同步上线两款全新花香茶咖饮品，融入特色花香风味",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪的茶×酷乐潮玩×豚豚崽联名系列",
-      "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "",
-      "description": "推出5款联名蔬果酸奶昔，购联名饮品赠对应联名杯贴等周边",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
-    },
-    {
       "brand": "爷爷不泡茶",
       "title": "爷爷不泡茶×美图秀秀联名周边上线",
       "category": "茶饮",
@@ -144,6 +100,17 @@
       "description": "上线联名化妆包、气垫梳周边，辽宁黑吉辽蒙在可购范围",
       "ratio": 1.2,
       "lastSeen": "2026-09-14"
+    },
+    {
+      "brand": "柠季",
+      "title": "×大力水手联名系列上新",
+      "category": "茶饮",
+      "startDate": "2026-09-08",
+      "endDate": "",
+      "image": "",
+      "description": "全国门店上线联名包装港式冻柠茶等联名产品",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-15"
     },
     {
       "brand": "爷爷不泡茶",
@@ -157,48 +124,15 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "brand": "喜茶",
-      "title": "喜柿多多时令回归及喜柿多多蛋糕上新",
-      "category": "茶饮",
-      "startDate": "2026-09-08",
-      "endDate": "",
-      "image": "",
-      "description": "喜柿多多冰沙回归，同系列蛋糕上新，到店下单组合直享买一送一",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
-    },
-    {
-      "brand": "瑞幸",
-      "title": "沈阳大悦城限定YOYO联名活动",
-      "category": "咖啡",
-      "startDate": "2026-09-08",
-      "endDate": "",
-      "image": "",
-      "description": "沈阳大悦城门店购指定饮品得YOYO联名杯套，可联动打卡收集周边",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
-    },
-    {
-      "brand": "茶百道",
-      "title": "时令新品「岭南龙眼冰奶」上市",
-      "category": "茶饮",
-      "startDate": "2026-09-07",
-      "endDate": "2026-10-17",
-      "image": "https://raw.githubusercontent.com/Junjun-111/tea-activities/main/images/poster_shenyang_2026-09-11_2.jpg",
-      "description": "全国门店上新限定时令冰奶产品，内含23颗岭南石硖龙眼",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
-    },
-    {
       "brand": "爷爷不泡茶",
       "title": "橙香玉露系列新品上市",
       "category": "茶饮",
       "startDate": "2026-09-04",
       "endDate": "",
       "image": "",
-      "description": "全国上新两款秋季橙香主题茶饮，沈阳门店同步参与",
+      "description": "全国门店上新楚韵风味橙香玉露系列开学季特调",
       "ratio": 1.2,
-      "lastSeen": "2026-09-14"
+      "lastSeen": "2026-09-15"
     },
     {
       "brand": "爷爷不泡茶",
@@ -212,28 +146,6 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "brand": "爷爷不泡茶",
-      "title": "橙香玉露系列新品上市+打卡赠限定收藏护照",
-      "category": "茶饮",
-      "startDate": "2026-09-04",
-      "endDate": "",
-      "image": "",
-      "description": "沈阳门店在内的指定门店购新品可领限定收藏护照，每家限量100本",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
-    },
-    {
-      "brand": "爷爷不泡茶",
-      "title": "限定橙意小卡到店赠活动",
-      "category": "茶饮",
-      "startDate": "2026-09-01",
-      "endDate": "2026-09-30",
-      "image": "",
-      "description": "沈阳门店到店开学生卡可领限定橙意小卡，单店限量100张",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-11"
-    },
-    {
       "brand": "茉莉奶白",
       "title": "针王葡萄系列新品上新",
       "category": "茶饮",
@@ -241,17 +153,6 @@
       "endDate": "",
       "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-14_1.jpg",
       "description": "与施华洛世奇联名推葡萄风味果奶，配限定周边热卖",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-14"
-    },
-    {
-      "brand": "柠季",
-      "title": "×大力水手联名系列上市",
-      "category": "茶饮",
-      "startDate": "2026-08-06",
-      "endDate": "",
-      "image": "",
-      "description": "联名推出大力捶奇迹果蔬杯，配套主题包装周边，沈阳门店参与",
       "ratio": 1.2,
       "lastSeen": "2026-09-14"
     }
