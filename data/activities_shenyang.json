@@ -3,15 +3,15 @@
   "city": "沈阳",
   "activities": [
     {
-      "brand": "柠季",
-      "title": "莓果系列新品上市",
+      "brand": "700cc",
+      "title": "新品预热线索公布",
       "category": "茶饮",
-      "startDate": "2026-09-13",
-      "endDate": "",
+      "startDate": "2026-09-12",
+      "endDate": "2026-09-15",
       "image": "",
-      "description": "全国上新莓果风味系列，含冰柠茶与可可奶两款",
+      "description": "公布新品三条线索，谜底将于9月15日正式揭晓",
       "ratio": 1.2,
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-14"
     },
     {
       "brand": "茶百道",
@@ -23,6 +23,17 @@
       "description": "上线联名套餐，随餐附赠双杯纸袋、镭射票组、限定徽章等周边",
       "ratio": 1.2,
       "lastSeen": "2026-09-11"
+    },
+    {
+      "brand": "cubic3立方咖啡",
+      "title": "秋季季节限定新品预告",
+      "category": "咖啡",
+      "startDate": "2026-09-11",
+      "endDate": "",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-14_4.jpg",
+      "description": "推出秋季季节限定咖啡新品，适配入秋风味",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-14"
     },
     {
       "brand": "700cc",
@@ -67,6 +78,17 @@
       "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减免低价一杯，无需领券，每账号限1次",
       "ratio": 1.2,
       "lastSeen": "2026-09-11"
+    },
+    {
+      "brand": "柠季",
+      "title": "莓果系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-10",
+      "endDate": "",
+      "image": "",
+      "description": "推出莓果缤纷冰柠茶、莓果可可冰奶两款莓果风味新品",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-14"
     },
     {
       "brand": "茉莉奶白",
@@ -114,12 +136,12 @@
     },
     {
       "brand": "爷爷不泡茶",
-      "title": "X美图秀秀联名周边上线",
+      "title": "爷爷不泡茶×美图秀秀联名周边上线",
       "category": "茶饮",
       "startDate": "2026-09-09",
       "endDate": "",
       "image": "",
-      "description": "推出联名化妆包、气垫梳周边，辽宁沈阳门店可购",
+      "description": "上线联名化妆包、气垫梳周边，辽宁黑吉辽蒙在可购范围",
       "ratio": 1.2,
       "lastSeen": "2026-09-14"
     },
