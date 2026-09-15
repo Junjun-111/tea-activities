@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15",
+  "updated_at": "2026-09-16",
   "city": "沈阳",
   "activities": [
     {
@@ -12,6 +12,17 @@
       "description": "沈阳皇城恒隆广场店办一日店长活动，首发限定周边、推新品",
       "ratio": 1.2,
       "lastSeen": "2026-09-15"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "泰奶珍珠冰泰式奶香限定新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-14",
+      "endDate": "",
+      "image": "",
+      "description": "泰式红茶搭配奶感冰沙裹国王珍珠，呈现南洋风味",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-16"
     },
     {
       "brand": "爷爷不泡茶",
@@ -36,6 +47,17 @@
       "lastSeen": "2026-09-14"
     },
     {
+      "brand": "700cc",
+      "title": "赵继伟一日店长沈阳快闪活动",
+      "category": "茶饮",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-20",
+      "image": "",
+      "description": "沈阳中街恒隆店将办一日店长活动，首发限量周边",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-16"
+    },
+    {
       "brand": "柠季",
       "title": "莓果系列新品上市",
       "category": "茶饮",
@@ -58,17 +80,6 @@
       "lastSeen": "2026-09-15"
     },
     {
-      "brand": "700cc",
-      "title": "沈阳中街赵继伟一日店长活动官宣",
-      "category": "茶饮",
-      "startDate": "2026-09-11",
-      "endDate": "2026-09-20",
-      "image": "",
-      "description": "官宣9月20日赵继伟任沈阳中街门店一日店长，发新品及周边",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-15"
-    },
-    {
       "brand": "cubic3立方咖啡",
       "title": "秋季季节限定新品预告",
       "category": "咖啡",
@@ -80,15 +91,15 @@
       "lastSeen": "2026-09-14"
     },
     {
-      "brand": "700cc",
-      "title": "赵继伟一日店长活动预热",
+      "brand": "茉莉奶白",
+      "title": "针王与维也纳、白兰与维也纳新品上市",
       "category": "茶饮",
-      "startDate": "2026-09-11",
-      "endDate": "2026-09-20",
-      "image": "",
-      "description": "沈阳恒隆门店9月20日赵继伟任店长，首发周边与新品",
+      "startDate": "2026-09-10",
+      "endDate": "",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-16_0.jpg",
+      "description": "两款花香茶咖新品全国同步上线",
       "ratio": 1.2,
-      "lastSeen": "2026-09-14"
+      "lastSeen": "2026-09-16"
     },
     {
       "brand": "茉莉奶白",
@@ -125,14 +136,14 @@
     },
     {
       "brand": "爷爷不泡茶",
-      "title": "×美图秀秀联名周边上线",
+      "title": "美图秀秀联名周边上线",
       "category": "茶饮",
       "startDate": "2026-09-09",
       "endDate": "",
       "image": "",
-      "description": "联名推出化妆包、气垫梳周边，黑吉辽蒙门店可参与",
+      "description": "联名推出化妆包、气垫梳周边，辽宁区域门店可获取",
       "ratio": 1.2,
-      "lastSeen": "2026-09-15"
+      "lastSeen": "2026-09-16"
     },
     {
       "brand": "柠季",
