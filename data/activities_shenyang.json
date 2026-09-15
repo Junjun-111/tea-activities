@@ -14,6 +14,17 @@
       "lastSeen": "2026-09-15"
     },
     {
+      "brand": "爷爷不泡茶",
+      "title": "×花西子联名活动上线",
+      "category": "茶饮",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-29",
+      "image": "",
+      "description": "与花西子跨界联动，全国门店上线联名产品及主题包装",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-15"
+    },
+    {
       "brand": "700cc",
       "title": "新品预热线索公布",
       "category": "茶饮",
@@ -25,6 +36,28 @@
       "lastSeen": "2026-09-14"
     },
     {
+      "brand": "柠季",
+      "title": "莓果系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-11",
+      "endDate": "",
+      "image": "",
+      "description": "全国门店上线莓果口味柠檬茶及可可奶新品，线下门店直售",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-15"
+    },
+    {
+      "brand": "cubic3立方咖啡",
+      "title": "秋季季节限定咖啡系列上市",
+      "category": "咖啡",
+      "startDate": "2026-09-11",
+      "endDate": "",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-15_4.jpg",
+      "description": "沈阳门店同步上线秋季限定咖啡饮品，主打秋日丝滑风味",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-15"
+    },
+    {
       "brand": "700cc",
       "title": "沈阳中街赵继伟一日店长活动官宣",
       "category": "茶饮",
@@ -32,17 +65,6 @@
       "endDate": "2026-09-20",
       "image": "",
       "description": "官宣9月20日赵继伟任沈阳中街门店一日店长，发新品及周边",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-15"
-    },
-    {
-      "brand": "cubic3立方咖啡",
-      "title": "秋日季节限定咖啡新品上市",
-      "category": "咖啡",
-      "startDate": "2026-09-11",
-      "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-15_3.jpg",
-      "description": "推出秋季限定咖啡饮品，主打丝滑入秋的季节风味",
       "ratio": 1.2,
       "lastSeen": "2026-09-15"
     },
@@ -70,6 +92,17 @@
     },
     {
       "brand": "茉莉奶白",
+      "title": "针王与维也纳等两款花香茶咖新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-10",
+      "endDate": "",
+      "image": "",
+      "description": "全国上线两款花香茶咖新品，9月10日持教师资格证可免费领新品",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-15"
+    },
+    {
+      "brand": "茉莉奶白",
       "title": "花香茶咖2.0系列新品上市",
       "category": "茶饮",
       "startDate": "2026-09-10",
@@ -78,17 +111,6 @@
       "description": "两款花茶搭配维也纳咖啡的新品，全国门店同步上架",
       "ratio": 1.2,
       "lastSeen": "2026-09-15"
-    },
-    {
-      "brand": "柠季",
-      "title": "莓果系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "",
-      "description": "推出莓果缤纷冰柠茶、莓果可可冰奶两款莓果风味新品",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-14"
     },
     {
       "brand": "茉莉奶白",
@@ -136,12 +158,12 @@
     },
     {
       "brand": "爷爷不泡茶",
-      "title": "橙香玉露系列上新",
+      "title": "橙香玉露系列新品上市",
       "category": "茶饮",
       "startDate": "2026-09-04",
       "endDate": "",
       "image": "",
-      "description": "推出秋日橙香主题新品，含奶油玉露、玉露冰茶两款",
+      "description": "全国上新橙香系列新品，主题门店打卡可领开学护照集章兑新品",
       "ratio": 1.2,
       "lastSeen": "2026-09-15"
     },
