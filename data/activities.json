@@ -2,75 +2,30 @@
   "updated_at": "2026-09-17",
   "activities": [
     {
-      "brand": "喜茶",
-      "title": "红菜头美颜瓶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "喜茶",
-      "title": "去火纤体瓶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-15",
-      "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "喜茶",
-      "title": "喜茶×Hello Kitty联名",
-      "category": "茶饮",
-      "startDate": "2026-09-17",
-      "endDate": "",
-      "description": "推不老莓养眼杯及Hello Kitty造型银色茶碗等限定周边",
-      "lastSeen": "2026-09-17"
-    },
-    {
       "brand": "奈雪的茶",
       "title": "奈雪×明日方舟终末地联动",
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "联动饮品套餐及瓶装饮料，含联名周边",
+      "description": "与游戏明日方舟终末地联动，推出饮品套餐及联名瓶装饮料",
       "lastSeen": "2026-09-17"
     },
     {
-      "brand": "奈雪的茶",
-      "title": "泰橘双品焕新",
+      "brand": "喜茶",
+      "title": "喜茶Chiikawa联名活动",
       "category": "茶饮",
-      "startDate": "2026-09-16",
+      "startDate": "2026-09-17",
       "endDate": "",
-      "description": "小橙瓶升级回归，全新果奶同步亮相",
+      "description": "联名日本动漫Chiikawa，发售限量联名周边，门店火爆",
       "lastSeen": "2026-09-17"
     },
     {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×CLOT联名抹茶系列",
+      "brand": "蜜雪冰城",
+      "title": "草莓奶麻薯新品上架",
       "category": "茶饮",
-      "startDate": "2026-09-16",
+      "startDate": "2026-09-17",
       "endDate": "",
-      "description": "三款抹茶新品，联名包材、中奖杯及五款主题周边",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "茶百道",
-      "title": "茶百道×天官赐福动画联名",
-      "category": "茶饮",
-      "startDate": "2026-09-12",
-      "endDate": "",
-      "description": "四款限定包装与五款周边，含镭射票、徽章、杯套贴纸",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "茶百道",
-      "title": "柠檬巴巴露亚拿铁上新",
-      "category": "咖啡",
-      "startDate": "2026-09-11",
-      "endDate": "",
-      "description": "灵感源自法式巴巴露亚甜品，可喝的柠檬液体蛋糕",
+      "description": "新品草莓奶麻薯上架，主打草莓与麻薯口感",
       "lastSeen": "2026-09-17"
     },
     {
@@ -79,16 +34,79 @@
       "category": "茶饮",
       "startDate": "2026-09-17",
       "endDate": "",
-      "description": "仅用鲜牛奶制作，可选冷牛奶或加热温牛奶",
+      "description": "小程序上新纯鲜牛奶饮品，可选冷热两种",
       "lastSeen": "2026-09-17"
     },
     {
-      "brand": "甜啦啦",
-      "title": "清风茉白鲜奶茶茶底升级",
+      "brand": "喜茶",
+      "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
-      "startDate": "2026-09-04",
+      "startDate": "2026-09-16",
       "endDate": "",
-      "description": "茉莉茶底全线升级，首周售出超80万杯",
+      "description": "超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪泰橘双品焕新",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "小橙瓶升级回归，全新果奶同步亮相",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬×CLOT抹茶系列",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "联名CLOT推三款抹茶新品，含联名包材及五款主题周边",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "喜茶",
+      "title": "去火·纤体瓶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-15",
+      "endDate": "",
+      "description": "超级植物茶系列第二款，羽衣甘蓝配苦瓜，100大卡",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "喜茶",
+      "title": "椰椰芒芒Pro上新+买一送一",
+      "category": "茶饮",
+      "startDate": "2026-09-15",
+      "endDate": "",
+      "description": "9月15日上新椰椰芒芒Pro（芒果果肉加倍、椰乳加量），当天门店买一送一",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "茶百道",
+      "title": "茶百道×天官赐福动画联名",
+      "category": "茶饮",
+      "startDate": "2026-09-12",
+      "endDate": "",
+      "description": "联名天官赐福动画，推出四款限定包装与五款周边",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "茶百道",
+      "title": "柠檬巴巴露亚拿铁上新",
+      "category": "咖啡",
+      "startDate": "2026-09-11",
+      "endDate": "",
+      "description": "灵感源自法式巴巴露亚甜品，柠檬液体蛋糕风味",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "蜜雪冰城",
+      "title": "蜜雪冰城×盗墓笔记联名",
+      "category": "茶饮",
+      "startDate": "2026-09-11",
+      "endDate": "",
+      "description": "与盗墓笔记IP联名活动，引发消费者期待",
       "lastSeen": "2026-09-17"
     },
     {
@@ -101,12 +119,21 @@
       "lastSeen": "2026-09-17"
     },
     {
-      "brand": "喜茶",
-      "title": "椰椰芒芒Pro上新+买一送一",
+      "brand": "古茗",
+      "title": "现打啤酒系列试点上线",
       "category": "茶饮",
-      "startDate": "2026-09-15",
+      "startDate": "2026-09-05",
       "endDate": "",
-      "description": "9月15日上新椰椰芒芒Pro（芒果果肉加倍、椰乳加量），当天门店买一送一",
+      "description": "杭州湖滨银泰门店试点，推经典生啤与三重柚拉格",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "清风茉白鲜奶茶茶底升级",
+      "category": "茶饮",
+      "startDate": "2026-09-04",
+      "endDate": "",
+      "description": "茉莉茶底全线升级，首周售出超80万杯",
       "lastSeen": "2026-09-17"
     }
   ]
