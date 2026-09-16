@@ -301,6 +301,50 @@ def bing_search(query, n=3):
     return links
 
 
+def strip_site_tail(text):
+    """去掉搜索摘要里的站点名/日期尾巴（免费模式用，0 成本）"""
+    t = re.sub(r"\s+", "", str(text))
+    # 还原 HTML 实体（搜索结果里常见的 &quot; &amp; 等）
+    t = (t.replace("&quot;", "\"").replace("&#39;", "'")
+          .replace("&amp;", "&").replace("&nbsp;", "").replace("&lt;", "<")
+          .replace("&gt;", ">"))
+    t = re.sub(
+        r"(中国咖啡网|咖啡网|饮品报|搜狐|网易|新浪|腾讯|百家号|知乎|小红书|微博|B站|"
+        r"今日头条|凤凰网|东方财富|界面新闻|36氪|观点网|壹览商业|哔哩哔哩|bilibili|"
+        r"抖音|快手|豆瓣|雪球|和讯|同花顺|赢商网|联商网|红餐网|餐企老板内参).*$", "", t)
+    # 去掉开头的微博话题标签（#海航蜜雪冰城联名活动#）
+    t = re.sub(r"^(#[^#]{0,20}#)+", "", t)
+    t = re.sub(r"(\d{4}[-/年])?\d{1,2}月\d{1,2}日更新.*$", "", t)
+    t = re.sub(r"\d{4}-\d{2}-\d{2}.*$", "", t)
+    t = re.sub(r"\d{1,2}月\d{1,2}日更新.*$", "", t)
+    return t.strip("|-—·。）)】（）()［］ 　")
+
+
+def cap_title(text, limit=25):
+    """截到 limit 字以内，尽量在标点处断开，不要在词中间切"""
+    t = text.strip()
+    if len(t) <= limit:
+        return t
+    head = t[:limit]
+    for sep in ("，", "、", "：", ":", "（", "(", " ", "「"):
+        i = head.rfind(sep)
+        if i >= 8:
+            return head[:i]
+    return head
+
+
+def pick_activity_title(title, snippet, brand):
+    """从「标题 + 摘要」里挑最像活动名的一段：优先含品牌名的那段，
+    标题里没有品牌就用摘要（免费模式常见的标题是站点名或日期）"""
+    t = strip_site_tail(title)
+    s = strip_site_tail(snippet)
+    if brand and brand in t and len(t) >= 4:
+        return cap_title(t)
+    if brand and brand in s and len(s) >= 4:
+        return cap_title(s)
+    return cap_title(t or s)
+
+
 def build_city_search_prompt(today, province, city_name, city_key, cutoff_days,
                              brands_text):
     """城市搜索用的完整提示词（独立成函数，方便直接打印/调试）。
@@ -471,9 +515,14 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
             return False
         if a == b:
             return True
+        # 一条标题包含另一条（如「霸王茶姬×CLOT联名」和「霸王茶姬携手CLOT推出联名系列」）也算同一活动
+        if a in b or b in a:
+            return True
         inter = len(set(a) & set(b))
         union = len(set(a) | set(b))
-        return union > 0 and inter / union >= 0.6
+        # 阈值从 0.6 放宽到 0.45：免费模式抓到的多条同活动新闻标题差异较大，
+        # 太严会同一个活动重复好几条
+        return union > 0 and inter / union >= 0.45
 
     try:
         with open(f"data/activities_{city['key']}.json", "r", encoding="utf-8") as f:
@@ -686,8 +735,8 @@ def fetch_free_city_activities(city, news, today, cutoff_days=7):
     items = []
     seen = set()
 
-    def add(brand, title, start, desc):
-        t = re.sub(r"\s+", "", str(title))[:25]
+    def add(brand, title, snippet, start, desc):
+        t = pick_activity_title(title, snippet, brand)
         if not t or t in seen:
             return
         seen.add(t)
@@ -697,12 +746,12 @@ def fetch_free_city_activities(city, news, today, cutoff_days=7):
             "category": "咖啡" if brand in COFFEE_BRANDS else "茶饮",
             "startDate": start,
             "endDate": "",
-            "description": re.sub(r"\s+", "", str(desc))[:40],
+            "description": strip_site_tail(desc)[:40],
             "lastSeen": today,
         })
 
-    def scan(text, date_hint):
-        text = str(text)
+    def scan(title, snippet, date_hint=None):
+        text = f"{title} {snippet}".strip()
         if not text or any(k in text for k in NON_ACT_KEYWORDS):
             return
         if any(k in text for k in NOISE_KEYWORDS):
@@ -719,7 +768,8 @@ def fetch_free_city_activities(city, news, today, cutoff_days=7):
                 continue
             if any(k in brand for k in NON_BRAND_KEYWORDS):
                 continue
-            add(brand, text, found or date_hint or today, text)
+            add(brand, str(title), str(snippet), found or date_hint or today,
+                text)
             return  # 一段文本只归给第一个命中的品牌
 
     # ① 饮品报最新文章标题（带发布日期，用它当活动开始日期）
@@ -728,7 +778,7 @@ def fetch_free_city_activities(city, news, today, cutoff_days=7):
         if not title:
             continue
         d = normalize_dates(str(art.get("date", "")), "", today)
-        scan(title, d[0] if d else today)
+        scan(title, "", d[0] if d else today)
 
     # ② 每个品牌一次免费搜索，从结果标题 + 摘要里提取
     for brand in BRAND_NAMES:
@@ -740,9 +790,7 @@ def fetch_free_city_activities(city, news, today, cutoff_days=7):
         for (t, snip) in hits:
             if brand not in f"{t}{snip}":
                 continue
-            scan(t, today)
-            if snip:
-                scan(snip, today)
+            scan(t, snip, today)
     print(f"[{city_name}] free mode items:", len(items))
     return items
 
