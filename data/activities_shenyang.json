@@ -8,52 +8,70 @@
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
+      "description": "超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "喜茶",
-      "title": "Chiikawa联名合作",
+      "title": "去火·纤体瓶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-15",
+      "endDate": "",
+      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "喜茶",
+      "title": "喜茶×Chiikawa联名",
       "category": "茶饮",
       "startDate": "2026-09-17",
       "endDate": "",
-      "description": "与日本动漫Chiikawa联名，推出限量联名周边",
+      "description": "联名Chiikawa，推出限量联名周边，门店取餐等3小时",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "奈雪的茶",
-      "title": "泰橘系列双品上新",
+      "title": "奈雪×明日方舟终末地联名",
+      "category": "茶饮",
+      "startDate": "2026-09-23",
+      "endDate": "",
+      "description": "联名明日方舟终末地，推出联名饮品及瓶装饮料",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "泰橘双品焕新",
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "",
-      "description": "泰橘3倍超C小橙瓶升级回归，全新初雪柠酪泰橘亮相",
+      "description": "小橙瓶升级回归，全新果奶亮相",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "霸王茶姬",
-      "title": "CLOT联名抹茶系列",
+      "title": "霸王茶姬×CLOT联名抹茶系列",
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "",
-      "description": "联名CLOT推出三款抹茶新品，含联名包材及五款主题周边",
+      "description": "联名CLOT推三款抹茶新品，含联名包材、五款周边",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "茶百道",
-      "title": "天官赐福动画联名",
+      "title": "茶百道×天官赐福联名",
       "category": "茶饮",
       "startDate": "2026-09-12",
       "endDate": "",
-      "description": "与天官赐福动画联名，推出四款限定包装与五款周边",
+      "description": "联名天官赐福动画，推出四款限定包装与五款周边",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "茶百道",
       "title": "柠檬巴巴露亚拿铁上新",
-      "category": "茶饮",
+      "category": "咖啡",
       "startDate": "2026-09-11",
       "endDate": "",
-      "description": "灵感源自法式巴巴露亚甜品，可喝的柠檬液体蛋糕",
+      "description": "灵感源自法式巴巴露亚甜品，柠檬液体蛋糕风味",
       "lastSeen": "2026-09-17"
     },
     {
@@ -71,7 +89,16 @@
       "category": "茶饮",
       "startDate": "2026-09-17",
       "endDate": "",
-      "description": "小程序上新纯鲜牛奶饮品，可选冷热",
+      "description": "新品仅用鲜牛奶，可选冷牛奶或温牛奶",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "甜啦啦×茶啊二中联名",
+      "category": "茶饮",
+      "startDate": "2026-09-17",
+      "endDate": "",
+      "description": "联名校园动画IP茶啊二中，推出老红糖风味系列",
       "lastSeen": "2026-09-17"
     },
     {
