@@ -13,12 +13,30 @@ import gzip
 import json
 import os
 import re
+import time
 import urllib.parse
 import urllib.request
 
 ARK_KEY = os.environ.get("ARK_API_KEY", "")
 # 免费模式：没有填 ARK_API_KEY，或显式设置 FREE_MODE=1
 FREE_MODE = (not ARK_KEY) or os.environ.get("FREE_MODE") == "1"
+
+# ---------- 省 token 的模型提取（OpenAI 兼容接口，用哪家模型都行）----------
+# 联网搜索照旧（搜索引擎实时结果 + 重点页面正文片段），但不再让模型自己去联网：
+# 模型只做一次"结构化提取"，输入控制在几千字，费用是豆包联网插件的几十分之一。
+LLM_BASE_URL = os.environ.get("LLM_BASE_URL", "").rstrip("/")
+LLM_KEY = os.environ.get("LLM_API_KEY", "")
+LLM_MODEL = os.environ.get("LLM_MODEL", "")
+LLM_READY = bool(LLM_BASE_URL and LLM_KEY and LLM_MODEL)
+# 送给模型的资讯文本上限（字符，约等于 token 数）——这是成本天花板
+LLM_INPUT_CHAR_LIMIT = int(os.environ.get("LLM_INPUT_CHAR_LIMIT", "6000"))
+# 每个品牌最多取几条搜索结果
+LLM_HITS_PER_BRAND = int(os.environ.get("LLM_HITS_PER_BRAND", "3"))
+# 最多抓几个重点页面的正文片段（能提高准确性，每页只取几百字）
+LLM_PAGE_FETCHES = int(os.environ.get("LLM_PAGE_FETCHES", "6"))
+LLM_PAGE_CHARS = int(os.environ.get("LLM_PAGE_CHARS", "400"))
+LLM_MAX_OUTPUT_TOKENS = int(os.environ.get("LLM_MAX_OUTPUT_TOKENS", "1500"))
+
 ARK_RESPONSES = "https://ark.cn-beijing.volces.com/api/v3/responses"
 # 想省钱可以换成便宜的模型（例如 doubao-seed-2-0-lite-260628），
 # 质量会下降一些；不改就用 pro。
@@ -662,7 +680,7 @@ def main():
 
 
 def free_web_search(query, n=5, days=7):
-    """零成本搜索：抓 DuckDuckGo / Bing 的网页结果，返回 [(标题, 摘要)]。
+    """零成本搜索：抓 DuckDuckGo / Bing 的网页结果，返回 [(标题, 摘要, 链接)]。
 
     不调用任何付费接口。两条都带时间过滤（只取最近 days 天），避免搜到几个月前的旧文章。
     实测 DuckDuckGo 的 html 端点更稳，所以它排在前面，Bing 兜底。
@@ -673,13 +691,13 @@ def free_web_search(query, n=5, days=7):
         url = (f"https://html.duckduckgo.com/html/?q={urllib.parse.quote(query)}"
                f"&df={df}")
         html = _get(url).decode("utf-8", "ignore")
-        titles = re.findall(r'class="result__a"[^>]*>(.*?)</a>', html, re.S)
         snips = re.findall(r'class="result__snippet"[^>]*>(.*?)</a>', html, re.S)
-        for i, t in enumerate(titles):
-            title = re.sub(r"<[^>]+>", "", t).strip()
+        for i, m in enumerate(re.finditer(
+                r'class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', html, re.S)):
+            title = re.sub(r"<[^>]+>", "", m.group(2)).strip()
             snip = re.sub(r"<[^>]+>", "", snips[i]).strip() if i < len(snips) else ""
             if title:
-                out.append((title, snip))
+                out.append((title, snip, _ddg_url(m.group(1))))
             if len(out) >= n:
                 break
     except Exception as e:
@@ -690,17 +708,60 @@ def free_web_search(query, n=5, days=7):
                    + "&filters=" + urllib.parse.quote('ex1:"ez2"'))
             html = _get(url).decode("utf-8", "ignore")
             for m in re.finditer(
-                    r'<li class="b_algo".*?<h2[^>]*>\s*<a[^>]*>(.*?)</a>.*?'
-                    r'(?:<p[^>]*>(.*?)</p>)?', html, re.S):
-                title = re.sub(r"<[^>]+>", "", m.group(1) or "").strip()
-                snip = re.sub(r"<[^>]+>", "", m.group(2) or "").strip()
+                    r'<li class="b_algo".*?<h2[^>]*>\s*<a[^>]*href="([^"]+)"[^>]*>'
+                    r'(.*?)</a>.*?(?:<p[^>]*>(.*?)</p>)?', html, re.S):
+                title = re.sub(r"<[^>]+>", "", m.group(2) or "").strip()
+                snip = re.sub(r"<[^>]+>", "", m.group(3) or "").strip()
                 if title:
-                    out.append((title, snip))
+                    out.append((title, snip, m.group(1)))
                 if len(out) >= n:
                     break
         except Exception as e:
             print("bing free search fail:", e)
     return out[:n]
+
+
+def _ddg_url(href):
+    """DuckDuckGo 的结果链接是跳转链接（.../l/?uddg=真实地址），这里还原成真实地址"""
+    if not href:
+        return ""
+    if href.startswith("//"):
+        href = "https:" + href
+    if "uddg=" in href:
+        try:
+            q = urllib.parse.parse_qs(urllib.parse.urlparse(href).query)
+            if q.get("uddg"):
+                return urllib.parse.unquote(q["uddg"][0])
+        except Exception:
+            return href
+    return href
+
+
+def fetch_page_text(url, limit=400):
+    """抓网页正文的前 limit 字（免费）。只给模型看重点页面的片段，控制 token。"""
+    if not str(url).lower().startswith("http"):
+        return ""
+    try:
+        # 超时给短一点：这些页面只是"补充线索"，不值得为它们拖时间
+        html = _get(url, timeout=8).decode("utf-8", "ignore")
+    except Exception:
+        return ""
+    html = re.sub(r"(?is)<(script|style|nav|footer|header|svg)[^>]*>.*?</\1>", " ", html)
+    text = re.sub(r"(?s)<[^>]+>", " ", html)
+    text = (text.replace("&nbsp;", " ").replace("&amp;", "&")
+            .replace("&quot;", "\"").replace("&#39;", "'")
+            .replace("&lt;", "<").replace("&gt;", ">"))
+    text = re.sub(r"\s+", " ", text).strip()
+    # 跳过页面头部的导航文字（很多页面前 200 字是"首页 > 栏目 > 正文"这类）
+    for marker in ("正文", "导读", "核心提示"):
+        i = text.find(marker)
+        if 0 <= i < 200:
+            text = text[i + len(marker):].strip()
+            break
+    else:
+        if len(text) > 200:
+            text = text[80:]
+    return text[:limit]
 
 
 def date_in_text(text, today, cutoff_days=7):
@@ -722,6 +783,129 @@ def date_in_text(text, today, cutoff_days=7):
     if (today_d - found).days > cutoff_days:
         return (found.isoformat(), False)
     return (found.isoformat(), True)
+
+
+def build_llm_materials(city_name, news, hits_by_brand, budget):
+    """把抓到的资讯拼成给模型的文本（先用关键词筛一遍，只喂"像活动"的），
+    并严格遵守字符预算 —— 这就是每次运行的成本天花板。"""
+    # 预算六四分：六成给资讯标题/摘要，四成留给重点页面的正文片段
+    line_budget = int(budget * 0.6)
+    page_budget = budget - line_budget
+    lines = []
+    seen = set()
+
+    def push(line, url=None):
+        nonlocal line_budget
+        line = re.sub(r"\s+", " ", str(line)).strip()[:200]
+        if not line or line[:16] in seen:
+            return
+        if len(line) + 1 > line_budget:
+            return
+        seen.add(line[:16])
+        line_budget -= len(line) + 1
+        lines.append([line, url])
+
+    # 饮品报标题（带发布日期）
+    for art in news[:20]:
+        t = strip_site_tail(art.get("title", ""))
+        if t:
+            push(f"- [{art.get('date', '')}] {t}")
+
+    # 各品牌搜索结果（每品牌最多 LLM_HITS_PER_BRAND 条）
+    for brand, hits in hits_by_brand.items():
+        for hit in hits[:LLM_HITS_PER_BRAND]:
+            t, snip, url = (list(hit) + ["", "", ""])[:3]
+            text = f"{t} {snip}"
+            if any(k in text for k in NON_ACT_KEYWORDS):
+                continue
+            if any(k in text for k in NOISE_KEYWORDS):
+                continue
+            if not any(k in text for k in ACT_KEYWORDS):
+                continue
+            push(f"- {brand}: {strip_site_tail(t)} {strip_site_tail(snip)}", url)
+
+    # 抓几个重点页面的正文片段（提高准确性）
+    # 整段抓取有 40 秒总时限：宁可少抓几页，也不能把每次运行拖成好几分钟
+    page_deadline = time.monotonic() + 40
+    fetched = 0
+    for item in lines:
+        if fetched >= LLM_PAGE_FETCHES or page_budget <= 0:
+            break
+        if time.monotonic() > page_deadline:
+            print(f"[{city_name}] 抓正文到时限，停止（已抓 {fetched} 页）")
+            break
+        if not item[1]:
+            continue
+        body = fetch_page_text(item[1], LLM_PAGE_CHARS)
+        if len(body) < 30:
+            continue
+        fetched += 1
+        body = body[:max(0, page_budget)]
+        page_budget -= len(body)
+        item[0] = f"{item[0]}\n   正文片段: {body}"
+        item[1] = None
+
+    print(f"[{city_name}] 给模型的资讯条数:", len(lines), "抓正文页数:", fetched)
+    return "\n".join(item[0] for item in lines)
+
+
+def llm_extract(city_name, today, materials):
+    """一次 OpenAI 兼容调用：把抓到的资讯整理成结构化 JSON。
+    不让模型联网（联网由本地搜索完成），输入长度已限死，费用是豆包联网插件的几十分之一。"""
+    prompt = (
+        f"下面是从公开网页实时抓到的茶饮资讯（标题/摘要/正文片段），今天是 {today}，城市{city_name}。\n"
+        "请提取其中的品牌活动，输出严格 JSON 数组（只输出 JSON，不要任何其他文字）：\n"
+        '[{"title":"活动名(不超过25字)","brand":"品牌名","category":"茶饮或咖啡",'
+        '"startDate":"YYYY-MM-DD(没写就用今天)","endDate":"YYYY-MM-DD(没写就留空)",'
+        '"description":"不超过40字的介绍"}]\n'
+        "规则：\n"
+        f"1. 只保留这些品牌：{WATCH_BRANDS}；\n"
+        "2. 只要这4类：①新品上市 ②IP联名 ③门店无券直享买一送一 ④打卡/到店送周边；\n"
+        "3. 排除：个人小店/食堂/社区团购；抽奖、兑券、0.01元抢购、美团外卖套餐；盘点/汇总/答疑类；\n"
+        "4. 同一个活动只输出一条。\n"
+        f"资讯：\n{materials}"
+    )
+    print(f"[{city_name}] 模型输入字符数:", len(prompt))
+    body = {
+        "model": LLM_MODEL,
+        "messages": [
+            {"role": "system", "content": "你是茶饮行业情报分析师，只输出 JSON。"},
+            {"role": "user", "content": prompt},
+        ],
+        "max_tokens": LLM_MAX_OUTPUT_TOKENS,
+        "temperature": 0.2,
+    }
+    req = urllib.request.Request(
+        f"{LLM_BASE_URL}/chat/completions",
+        data=json.dumps(body).encode("utf-8"),
+        headers={
+            "Authorization": "Bearer " + LLM_KEY,
+            "Content-Type": "application/json",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=120) as r:
+        data = json.loads(r.read().decode("utf-8"))
+    if data.get("usage"):
+        print("[usage]", json.dumps(data["usage"], ensure_ascii=False))
+    choices = data.get("choices") or [{}]
+    text = (choices[0].get("message") or {}).get("content") or ""
+    items = []
+    for a in extract_json(text):
+        title = str(a.get("title", "")).strip()
+        brand = str(a.get("brand", "")).strip()
+        if not title or not brand:
+            continue
+        items.append({
+            "brand": brand,
+            "title": title[:25],
+            "category": str(a.get("category", "")).strip() or (
+                "咖啡" if brand in COFFEE_BRANDS else "茶饮"),
+            "startDate": str(a.get("startDate", "")).strip() or today,
+            "endDate": str(a.get("endDate", "")).strip(),
+            "description": str(a.get("description", "")).strip()[:40],
+            "lastSeen": today,
+        })
+    return items
 
 
 def fetch_free_city_activities(city, news, today, cutoff_days=7):
@@ -780,14 +964,33 @@ def fetch_free_city_activities(city, news, today, cutoff_days=7):
         d = normalize_dates(str(art.get("date", "")), "", today)
         scan(title, "", d[0] if d else today)
 
-    # ② 每个品牌一次免费搜索，从结果标题 + 摘要里提取
+    # ② 每个品牌一次实时搜索（搜索引擎抓最近一周的结果，免费）
+    hits_by_brand = {}
     for brand in BRAND_NAMES:
         try:
-            hits = free_web_search(f"{brand} 新品 上新 联名", 5)
+            hits_by_brand[brand] = free_web_search(f"{brand} 新品 上新 联名", 5)
         except Exception as e:
             print(f"[{city_name}] free search fail {brand}:", e)
-            continue
-        for (t, snip) in hits:
+            hits_by_brand[brand] = []
+
+    # ③ 配了模型 → 抓重点页面正文 + 一次结构化提取（token 有硬上限）；
+    #    没配模型 → 直接走纯规则
+    if LLM_READY:
+        materials = build_llm_materials(city_name, news, hits_by_brand,
+                                        LLM_INPUT_CHAR_LIMIT)
+        if materials.strip():
+            try:
+                llm_items = llm_extract(city_name, today, materials)
+                if llm_items:
+                    print(f"[{city_name}] 模型提取:", len(llm_items), "条")
+                    return llm_items
+            except Exception as e:
+                print(f"[{city_name}] 模型提取失败，回退纯规则:", e)
+
+    # ④ 纯规则兜底
+    for brand, hits in hits_by_brand.items():
+        for hit in hits:
+            t, snip = (list(hit) + ["", "", ""])[:2]
             if brand not in f"{t}{snip}":
                 continue
             scan(t, snip, today)

@@ -43,6 +43,15 @@ jobs:
           # 免费模式：不调用付费模型/联网搜索（改抓公开网页 + 关键词规则）。
           # 方舟余额充好了想切回模型模式（更准），把下面这行删掉或改成 '0'。
           FREE_MODE: '1'
+          # 省 token 的模型提取：填好这三个 secret 就自动生效（模型只做提取、
+          # 联网搜索仍由脚本自己做，所以一次只要几千 token）。
+          # 例：LLM_BASE_URL=https://api.deepseek.com/v1  LLM_MODEL=deepseek-chat
+          #     LLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1  LLM_MODEL=qwen-flash
+          #     LLM_BASE_URL=https://open.bigmodel.cn/api/paas/v4  LLM_MODEL=glm-4.5-flash
+          #     LLM_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai  LLM_MODEL=gemini-2.0-flash
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
         run: python scripts/update_activities.py
 
       # 同步到 OSS（App 的首选数据源）。失败不阻塞后面的提交，
