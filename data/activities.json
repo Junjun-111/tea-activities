@@ -3,51 +3,51 @@
   "activities": [
     {
       "brand": "奈雪的茶",
-      "title": "奈雪泰橘双品焕新：小橙瓶升级果奶亮相",
+      "title": "奈雪泰橘双品焕新，小橙瓶升级果奶亮相",
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "2026-10-16",
-      "description": "小橙瓶升级回归，推出全新果奶产品，完成泰橘双品焕新"
+      "description": "泰橘产品线焕新，升级小橙瓶产品，同步推出全新果奶饮品"
     },
     {
       "brand": "奈雪的茶",
-      "title": "奈雪咖啡搭配佛卡夏成产品杀手锏",
+      "title": "奈雪咖啡搭配佛卡夏产品深受市场欢迎",
       "category": "咖啡",
       "startDate": "2026-09-11",
       "endDate": "2026-10-11",
-      "description": "保持月月上新节奏，推出咖啡搭配佛卡夏的产品组合"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪联名yuy玉推出治愈酸奶昔",
-      "category": "茶饮",
-      "startDate": "2026-08-26",
-      "endDate": "2026-09-25",
-      "description": "联名IP yuy玉推出治愈酸奶昔产品，引发全网传播热度"
-    },
-    {
-      "brand": "喜茶",
-      "title": "喜茶上海双店同开喜拉朵实验室系列新店",
-      "category": "茶饮",
-      "startDate": "2026-08-21",
-      "endDate": "2026-09-20",
-      "description": "上海开出喜拉朵实验室+系列新店，供应手工鲜果gelato产品"
-    },
-    {
-      "brand": "林里LINLEE",
-      "title": "LINLEE林里联名鹅鸭杀推出桃系冰柠茶",
-      "category": "茶饮",
-      "startDate": "2026-08-19",
-      "endDate": "2026-09-18",
-      "description": "联名游戏IP《鹅鸭杀》上新，桃系冰柠茶产品清爽回归"
+      "description": "品牌常态化上新咖啡配佛卡夏组合，多款产品销量表现优异"
     },
     {
       "brand": "甜啦啦",
-      "title": "甜啦啦荔枝系列上新七夕享限定福利",
+      "title": "甜啦啦推出清风茉白产品开展开学季活动",
       "category": "茶饮",
-      "startDate": "2026-08-14",
-      "endDate": "2026-09-13",
-      "description": "推出荔枝系列新品，七夕期间推出13.14元限定福利活动"
+      "startDate": "2026-09-01",
+      "endDate": "2026-10-01",
+      "description": "开学季推出清风茉白新品，锚定Z世代消费群体的仪式感需求"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪联名yuy玉推出治愈酸奶昔引发全网关注",
+      "category": "茶饮",
+      "startDate": "2026-08-26",
+      "endDate": "2026-09-25",
+      "description": "联名IP yuy玉推出治愈酸奶昔新品，相关话题登上社交平台热搜"
+    },
+    {
+      "brand": "喜茶",
+      "title": "喜茶上海开出喜拉朵实验室等双新店",
+      "category": "茶饮",
+      "startDate": "2026-08-21",
+      "endDate": "2026-09-20",
+      "description": "上海双店同开，推出手工鲜果gelato产品丰富消费体验"
+    },
+    {
+      "brand": "LINLEE林里",
+      "title": "LINLEE林里联名《鹅鸭杀》推出桃系冰柠茶",
+      "category": "茶饮",
+      "startDate": "2026-08-19",
+      "endDate": "2026-09-18",
+      "description": "联动游戏IP《鹅鸭杀》上新，同步回归清爽桃系冰柠茶产品"
     }
   ]
 }

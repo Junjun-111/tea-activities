@@ -3,12 +3,21 @@
   "city": "沈阳",
   "activities": [
     {
-      "brand": "喜茶",
-      "title": "超多肉椰椰芒芒新品上市",
+      "brand": "奈雪的茶",
+      "title": "奈雪×明日方舟终末地联名",
       "category": "茶饮",
-      "startDate": "2026-09-15",
+      "startDate": "2026-09-23",
       "endDate": "",
-      "description": "喜茶新品「超多肉椰椰芒芒」上新，全国门店陆续上线",
+      "description": "与游戏IP明日方舟终末地联名，将上线联名饮品及瓶装联名产品",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "700cc",
+      "title": "700CC沈阳赵继伟一日店长活动",
+      "category": "茶饮",
+      "startDate": "2026-09-20",
+      "endDate": "2026-09-20",
+      "description": "沈阳恒隆门店举办赵继伟一日店长活动，首发限量周边同步推新品",
       "lastSeen": "2026-09-16"
     },
     {
@@ -23,12 +32,39 @@
       "lastSeen": "2026-09-15"
     },
     {
+      "brand": "奈雪的茶",
+      "title": "奈雪泰橘系列升级回归上新",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "泰橘3倍超C小橙瓶升级回归，同步上新初雪柠酪泰橘，配主题周边",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬抹茶系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "全国上新3款抹茶系列新品，含花香、果香、浓醇不同风味",
+      "lastSeen": "2026-09-16"
+    },
+    {
       "brand": "霸王茶姬",
       "title": "抹茶系列×CLOT联名上新",
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "2026-09-22",
       "description": "上新3款抹茶系列新品，购指定产品赠CLOT联名周边",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "喜茶",
+      "title": "超多肉椰椰芒芒新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-15",
+      "endDate": "",
+      "description": "喜茶新品「超多肉椰椰芒芒」上新，全国门店陆续上线",
       "lastSeen": "2026-09-16"
     },
     {
@@ -81,23 +117,12 @@
       "lastSeen": "2026-09-15"
     },
     {
-      "brand": "柠季",
-      "title": "莓果系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-13",
-      "endDate": "",
-      "image": "",
-      "description": "推出两款莓果风味新品，全国门店同步上新",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-16"
-    },
-    {
       "brand": "茶百道",
-      "title": "茶百道×天官赐福动画联名活动",
+      "title": "茶百道×天官赐福动画联名",
       "category": "茶饮",
       "startDate": "2026-09-12",
       "endDate": "",
-      "description": "联名天官赐福动画，上线联名饮品，配套主题门店打卡活动",
+      "description": "联名上线6款饮品，购套餐得联名周边，设主题门店享专属活动",
       "lastSeen": "2026-09-16"
     },
     {
@@ -112,23 +137,21 @@
       "lastSeen": "2026-09-14"
     },
     {
-      "brand": "奈雪的茶",
-      "title": "奈雪的茶×明日方舟终末地联名",
+      "brand": "柠季",
+      "title": "柠季莓果系列新品上市",
       "category": "茶饮",
       "startDate": "2026-09-11",
       "endDate": "",
-      "description": "官宣联名游戏IP明日方舟终末地，将上线联名饮品及套餐",
+      "description": "推出莓果缤纷冰柠茶、莓果可可奶两款莓果主题新品",
       "lastSeen": "2026-09-16"
     },
     {
-      "brand": "700cc",
-      "title": "赵继伟一日店长沈阳站活动",
-      "category": "茶饮",
+      "brand": "cubic3立方咖啡",
+      "title": "cubic3立方咖啡秋季限定系列上市",
+      "category": "咖啡",
       "startDate": "2026-09-11",
-      "endDate": "2026-09-20",
-      "image": "",
-      "description": "沈阳恒隆店将办赵继伟一日店长活动，首发限量周边、可尝新品",
-      "ratio": 1.2,
+      "endDate": "",
+      "description": "推出秋季主题季节限定咖啡饮品，主打丝滑秋日风味",
       "lastSeen": "2026-09-16"
     },
     {
@@ -209,6 +232,24 @@
       "lastSeen": "2026-09-13"
     },
     {
+      "brand": "爷爷不泡茶",
+      "title": "爷爷不泡茶开学季color drink活动",
+      "category": "茶饮",
+      "startDate": "2026-09-09",
+      "endDate": "",
+      "description": "推出开学季限定选品活动，包含三款限定搭配饮品",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "沪上阿姨",
+      "title": "沪上阿姨超糯溏心木薯糖水上市",
+      "category": "茶饮",
+      "startDate": "2026-09-09",
+      "endDate": "",
+      "description": "新品选用黄心木薯搭配桃胶、银耳等，呈现经典糖水多重口感",
+      "lastSeen": "2026-09-16"
+    },
+    {
       "brand": "甜啦啦",
       "title": "黄山毛峰青提系列新品上市",
       "category": "茶饮",
@@ -226,6 +267,15 @@
       "image": "",
       "description": "联名推出化妆包、气垫梳周边，辽宁区域门店可获取",
       "ratio": 1.2,
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "喜茶",
+      "title": "喜茶喜柿多多系列回归",
+      "category": "茶饮",
+      "startDate": "2026-09-08",
+      "endDate": "",
+      "description": "喜柿多多时令回归，同步上新喜柿多多蛋糕，蛋糕+茶无券买1送1",
       "lastSeen": "2026-09-16"
     },
     {
@@ -249,6 +299,42 @@
       "description": "推出两款泰式风味新品，复刻东南亚特色风味",
       "ratio": 1.2,
       "lastSeen": "2026-09-13"
+    },
+    {
+      "brand": "茶百道",
+      "title": "茶百道岭南龙眼冰奶上市",
+      "category": "茶饮",
+      "startDate": "2026-09-07",
+      "endDate": "",
+      "description": "选用岭南龙眼搭配栀兰茶与奶香，推出秋日新品岭南龙眼冰奶",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "瑞幸",
+      "title": "瑞幸瑰夏白冷萃上市",
+      "category": "咖啡",
+      "startDate": "2026-09-07",
+      "endDate": "",
+      "description": "选用埃塞瑰夏豆双处理法冷萃，搭配咸甜奶酪，风味层次丰富",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "蜜雪冰城",
+      "title": "蜜雪冰城奶麻薯系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-04",
+      "endDate": "",
+      "description": "糯糯奶麻薯系列新品全国上新，口感香甜软糯",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "爷爷不泡茶橙香玉露系列上新",
+      "category": "茶饮",
+      "startDate": "2026-09-04",
+      "endDate": "",
+      "description": "开学季上新橙香玉露系列，含奶油玉露、冰茶两款产品",
+      "lastSeen": "2026-09-16"
     },
     {
       "brand": "爷爷不泡茶",
