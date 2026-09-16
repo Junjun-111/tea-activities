@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""每天定时任务：抓饮品报最新文章 -> 豆包联网搜索活动 -> 抓官方配图 -> 更新 activities.json
+"""每天定时任务：抓饮品报最新文章 -> 豆包联网搜索活动 -> 更新 activities.json
 
 数据源：饮品报移动版 m.drinknewspaper.com（茶饮行业垂直媒体，日更，文章配图多为品牌官方宣传图）。
 搜索与提取全部由豆包（doubao-seed-2-1-pro，火山方舟 Responses API + Web Search 插件）完成。
@@ -7,7 +7,6 @@
 """
 import datetime
 import gzip
-import io
 import json
 import os
 import re
@@ -16,7 +15,6 @@ import urllib.request
 ARK_KEY = os.environ["ARK_API_KEY"]
 ARK_RESPONSES = "https://ark.cn-beijing.volces.com/api/v3/responses"
 DOUBAO_MODEL = "doubao-seed-2-1-pro-260628"
-RAW_BASE = "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com"
 
 MOBILE_UA = ("Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
              "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1")
@@ -224,18 +222,8 @@ def fetch_news_list():
     return ordered[:40]
 
 
-def full_cover_url(u):
-    """去掉列表缩略图 !WxH 缩放后缀，返回原图 URL"""
-    if not u:
-        return None
-    u = u.strip()
-    if u.startswith("//"):
-        u = "https:" + u
-    return re.sub(r"!\d+x\d+(\.\w+)?$", "", u)
-
-
 def fetch_article(art):
-    """抓文章页：补充发布时间与正文图片列表"""
+    """抓文章页：补充发布时间"""
     try:
         html = _get(art["href"]).decode("utf-8", "ignore")
     except Exception as e:
@@ -244,66 +232,7 @@ def fetch_article(art):
     mt = re.search(r'(\d{4})-(\d{2})-(\d{2})T\d{2}:\d{2}', html)
     if mt:
         art["date"] = "%s/%s/%s" % (mt.group(1), mt.group(2), mt.group(3))
-    imgs = []
-    for m in re.finditer(
-            r'(?:src|src-original)="(//[^"]+\.(?:jpg|jpeg|png|webp|gif)[^"]*|https?://[^"]+\.(?:jpg|jpeg|png|webp|gif)[^"]*)"',
-            html):
-        u = m.group(1)
-        if u.startswith("//"):
-            u = "https:" + u
-        imgs.append(u)
-    if imgs:
-        art["images"] = imgs
     return art
-
-
-def is_qualified(data):
-    try:
-        from PIL import Image
-        im = Image.open(io.BytesIO(data))
-        w, h = im.size
-        ok = w >= 300 and w * h >= 120000
-        # 拒绝超宽/超高横幅（文章头部 banner 等），海报比例约 0.6~2.0
-        if ok:
-            ratio = w / h if h > 0 else 0
-            if ratio > 2.6 or ratio < 0.45:
-                ok = False
-                print("rejected by ratio:", ratio)
-        if not ok:
-            print("rejected by size:", w, "x", h)
-        return ok
-    except Exception:
-        return len(data) >= 30 * 1024
-
-
-def download_image(img_url):
-    """下载并校验图片，成功返回 bytes，失败返回 None"""
-    try:
-        img_url = img_url.strip()
-        if not img_url.lower().startswith("http"):
-            return None
-        low = img_url.lower()
-        if any(x in low for x in ("loading", "transparent", "placeholder",
-                                  "logo", "icon", "qrcode", "banner.png", "spacer")):
-            print("skip placeholder url:", img_url[:100])
-            return None
-        candidates = [img_url]
-        m = re.search(r"![\w\d]+(\?|$)", img_url)
-        if m:
-            candidates.insert(0, img_url[:m.start()])
-        for u in candidates:
-            try:
-                data = _get(u, timeout=45)
-            except Exception:
-                continue
-            if data[:3] == b"\xff\xd8\xff" or data[:3] == b"\x89PN" or data[:4] == b"RIFF":
-                if is_qualified(data):
-                    return data
-                return None
-        return None
-    except Exception as e:
-        print("image download fail:", img_url[:120], e)
-        return None
 
 
 def bing_search(query, n=3):
@@ -329,33 +258,11 @@ def bing_search(query, n=3):
     return links
 
 
-def fetch_page_images(page_url):
-    """抓页面 og:image -> 前几张 <img>，返回去重候选列表"""
-    cands = []
-    try:
-        html = _get(page_url).decode("utf-8", "ignore")
-        m = re.search(
-            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', html)
-        if not m:
-            m = re.search(
-                r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']', html)
-        if m:
-            cands.append(m.group(1))
-        for m in re.finditer(r'<img[^>]+src=["\']([^"\']+)["\']', html):
-            cands.append(m.group(1))
-            if len(cands) >= 6:
-                break
-    except Exception as e:
-        print("page fetch fail:", page_url, e)
-    return cands
-
-
 def fetch_city_activities(city, news, today, cutoff_days=7):
-    """按城市联网搜索当地活动，返回 [{brand,title,category,startDate,endDate,description,image,ratio}]
+    """按城市联网搜索当地活动，
+    返回 [{brand,title,category,startDate,endDate,description,lastSeen}]
 
-    city: {"key","name","province"}
-    news: 已抓取的饮品报文章列表（用于配图匹配，可为空）
-    无图的活动降级为纯文字条目（image 为空字符串），避免因缺图丢信息。
+    （活动数据只保留文字信息：App 端不再展示海报图，脚本也不再下载图片）
     """
     city_name = city["name"]
     province = city["province"]
@@ -369,7 +276,7 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
         f"现在是{today}。请联网搜索中国「{province}{city_name}」地区最近 {cutoff_days} 天内"
         "以下固定品牌清单中每个品牌的真实门店活动。\n"
         f"【品牌清单】{watch_brands}。\n"
-        + (f"【已确认该城市有门店的品牌（必须逐一搜索，不得跳过）】爷爷不泡茶、茉莉奶白、鲜果时间、柠季、700cc、cubic3立方咖啡。\n" if city["key"] == "shenyang" else "")
+        + (f"【该城市重点品牌（除上面清单外，这些也必须逐一搜索）】爷爷不泡茶、茉莉奶白、鲜果时间、柠季、700cc、cubic3立方咖啡。\n" if city["key"] == "shenyang" else "")
         + "【执行步骤】逐个搜索上述每个品牌最近 {cutoff_days} 天内是否有以下活动：\n"
         "1. 新品上市；\n"
         "2. IP联名/限定联名产品；\n"
@@ -383,6 +290,8 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
         "排除以下类型的活动：小程序抽奖/口令兑奖/兑换券/0.01元或0.1元抢购类、需要抢券或领券的、"
         "美团/饿了么等外卖平台套餐（如'双杯套餐17.99元'）、平台优惠券活动。\n"
         "只要这4类：①新品上市；②IP联名产品；③门店无券直享买一送一（下单自动生效）；④打卡/到店送周边。\n"
+        "【覆盖要求】清单里的每个品牌都要单独搜一次，结果要尽量覆盖多个品牌，"
+        "不要只给少数几个品牌的活动；同一个品牌最多给 2 条。\n"
         "列出所有满足条件的活动（数量不限，越多越好），"
         "每条包含：品牌名、活动或新品名、开始日期、结束日期（如有）、"
         "一句话介绍、是否为全国活动、该活动的官方信息来源URL（必须是报道该活动的官方微博/微信公众号文章/品牌官网/新闻网页链接，不要编造URL）。"
@@ -418,6 +327,10 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
 
     items = []
     seen = set()
+    # 不做条数上限、也不做单品牌配额：清单里每个品牌近期的活动都要收进来。
+    # （原来 if len(items) >= 5: break 只留前 5 条，导致大部分品牌永远进不来）
+    # 近似重复的活动由下面的 _same_act 相似度合并，3 天没再搜到的会被清理掉，
+    # 所以数据量不会无限膨胀。
     # 程序兜底：剔除模型漏网的非连锁品牌/个人小店（防止个人店、食堂混入）
     NON_BRAND = ("食堂", "档口", "个体", "私人", "工作室", "小巷", "商户", "咖啡屋",
                  "咖啡店", "小摊", "摊贩", "社区团购", "自营")
@@ -453,56 +366,15 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
             continue
         sd, ed = dates
         seen.add(title)
-        # 配图优先级：活动信息来源页面的图（og:image/正文图）→ 饮品报文章配图兜底
-        # 原则：图片必须来自报道该活动的来源页面，禁止用无关文章图冒充活动海报
-        data = None
-        src = str(a.get("sourceUrl", "")).strip()
-        if src.lower().startswith("http"):
-            for u in fetch_page_images(src):
-                u2 = full_cover_url(u) if "//" in u else u
-                if not u2.lower().startswith("http"):
-                    continue
-                data = download_image(u2)
-                if data:
-                    print(f"[{city_name}] image from source:", src[:90])
-                    break
-        # 饮品报文章配图兜底（要求标题含品牌 + 活动标题中的活动词，避免配错图）
-        if data is None:
-            act_kw = title.replace(brand, "").strip()[:4]
-            matched = None
-            for art in news:
-                t = art.get("title", "")
-                if brand and brand in t and act_kw and act_kw in t:
-                    matched = art
-                    break
-            if matched is not None:
-                print(f"[{city_name}] image from yinpinbao:", matched.get("title", "")[:60])
-                cover = full_cover_url(matched.get("cover"))
-                cands = [c for c in ([cover] + list(matched.get("images", []))) if c]
-                for u in cands:
-                    data = download_image(u)
-                    if data:
-                        break
-        image = ""
-        if data:
-            poster = f"images/poster_{city['key']}_{today}_{i}.jpg"
-            with open(poster, "wb") as f:
-                f.write(data)
-            image = RAW_BASE + "/" + poster
-        sd, ed = dates
         items.append({
             "brand": brand,
             "title": title,
             "category": "咖啡" if "咖啡" in str(a.get("category", "")) else "茶饮",
             "startDate": sd,
             "endDate": ed,
-            "image": image,
             "description": str(a.get("description", "")).strip(),
-            "ratio": 1.2,
             "lastSeen": today,
         })
-        if len(items) >= 5:
-            break
 
     # 并入人工确认活动（用户核实过的真实活动，不依赖搜索，去重）
     existing = {it["title"] for it in items}
@@ -521,9 +393,7 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
             "category": str(ma.get("category", "茶饮")),
             "startDate": sd,
             "endDate": ed,
-            "image": "",
             "description": str(ma.get("description", "")).strip(),
-            "ratio": 1.2,
             "lastSeen": today,
         })
         existing.add(title)
@@ -592,11 +462,13 @@ def main():
     bj = datetime.timezone(datetime.timedelta(hours=8))
     now = datetime.datetime.now(bj)
     today = now.strftime("%Y-%m-%d")
+    # 留一个空的 images 目录：工作流里的 upload_oss.py 会扫这个目录，
+    # 现在不再生成海报图，所以它扫到的是空目录（不影响数据上传）
     os.makedirs("images", exist_ok=True)
     os.makedirs("data", exist_ok=True)
 
     # 可选：CITY_KEYS 环境变量（逗号分隔城市 key，如 shenyang,beijing）只跑指定城市；
-    # 未设置则跑全部预设城市
+    # 未设置则跑全部预设城市（App 端会按用户定位去取对应城市的文件，所以默认全跑）
     city_filter = [c.strip() for c in os.environ.get("CITY_KEYS", "").split(",") if c.strip()]
     cities = [c for c in CITIES if not city_filter or c["key"] in city_filter]
     print("== CITIES ==")
@@ -664,31 +536,6 @@ def main():
             if not title or title in seen:
                 continue
             seen.add(title)
-            matched = None
-            for art in news:
-                t = art["title"]
-                if title[:6] in t or t[:6] in title:
-                    matched = art
-                    break
-            if matched is None:
-                for art in news:
-                    if a.get("brand", "") in art["title"]:
-                        matched = art
-                        break
-            data = None
-            if matched is not None:
-                cover = full_cover_url(matched.get("cover"))
-                cands = [c for c in ([cover] + list(matched.get("images", []))) if c]
-                for u in cands:
-                    data = download_image(u)
-                    if data:
-                        break
-            image = ""
-            if data:
-                poster = f"images/poster_national_{today}_{i}.jpg"
-                with open(poster, "wb") as f:
-                    f.write(data)
-                image = RAW_BASE + "/" + poster
             sd = str(a.get("startDate", "")).strip() or today
             ed = str(a.get("endDate", "")).strip() or sd
             national.append({
@@ -697,9 +544,7 @@ def main():
                 "category": "咖啡" if "咖啡" in str(a.get("category", "")) else "茶饮",
                 "startDate": sd,
                 "endDate": ed,
-                "image": image,
                 "description": str(a.get("description", "")).strip(),
-                "ratio": 1.2,
             })
             if len(national) >= 6:
                 break

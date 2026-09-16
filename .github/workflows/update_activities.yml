@@ -6,7 +6,15 @@ on:
     - cron: '0 22 * * *'   # 北京 6:00
     - cron: '0 4 * * *'    # 北京 12:00
     - cron: '0 10 * * *'   # 北京 18:00
+  # 手动运行：出门到别的城市时，在 Actions 页面点 Run workflow，
+  # 在 cities 里填城市 key（如 beijing 或 shenyang,beijing）即可，
+  # 不用改文件。留空 = 用下面的默认城市。
   workflow_dispatch:
+    inputs:
+      cities:
+        description: '要更新的城市 key（逗号分隔，如 beijing）'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -21,15 +29,21 @@ jobs:
         with:
           python-version: '3.12'
 
-      - run: pip install requests pillow oss2
+      # 活动数据只保留文字，脚本不再下载/生成海报图，所以不需要 pillow
+      - run: pip install requests oss2
 
-      - name: Run update script (Shenyang only)
+      # 只生成当前需要的城市：逐个城市要联网搜索，跑满 12 个城市是 12 倍的模型费用，
+      # 而用户同一时间只在一个城市。默认只跑 shenyang，出远门时用上面的手动触发换城市。
+      - name: Run update script
         env:
           ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
-          CITY_KEYS: shenyang
+          CITY_KEYS: ${{ github.event.inputs.cities || 'shenyang' }}
         run: python scripts/update_activities.py
 
+      # 同步到 OSS（App 的首选数据源）。失败不阻塞后面的提交，
+      # 否则 OSS 出问题会连带数据也推不上去（之前 OSS 就停更在 9/11）
       - name: Upload to Aliyun OSS
+        continue-on-error: true
         env:
           ALIYUN_AK: ${{ secrets.ALIYUN_AK }}
           ALIYUN_SK: ${{ secrets.ALIYUN_SK }}
