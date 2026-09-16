@@ -889,12 +889,24 @@ def llm_extract(city_name, today, materials):
         print("[usage]", json.dumps(data["usage"], ensure_ascii=False))
     choices = data.get("choices") or [{}]
     text = (choices[0].get("message") or {}).get("content") or ""
+    # 反编造校验：模型输出的条目，品牌和标题必须在"我抓到的原文"里找得到线索，
+    # 找不到就丢掉（模型看不到网，只能基于我给的材料整理，编造的一律不要）
+    titles_in_material = materials
     items = []
     for a in extract_json(text):
         title = str(a.get("title", "")).strip()
         brand = str(a.get("brand", "")).strip()
         if not title or not brand:
             continue
+        if brand not in titles_in_material:
+            print(f"[{city_name}] 丢弃可疑条目(品牌不在原文):", brand, title)
+            continue
+        chars = set(re.sub(r"[^\u4e00-\u9fff]", "", title))
+        if chars:
+            hit = sum(1 for c in chars if c in titles_in_material)
+            if hit / len(chars) < 0.5:
+                print(f"[{city_name}] 丢弃可疑条目(标题在原文找不到):", brand, title)
+                continue
         items.append({
             "brand": brand,
             "title": title[:25],
