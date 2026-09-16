@@ -59,25 +59,25 @@
     },
     {
       "brand": "700cc",
-      "title": "赵继伟一日店长沈阳快闪活动",
+      "title": "赵继伟一日店长沈阳站活动",
       "category": "茶饮",
       "startDate": "2026-09-11",
       "endDate": "2026-09-20",
       "image": "",
-      "description": "沈阳中街恒隆店将办一日店长活动，首发限量周边",
+      "description": "沈阳恒隆店将办赵继伟一日店长活动，首发限量周边、可尝新品",
       "ratio": 1.2,
       "lastSeen": "2026-09-16"
     },
     {
       "brand": "cubic3立方咖啡",
-      "title": "秋季季节限定咖啡系列上市",
+      "title": "入秋季节限定咖啡新品上市",
       "category": "咖啡",
       "startDate": "2026-09-11",
       "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-15_4.jpg",
-      "description": "沈阳门店同步上线秋季限定咖啡饮品，主打秋日丝滑风味",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-16_3.jpg",
+      "description": "推出秋季季节限定咖啡新品，主打丝滑入秋风味，当季限定",
       "ratio": 1.2,
-      "lastSeen": "2026-09-15"
+      "lastSeen": "2026-09-16"
     },
     {
       "brand": "cubic3立方咖啡",
@@ -89,6 +89,17 @@
       "description": "推出秋季季节限定咖啡新品，适配入秋风味",
       "ratio": 1.2,
       "lastSeen": "2026-09-14"
+    },
+    {
+      "brand": "柠季",
+      "title": "莓果系列新品上市 购套餐赠周边",
+      "category": "茶饮",
+      "startDate": "2026-09-10",
+      "endDate": "",
+      "image": "",
+      "description": "上新莓果系列两款新品，购指定套餐赠贴纸、拼豆套组等周边",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-16"
     },
     {
       "brand": "茉莉奶白",
