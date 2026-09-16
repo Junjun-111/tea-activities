@@ -82,7 +82,12 @@ for f in glob.glob(os.path.join(data_dir, "*.json")):
         print("updated", os.path.basename(f))
 
 # 3) 上传 JSON -> data/
-for f in glob.glob(os.path.join(data_dir, "*.json")):
+json_files = sorted(glob.glob(os.path.join(data_dir, "*.json")))
+if not json_files:
+    # 目录传错时静默什么都不传，App 会一直读旧数据——这里直接报错让它可见
+    raise SystemExit(f"数据目录里没有任何 json，检查参数：{data_dir}")
+
+for f in json_files:
     key = "data/" + os.path.basename(f)
     bucket.put_object_from_file(
         key, f, headers={"Content-Type": "application/json; charset=utf-8"}

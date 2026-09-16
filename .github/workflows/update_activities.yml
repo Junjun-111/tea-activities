@@ -61,7 +61,10 @@ jobs:
         env:
           ALIYUN_AK: ${{ secrets.ALIYUN_AK }}
           ALIYUN_SK: ${{ secrets.ALIYUN_SK }}
-        run: python scripts/upload_oss.py . .
+        # 注意：两个参数分别是「数据目录」和「图片目录」。
+        # 之前传的是仓库根目录 "."，脚本扫不到任何 json，这一步等于空跑，
+        # 导致 App 首选的 OSS 数据一直停在旧日期（只能靠 jsDelivr 兜底）。
+        run: python scripts/upload_oss.py data images
 
       - name: Commit and push (mirror backup)
         run: |
