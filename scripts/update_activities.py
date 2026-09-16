@@ -168,11 +168,11 @@ MANUAL_ACTIVITIES = {
         },
         {
             "brand": "喜茶",
-            "title": "超多肉椰椰芒芒新品上市",
+            "title": "椰椰芒芒Pro上新+买一送一",
             "category": "茶饮",
             "startDate": "2026-09-15",
             "endDate": "",
-            "description": "喜茶新品「超多肉椰椰芒芒」上新，全国门店陆续上线",
+            "description": "9月15日上新椰椰芒芒Pro（芒果果肉加倍、椰乳加量），当天门店买一送一",
         },
     ],
 }
@@ -943,6 +943,36 @@ def llm_extract(city_name, today, materials):
     return items
 
 
+def manual_items_for(city_key, today):
+    """人工确认活动（用户核实过的真实活动）：每次运行都强制并入，
+    不依赖搜索，也不受关键词规则影响。免费模式/模型模式都会带上。"""
+    out = []
+    for ma in MANUAL_ACTIVITIES.get(city_key, []):
+        title = str(ma.get("title", "")).strip()
+        brand = str(ma.get("brand", "")).strip()
+        if not title or not brand:
+            continue
+        out.append({
+            "brand": brand,
+            "title": title[:25],
+            "category": str(ma.get("category", "茶饮")),
+            "startDate": str(ma.get("startDate", "")).strip() or today,
+            "endDate": str(ma.get("endDate", "")).strip(),
+            "description": str(ma.get("description", "")).strip()[:40],
+            "lastSeen": today,
+        })
+    return out
+
+
+def merge_manual(items, city_key, today):
+    """把人工确认活动并进来（按标题去重）"""
+    have = {it["title"] for it in items}
+    for it in manual_items_for(city_key, today):
+        if it["title"] not in have:
+            items.append(it)
+    return items
+
+
 def fetch_free_city_activities(city, news, today, cutoff_days=7):
     """零成本路径：只用免费可抓的公开网页，用关键词规则提取品牌活动。
 
@@ -1018,7 +1048,7 @@ def fetch_free_city_activities(city, news, today, cutoff_days=7):
                 llm_items = llm_extract(city_name, today, materials)
                 if llm_items:
                     print(f"[{city_name}] 模型提取:", len(llm_items), "条")
-                    return llm_items
+                    return merge_manual(llm_items, city["key"], today)
             except Exception as e:
                 print(f"[{city_name}] 模型提取失败，回退纯规则:", e)
 
@@ -1030,7 +1060,7 @@ def fetch_free_city_activities(city, news, today, cutoff_days=7):
                 continue
             scan(t, snip, today)
     print(f"[{city_name}] free mode items:", len(items))
-    return items
+    return merge_manual(items, city["key"], today)
 
 
 if __name__ == "__main__":
