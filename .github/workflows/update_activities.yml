@@ -72,3 +72,12 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then echo "no changes"; else git commit -m "update activities $(date +'%Y-%m-%d %H:%M')"; git push; fi
+
+      # 清一下 jsDelivr 的缓存：App 会把 OSS 和 jsDelivr 镜像都拉一遍挑更新的那份，
+      # 镜像缓存没刷新时会拿着旧数据参与比较（旧数据条数更多时曾经把新数据盖掉）
+      - name: Purge jsDelivr cache
+        continue-on-error: true
+        run: |
+          for f in activities.json activities_shenyang.json; do
+            curl -s -m 20 "https://purge.jsdelivr.net/gh/Junjun-111/tea-activities@main/data/$f" > /dev/null && echo "purged $f"
+          done

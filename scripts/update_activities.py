@@ -80,6 +80,36 @@ NOISE_KEYWORDS = ("有哪些", "盘点", "汇总", "合集", "回顾", "一文�
                   "翻车", "致歉", "道歉", "回应", "质疑", "投诉", "被罚", "整改",
                   "理念", "研发", "战略", "布局", "思考", "复盘", "趋势", "观察",
                   "报告", "白皮书", "专访", "演讲", "会议", "大会", "论坛", "峰会")
+
+# 「标题党」特征词：媒体为了点击率写的标题，不是活动名。
+# 例：「取餐等3小时!喜茶chiikawa联名活动火爆」「暗箱操作？喜茶联名茶碗被提前预定？!」
+# 这类即使提到了品牌和联名，用户也不要（他要的是干干净净的活动名）。
+JUNK_TITLE_KEYWORDS = (
+    "？", "?", "?!", "！?",
+    "震惊", "火爆", "排队", "取餐", "小时", "员工", "店员", "顾客", "网友",
+    "吐槽", "暗箱", "内幕", "爆料", "被曝", "曝光", "网传", "疑似", "满嘴",
+    "没活硬整", "状况百出", "混乱", "短缺", "断货", "缺货", "塌房", "惹众怒",
+    "维权", "实拍", "探店", "吃瓜", "围观", "破防", "竟", "到底",
+)
+
+
+def looks_like_junk_title(title):
+    """是不是「新闻标题」而不是「活动名」。
+
+    两道判断：
+    1) 命中上面的标题党特征词；
+    2) 感叹号出现在句子中间而不是结尾（媒体写法：「喜茶上新品!员工果蔬整不完!」，
+       正常活动名只会写「××联名上市！」）。
+    """
+    t = str(title).strip()
+    if not t:
+        return True
+    if any(k in t for k in JUNK_TITLE_KEYWORDS):
+        return True
+    stripped = t.rstrip("！!")
+    return ("!" in stripped) or ("！" in stripped)
+
+
 COFFEE_BRANDS = ("瑞幸", "星巴克", "库迪", "Manner")
 
 MOBILE_UA = ("Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
@@ -581,11 +611,20 @@ def merge_with_previous(city_name, city_key, items, today):
     # 全局去重：旧条目与本轮新条目、新条目之间，品牌+标题相似视为同一条，保留 lastSeen 最新者
     merged = []
     for it in items:
+        # 标题党/新闻式标题一律不要（用户明确反馈过「取餐等3小时!喜茶chiikawa联名活动火爆」
+        # 这类条目跑进来了）
+        if looks_like_junk_title(it.get("title")):
+            print(f"[{city_name}] skip junk title:", it.get("brand"), "-", it.get("title"))
+            continue
         if not any(_same_act(it["brand"], it["title"], m["brand"], m["title"]) for m in merged):
             merged.append(it)
     kept = 0
     for oit in old_items:
         ob, ot = str(oit.get("brand", "")), str(oit.get("title", ""))
+        if looks_like_junk_title(ot):
+            # 旧文件里已经混进去的标题党条目，顺手清掉，不再靠 3 天自然过期
+            print(f"[{city_name}] drop junk from old file:", ob, "-", ot)
+            continue
         dup = any(
             _same_act(it["brand"], it["title"], ob, ot)
             for it in merged
@@ -612,6 +651,10 @@ def main():
     bj = datetime.timezone(datetime.timedelta(hours=8))
     now = datetime.datetime.now(bj)
     today = now.strftime("%Y-%m-%d")
+    # updated_at 带上时分秒：App 会同时拉 OSS 和 GitHub 镜像两份数据，
+    # 只写日期的话两份同一天的数据分不出先后，App 只能按条数猜，
+    # 结果旧的缓存数据（条数更多）会把新数据盖掉——之前 App 里混进标题党就是这个原因。
+    updated_at = now.strftime("%Y-%m-%dT%H:%M:%S+08:00")
     # 留一个空的 images 目录：工作流里的 upload_oss.py 会扫这个目录，
     # 现在不再生成海报图，所以它扫到的是空目录（不影响数据上传）
     os.makedirs("images", exist_ok=True)
@@ -647,7 +690,7 @@ def main():
             print(f"[{city['name']}] no activities, keep old file if exists")
             continue
         with open(f"data/activities_{city['key']}.json", "w", encoding="utf-8") as f:
-            json.dump({"updated_at": today, "city": city["name"], "activities": items},
+            json.dump({"updated_at": updated_at, "city": city["name"], "activities": items},
                       f, ensure_ascii=False, indent=2)
         print(f"[{city['name']}] OK activities:", len(items))
         all_items.extend(items)
@@ -707,7 +750,7 @@ def main():
     national = national or all_items
     if national:
         with open("data/activities.json", "w", encoding="utf-8") as f:
-            json.dump({"updated_at": today, "activities": national}, f,
+            json.dump({"updated_at": updated_at, "activities": national}, f,
                       ensure_ascii=False, indent=2)
         print("OK national activities:", len(national))
     else:
