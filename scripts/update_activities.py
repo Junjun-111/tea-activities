@@ -532,11 +532,20 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
         })
         existing.add(title)
 
-    # lastSeen 机制：活动没有明确截止日期时，靠"连续几天搜不到则移除"动态判定结束。
-    # - 本次搜到的活动：lastSeen 更新为今天；
-    # - 旧文件里的活动本次没搜到：保留（活动可能仍持续，只是没报道），
-    #   连续 STALE_DAYS 天都没搜到才移除。
-    # 去重：同一品牌下标题相似（共享 ≥4 个中文字符）视为同一活动，取本次新版本（lastSeen 更新）
+    # 与上一轮数据的合并（去重 + 三天没搜到才移除）统一在 main() 里做，
+    # 因为这个函数在免费模式下会提前 return，写在这里的逻辑根本不会执行。
+    return items
+
+
+def merge_with_previous(city_name, city_key, items, today):
+    """本轮结果 + 上一轮文件 → 去重、保留、过期清理。
+
+    lastSeen 机制：活动没有明确截止日期时，靠"连续几天搜不到则移除"动态判定结束。
+    - 本次搜到的活动：lastSeen 更新为今天；
+    - 旧文件里的活动本次没搜到：保留（活动可能仍持续，只是这轮没报道），
+      连续 STALE_DAYS 天（默认 3）都没搜到才移除。
+    去重：同一品牌下标题相似（字符集相似度 ≥0.45）视为同一活动，保留本轮版本。
+    """
     stale_days = int(os.environ.get("STALE_DAYS", "3"))
     today_d = datetime.date.fromisoformat(today)
 
@@ -545,7 +554,7 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
         return re.sub(r"[^0-9\u4e00-\u9fff]", "", str(s))
 
     def _same_act(b1, t1, b2, t2):
-        """判断两条活动是否为同一活动：品牌包含 + 标题字符集相似度>=0.6"""
+        """判断两条活动是否为同一活动：品牌包含 + 标题字符集相似度>=0.45"""
         b1, b2 = _norm(b1), _norm(b2)
         if not b1 or not b2 or not (b1 in b2 or b2 in b1):
             return False
@@ -559,12 +568,10 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
             return True
         inter = len(set(a) & set(b))
         union = len(set(a) | set(b))
-        # 阈值从 0.6 放宽到 0.45：免费模式抓到的多条同活动新闻标题差异较大，
-        # 太严会同一个活动重复好几条
         return union > 0 and inter / union >= 0.45
 
     try:
-        with open(f"data/activities_{city['key']}.json", "r", encoding="utf-8") as f:
+        with open(f"data/activities_{city_key}.json", "r", encoding="utf-8") as f:
             old_data = json.load(f)
         old_items = old_data.get("activities", [])
     except Exception:
@@ -576,6 +583,7 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
     for it in items:
         if not any(_same_act(it["brand"], it["title"], m["brand"], m["title"]) for m in merged):
             merged.append(it)
+    kept = 0
     for oit in old_items:
         ob, ot = str(oit.get("brand", "")), str(oit.get("title", ""))
         dup = any(
@@ -589,9 +597,12 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
         except ValueError:
             last = today_d
         if (today_d - last).days > stale_days:
-            print(f"[{city['name']}] drop unseen >{stale_days}d:", ob, "-", ot)
+            print(f"[{city_name}] drop unseen >{stale_days}d:", ob, "-", ot)
             continue  # 连续多天搜不到，判定活动已结束，移除
+        kept += 1
         merged.append(oit)  # 保留，lastSeen 不变，等待下次确认
+    if kept:
+        print(f"[{city_name}] 保留上轮未被本轮搜到的活动:", kept, "条")
     # 按开始日期排序（新的在前）
     merged.sort(key=lambda x: x.get("startDate", ""), reverse=True)
     return merged
@@ -629,6 +640,9 @@ def main():
         except Exception as e:
             print(f"[{city['name']}] city fetch error:", e)
             items = []
+        if items:
+            # 两条代码路径（豆包搜索 / 免费+模型）的结果都统一在这里做保留与清理
+            items = merge_with_previous(city["name"], city["key"], items, today)
         if not items:
             print(f"[{city['name']}] no activities, keep old file if exists")
             continue
