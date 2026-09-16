@@ -3,6 +3,15 @@
   "city": "沈阳",
   "activities": [
     {
+      "brand": "喜茶",
+      "title": "超多肉椰椰芒芒新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-15",
+      "endDate": "",
+      "description": "喜茶新品「超多肉椰椰芒芒」上新，全国门店陆续上线",
+      "lastSeen": "2026-09-16"
+    },
+    {
       "brand": "700cc",
       "title": "赵继伟一日店长限定周边首发+新品尝鲜",
       "category": "茶饮",

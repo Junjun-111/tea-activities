@@ -100,6 +100,14 @@ MANUAL_ACTIVITIES = {
             "endDate": "2026-09-11",
             "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减免低价一杯，无需领券，每账号限1次",
         },
+        {
+            "brand": "喜茶",
+            "title": "超多肉椰椰芒芒新品上市",
+            "category": "茶饮",
+            "startDate": "2026-09-15",
+            "endDate": "",
+            "description": "喜茶新品「超多肉椰椰芒芒」上新，全国门店陆续上线",
+        },
     ],
 }
 
