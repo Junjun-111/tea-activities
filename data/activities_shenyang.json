@@ -3,156 +3,75 @@
   "city": "沈阳",
   "activities": [
     {
-      "brand": "甜啦啦",
-      "title": "甜啦啦深耕品质：“真茉莉，自然香”一杯好茶溯源升级",
+      "brand": "喜茶",
+      "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
-      "startDate": "2026-09-17",
+      "startDate": "2026-09-16",
       "endDate": "",
-      "description": "甜啦啦深耕品质：“真茉莉，自然香”一杯好茶溯源升级",
+      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
       "lastSeen": "2026-09-17"
     },
     {
-      "brand": "甜啦啦",
-      "title": "甜啦啦荔枝系列上新，七夕享13.14限定福利",
+      "brand": "喜茶",
+      "title": "Chiikawa联名合作",
       "category": "茶饮",
       "startDate": "2026-09-17",
       "endDate": "",
-      "description": "甜啦啦荔枝系列上新，七夕享13.14限定福利",
+      "description": "与日本动漫Chiikawa联名，推出限量联名周边",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "奈雪的茶",
-      "title": "奈雪的茶上新「泰橘系列」两款新品_",
+      "title": "泰橘系列双品上新",
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "",
-      "description": "奈雪的茶上新「泰橘系列」两款新品_",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "报‼️奈雪的茶x明日方舟终末地联名官宣啦_明日方舟",
-      "category": "茶饮",
-      "startDate": "2026-09-17",
-      "endDate": "",
-      "description": "报‼️奈雪的茶x明日方舟终末地联名官宣啦_明日方舟《天官赐福》动画周边万花筒·万",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "堪比魔药？!奈雪的茶X哈利波特联名活动状况百出!",
-      "category": "茶饮",
-      "startDate": "2026-09-17",
-      "endDate": "",
-      "description": "堪比魔药？!奈雪的茶X哈利波特联名活动状况百出!近期，这一世界闻名的大IP与奈雪",
+      "description": "泰橘3倍超C小橙瓶升级回归，全新初雪柠酪泰橘亮相",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "霸王茶姬",
-      "title": "霸王茶姬联名clot抹茶系列9月16日全国上新",
+      "title": "CLOT联名抹茶系列",
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "",
-      "description": "霸王茶姬联名clot抹茶系列9月16日全国上新",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬CHAGEE的",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "霸王茶姬CHAGEE的",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "物料短缺!霸王茶姬联名上新大混乱",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "物料短缺!霸王茶姬联名上新大混乱",
+      "description": "联名CLOT推出三款抹茶新品，含联名包材及五款主题周边",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "茶百道",
-      "title": "茶百道×《天官赐福》与君共饮",
+      "title": "天官赐福动画联名",
       "category": "茶饮",
-      "startDate": "2026-09-17",
+      "startDate": "2026-09-12",
       "endDate": "",
-      "description": "茶百道×《天官赐福》与君共饮「秋」|SocialBeta久候相逢，所愿皆成。9月",
+      "description": "与天官赐福动画联名，推出四款限定包装与五款周边",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "茶百道",
-      "title": "茶百道ChaPanda的",
+      "title": "柠檬巴巴露亚拿铁上新",
       "category": "茶饮",
       "startDate": "2026-09-11",
       "endDate": "",
-      "description": "茶百道ChaPanda的",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "茶百道",
-      "title": "2026.09.12茶百道与天官赐福联名～_",
-      "category": "茶饮",
-      "startDate": "2026-09-17",
-      "endDate": "",
-      "description": "2026.09.12茶百道与天官赐福联名～_",
+      "description": "灵感源自法式巴巴露亚甜品，可喝的柠檬液体蛋糕",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "蜜雪冰城",
       "title": "荔枝系列新品上新",
       "category": "茶饮",
-      "startDate": "2026-09-17",
+      "startDate": "2026-09-16",
       "endDate": "",
-      "description": "荔枝系列新品上新，直播间优享折上折~快来直播间看看吧!荔枝系列新品上新，直播间优",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "蜜雪冰城",
-      "title": "真的狠狠期待了#盗墓笔记联名活动#蜜雪冰城联名活动",
-      "category": "茶饮",
-      "startDate": "2026-09-17",
-      "endDate": "",
-      "description": "真的狠狠期待了#盗墓笔记联名活动#蜜雪冰城联名活动",
+      "description": "荔枝系列新品上市，直播间同步优享",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "古茗",
-      "title": "没活硬整？!古茗上新早安鲜牛奶!",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "没活硬整？!古茗上新早安鲜牛奶!",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "甜啦啦",
-      "title": "9月4日，甜啦啦茉莉茶底全线升级",
+      "title": "早安鲜牛奶上新",
       "category": "茶饮",
       "startDate": "2026-09-17",
       "endDate": "",
-      "description": "茉莉升级首战告捷，周环比增长33.3%_",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "沪上阿姨",
-      "title": "沪上阿姨新品上新#沪上阿姨新品推荐#沪上阿姨推荐必",
-      "category": "茶饮",
-      "startDate": "2026-09-17",
-      "endDate": "",
-      "description": "沪上阿姨新品上新#沪上阿姨新品推荐#沪上阿姨推荐必喝#沪上阿姨沪上阿姨新品上新#",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "沪上阿姨",
-      "title": "状况百出!沪上阿姨联名体验太差劲？",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "状况百出!沪上阿姨联名体验太差劲？",
+      "description": "小程序上新纯鲜牛奶饮品，可选冷热",
       "lastSeen": "2026-09-17"
     },
     {
