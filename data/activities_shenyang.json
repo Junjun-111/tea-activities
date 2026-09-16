@@ -36,6 +36,17 @@
       "lastSeen": "2026-09-15"
     },
     {
+      "brand": "柠季",
+      "title": "莓果系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-13",
+      "endDate": "",
+      "image": "",
+      "description": "推出两款莓果风味新品，全国门店同步上新",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-16"
+    },
+    {
       "brand": "700cc",
       "title": "新品预热线索公布",
       "category": "茶饮",
@@ -56,17 +67,6 @@
       "description": "沈阳中街恒隆店将办一日店长活动，首发限量周边",
       "ratio": 1.2,
       "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "柠季",
-      "title": "莓果系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-11",
-      "endDate": "",
-      "image": "",
-      "description": "全国门店上线莓果口味柠檬茶及可可奶新品，线下门店直售",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-15"
     },
     {
       "brand": "cubic3立方咖啡",
@@ -92,6 +92,17 @@
     },
     {
       "brand": "茉莉奶白",
+      "title": "花香茶咖2.0系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-10",
+      "endDate": "",
+      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-16_1.jpg",
+      "description": "上新两款花茶拼咖啡新品，搭配雪莉SOE、维也纳奶油等",
+      "ratio": 1.2,
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "茉莉奶白",
       "title": "针王与维也纳、白兰与维也纳新品上市",
       "category": "茶饮",
       "startDate": "2026-09-10",
@@ -109,17 +120,6 @@
       "endDate": "",
       "image": "",
       "description": "全国上线两款花香茶咖新品，9月10日持教师资格证可免费领新品",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-15"
-    },
-    {
-      "brand": "茉莉奶白",
-      "title": "花香茶咖2.0系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-15_2.jpg",
-      "description": "两款花茶搭配维也纳咖啡的新品，全国门店同步上架",
       "ratio": 1.2,
       "lastSeen": "2026-09-15"
     },
@@ -174,9 +174,9 @@
       "startDate": "2026-09-04",
       "endDate": "",
       "image": "",
-      "description": "全国上新橙香系列新品，主题门店打卡可领开学护照集章兑新品",
+      "description": "推出两款秋日橙香主题新品，含鲜橙、香柚冻等原料",
       "ratio": 1.2,
-      "lastSeen": "2026-09-15"
+      "lastSeen": "2026-09-16"
     },
     {
       "brand": "爷爷不泡茶",
