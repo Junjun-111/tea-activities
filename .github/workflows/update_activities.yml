@@ -2,10 +2,12 @@ name: update-activities
 
 on:
   schedule:
+    # 联网搜索按次计费，是主要开销；改成每天 2 次（原来 4 次）。
+    # 想更勤就把注释的两条放开，想更省就只留一条。
     - cron: '0 16 * * *'   # 北京 0:00
-    - cron: '0 22 * * *'   # 北京 6:00
     - cron: '0 4 * * *'    # 北京 12:00
-    - cron: '0 10 * * *'   # 北京 18:00
+    # - cron: '0 22 * * *' # 北京 6:00
+    # - cron: '0 10 * * *' # 北京 18:00
   # 手动运行：出门到别的城市时，在 Actions 页面点 Run workflow，
   # 在 cities 里填城市 key（如 beijing 或 shenyang,beijing）即可，
   # 不用改文件。留空 = 用下面的默认城市。

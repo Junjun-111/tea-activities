@@ -1,20 +1,49 @@
 #!/usr/bin/env python3
-"""每天定时任务：抓饮品报最新文章 -> 豆包联网搜索活动 -> 更新 activities.json
+"""每天定时任务：抓公开网页 -> 提取品牌活动 -> 更新 activities.json
 
 数据源：饮品报移动版 m.drinknewspaper.com（茶饮行业垂直媒体，日更，文章配图多为品牌官方宣传图）。
-搜索与提取全部由豆包（doubao-seed-2-1-pro，火山方舟 Responses API + Web Search 插件）完成。
-依赖环境变量：ARK_API_KEY
+两种模式：
+1) 免费模式（默认，无需任何 key）：抓饮品报标题 + Bing/DuckDuckGo 搜索结果，
+   用关键词规则提取活动 —— 0 成本，数据比模型模式粗一些。
+2) 模型模式：设置了 ARK_API_KEY（且 FREE_MODE 不为 1）时，走豆包联网搜索，
+   数据更准更全，但联网搜索按次计费。
 """
 import datetime
 import gzip
 import json
 import os
 import re
+import urllib.parse
 import urllib.request
 
-ARK_KEY = os.environ["ARK_API_KEY"]
+ARK_KEY = os.environ.get("ARK_API_KEY", "")
+# 免费模式：没有填 ARK_API_KEY，或显式设置 FREE_MODE=1
+FREE_MODE = (not ARK_KEY) or os.environ.get("FREE_MODE") == "1"
 ARK_RESPONSES = "https://ark.cn-beijing.volces.com/api/v3/responses"
-DOUBAO_MODEL = "doubao-seed-2-1-pro-260628"
+# 想省钱可以换成便宜的模型（例如 doubao-seed-2-0-lite-260628），
+# 质量会下降一些；不改就用 pro。
+DOUBAO_MODEL = os.environ.get("DOUBAO_MODEL", "doubao-seed-2-1-pro-260628")
+
+# 用户选定的品牌关注清单（茶饮 + 咖啡）
+WATCH_BRANDS = (
+    "喜茶、奈雪的茶、霸王茶姬、茶百道、蜜雪冰城、古茗、甜啦啦、沪上阿姨、"
+    "茉莉奶白、爷爷不泡茶、柠季、一点点、700cc、鲜果时间、"
+    "瑞幸、星巴克、库迪、cubic3立方咖啡"
+)
+BRAND_NAMES = [b.strip() for b in WATCH_BRANDS.split("、") if b.strip()]
+
+# 免费模式的规则关键词
+ACT_KEYWORDS = ("新品", "上新", "上市", "回归", "联名", "限定", "买一送一", "买1送1",
+                "第二杯", "开业", "快闪", "主题店", "打卡", "赠", "首发", "Pro", "报到")
+NON_ACT_KEYWORDS = ("抽奖", "兑奖", "兑换券", "0.01元", "0.1元", "口令", "免单券", "抢券",
+                    "领券", "美团外卖", "外卖平台", "平台套餐", "双杯套餐", "买1送1券",
+                    "买一送一券", "代金券", "刮奖", "游戏得", "任务兑换")
+NON_BRAND_KEYWORDS = ("食堂", "档口", "个体", "私人", "工作室", "小巷", "商户", "咖啡屋",
+                      "咖啡店", "小摊", "摊贩", "社区团购", "自营")
+# 免费模式里容易混进来的"非活动"内容：盘点/汇总/答疑/帖子这类
+NOISE_KEYWORDS = ("有哪些", "盘点", "汇总", "合集", "回顾", "一文看懂", "排行榜",
+                  "持续更新", "讨论", "测评", "开个贴", "奶茶上新贴")
+COFFEE_BRANDS = ("瑞幸", "星巴克", "库迪", "Manner")
 
 MOBILE_UA = ("Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
              "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1")
@@ -152,8 +181,14 @@ def doubao_chat(prompt, system="你是茶饮行业情报分析师。", max_token
         "max_output_tokens": max_tokens,
     }
     if search:
-        body["tools"] = [{"type": "web_search", "max_keyword": 5}]
+        # max_keyword 控制一次调用最多发起几次联网搜索——联网搜索是主要费用来源，
+        # 3 次足够覆盖一组品牌（原来 5 次，配合分组搜索会成倍烧钱）
+        body["tools"] = [{"type": "web_search", "max_keyword": 3}]
     resp = _post_responses(body)
+    # 打印每次调用的 token 用量，方便在 Actions 日志里核算费用
+    usage = resp.get("usage")
+    if usage:
+        print("[usage]", json.dumps(usage, ensure_ascii=False))
     texts = []
     for item in resp.get("output", []):
         if item.get("type") != "message":
@@ -274,12 +309,10 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
     """
     city_name = city["name"]
     province = city["province"]
-    # 用户选定的品牌关注清单（茶饮 + 咖啡）
-    watch_brands = (
-        "喜茶、奈雪的茶、霸王茶姬、茶百道、蜜雪冰城、古茗、甜啦啦、沪上阿姨、"
-        "茉莉奶白、爷爷不泡茶、柠季、一点点、700cc、鲜果时间、"
-        "瑞幸、星巴克、库迪、cubic3立方咖啡"
-    )
+    # 免费模式：不调用付费模型/搜索，改走免费抓取 + 关键词规则
+    if FREE_MODE:
+        return fetch_free_city_activities(city, news, today, cutoff_days)
+    watch_brands = WATCH_BRANDS
     # 品牌清单按 6 个一组拆开搜索：一次把 18 个品牌全丢给模型，它每个品牌只会浅搜一下，
     # 官方刚上新的产品很容易漏（实测漏掉过喜茶「超多肉椰椰芒芒」，而单独问豆包却能搜到）。
     # 拆成小组后每个品牌能搜得更深，最后把各组结果合并成一份再做结构化解析。
@@ -315,45 +348,33 @@ def fetch_city_activities(city, news, today, cutoff_days=7):
             "美团/饿了么等外卖平台套餐（如'双杯套餐17.99元'）、平台优惠券活动。\n"
             "只要这4类：①新品上市；②IP联名产品；③门店无券直享买一送一（下单自动生效）；④打卡/到店送周边。\n"
             "【覆盖要求】清单里每个品牌都要覆盖到，同一个品牌有几条活动就写几条（不要只写一条）。\n"
-            "列出所有满足条件的活动（数量不限，越多越好），"
-            "每条包含：品牌名、活动或新品名、开始日期、结束日期（如有）、"
-            "一句话介绍、是否为全国活动、该活动的官方信息来源URL（必须是报道该活动的官方微博/微信公众号文章/品牌官网/新闻网页链接，不要编造URL）。"
+            "列出所有满足条件的活动（数量不限，越多越好）。\n"
+            "输出严格 JSON 数组（只输出 JSON，不要任何其他文字）：\n"
+            '[{"title":"活动名(不超过25字)","brand":"品牌名","category":"茶饮或咖啡",'
+            '"startDate":"YYYY-MM-DD(资讯里明确写了活动开始日期就用；没写就填该活动官方发布的日期；再没有就填今天)",'
+            '"endDate":"YYYY-MM-DD(资讯里明确写了截止日期才填；没有明确截止日期就留空字符串)",'
+            '"description":"不超过40字的当地活动介绍",'
+            '"sourceUrl":"报道该活动的官方信息来源URL(没有就留空字符串)"}]'
         )
 
-    news_parts = []
+    # 每组品牌一次联网调用，直接要求返回结构化 JSON。
+    # 以前是"先联网搜索、再用第二个模型调用解析"，那次解析要把搜索结果整体再读一遍，
+    # 上下文重复导致费用接近翻倍；合并成一次调用（也省掉它自己的 token）。
+    acts = []
     for gi, group in enumerate(brand_groups, 1):
         try:
-            part = doubao_chat(build_search_prompt(group), search=True, max_tokens=4000)
+            raw = doubao_chat(build_search_prompt(group), search=True, max_tokens=4000)
         except Exception as e:
             print(f"[{city_name}] search group {gi} fail:", e)
             continue
         print(f"== CITY {city_name} SEARCH {gi}/{len(brand_groups)} ==")
-        print(part[:300])
-        news_parts.append(part)
-    if not news_parts:
+        print(raw[:300])
+        try:
+            acts.extend(extract_json(raw))
+        except Exception as e:
+            print(f"[{city_name}] group {gi} parse fail:", e)
+    if not acts:
         print(f"[{city_name}] all search groups failed")
-        return []
-    news_txt = "\n\n".join(news_parts)
-
-    parse_prompt = (
-        f"根据下面的「{province}{city_name}」茶饮资讯，提取所有满足条件的品牌活动（数量不限，"
-        "资讯里有几条就提取几条，满足条件都保留），"
-        f"【品牌清单】只保留以下品牌的官方门店活动：{watch_brands}。"
-        "排除个人小店、独立咖啡店、学校食堂、非品牌摊位、社区团购。"
-        "排除：小程序抽奖/口令兑奖/兑换券/0.01元或0.1元抢购、需抢券领券的、外卖平台套餐（如双杯套餐17.99元）、平台优惠券活动。"
-        "只要：①新品上市；②IP联名；③门店无券直享买一送一；④打卡送周边。\n"
-        "输出严格 JSON 数组（只输出 JSON，不要任何其他文字）：\n"
-        '[{"title":"活动名(不超过25字)","brand":"品牌名","category":"茶饮或咖啡",'
-        '"startDate":"YYYY-MM-DD(资讯里明确写了活动开始日期就用；没写就填该活动官方发布的日期；再没有就填今天)",'
-        '"endDate":"YYYY-MM-DD(资讯里明确写了截止日期才填；没有明确截止日期就留空字符串)",'
-        '"description":"不超过40字的当地活动介绍","national":true或false,'
-        '"sourceUrl":"报道该活动的官方信息来源URL(资讯里没给出就留空字符串)"}]\n'
-        f"资讯：\n{news_txt}"
-    )
-    try:
-        acts = extract_json(doubao_chat(parse_prompt, max_tokens=4000))
-    except Exception as e:
-        print(f"[{city_name}] parse fail:", e)
         return []
 
     items = []
@@ -532,7 +553,8 @@ def main():
 
     # 3. 全国兜底文件：饮品报全国活动 + 各城市合并（App 未定位时使用）
     national = []
-    if news:
+    # 免费模式不调用模型，全国文件直接用各城市合并的结果（下面 national = national or all_items）
+    if news and not FREE_MODE:
         # 全国口径：从饮品报文章提取（原逻辑，最多 6 条）
         lines = []
         for art in news:
@@ -589,6 +611,141 @@ def main():
         print("OK national activities:", len(national))
     else:
         print("no activities generated, keep old data")
+
+
+def free_web_search(query, n=5, days=7):
+    """零成本搜索：抓 DuckDuckGo / Bing 的网页结果，返回 [(标题, 摘要)]。
+
+    不调用任何付费接口。两条都带时间过滤（只取最近 days 天），避免搜到几个月前的旧文章。
+    实测 DuckDuckGo 的 html 端点更稳，所以它排在前面，Bing 兜底。
+    """
+    out = []
+    df = "d" if days <= 1 else ("w" if days <= 7 else "m")
+    try:
+        url = (f"https://html.duckduckgo.com/html/?q={urllib.parse.quote(query)}"
+               f"&df={df}")
+        html = _get(url).decode("utf-8", "ignore")
+        titles = re.findall(r'class="result__a"[^>]*>(.*?)</a>', html, re.S)
+        snips = re.findall(r'class="result__snippet"[^>]*>(.*?)</a>', html, re.S)
+        for i, t in enumerate(titles):
+            title = re.sub(r"<[^>]+>", "", t).strip()
+            snip = re.sub(r"<[^>]+>", "", snips[i]).strip() if i < len(snips) else ""
+            if title:
+                out.append((title, snip))
+            if len(out) >= n:
+                break
+    except Exception as e:
+        print("ddg free search fail:", e)
+    if len(out) < n:
+        try:
+            url = ("https://www.bing.com/search?q=" + urllib.parse.quote(query)
+                   + "&filters=" + urllib.parse.quote('ex1:"ez2"'))
+            html = _get(url).decode("utf-8", "ignore")
+            for m in re.finditer(
+                    r'<li class="b_algo".*?<h2[^>]*>\s*<a[^>]*>(.*?)</a>.*?'
+                    r'(?:<p[^>]*>(.*?)</p>)?', html, re.S):
+                title = re.sub(r"<[^>]+>", "", m.group(1) or "").strip()
+                snip = re.sub(r"<[^>]+>", "", m.group(2) or "").strip()
+                if title:
+                    out.append((title, snip))
+                if len(out) >= n:
+                    break
+        except Exception as e:
+            print("bing free search fail:", e)
+    return out[:n]
+
+
+def date_in_text(text, today, cutoff_days=7):
+    """文本里出现的日期 → (日期字符串 或 None, 是否可用)。
+    能找到日期且明显过期（早于 cutoff_days 天）就判定为旧文章，丢掉。"""
+    m = re.search(r"(\d{4})[-/年](\d{1,2})[-/月](\d{1,2})", text)
+    if m:
+        y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    else:
+        m = re.search(r"(\d{1,2})月(\d{1,2})日", text)
+        if not m:
+            return (None, True)
+        y, mo, d = int(today[:4]), int(m.group(1)), int(m.group(2))
+    try:
+        found = datetime.date(y, mo, d)
+    except ValueError:
+        return (None, True)
+    today_d = datetime.date.fromisoformat(today)
+    if (today_d - found).days > cutoff_days:
+        return (found.isoformat(), False)
+    return (found.isoformat(), True)
+
+
+def fetch_free_city_activities(city, news, today, cutoff_days=7):
+    """零成本路径：只用免费可抓的公开网页，用关键词规则提取品牌活动。
+
+    来源：① 饮品报文章标题（带发布日期）② 每个品牌一次免费网页搜索。
+    规则：文本里出现品牌名 + 命中活动关键词 → 收录；抽奖/券类/平台套餐直接丢掉。
+    精度不如模型模式（标题当活动名、描述用摘要），但完全不花钱。
+    """
+    city_name = city["name"]
+    items = []
+    seen = set()
+
+    def add(brand, title, start, desc):
+        t = re.sub(r"\s+", "", str(title))[:25]
+        if not t or t in seen:
+            return
+        seen.add(t)
+        items.append({
+            "brand": brand,
+            "title": t,
+            "category": "咖啡" if brand in COFFEE_BRANDS else "茶饮",
+            "startDate": start,
+            "endDate": "",
+            "description": re.sub(r"\s+", "", str(desc))[:40],
+            "lastSeen": today,
+        })
+
+    def scan(text, date_hint):
+        text = str(text)
+        if not text or any(k in text for k in NON_ACT_KEYWORDS):
+            return
+        if any(k in text for k in NOISE_KEYWORDS):
+            return
+        if not any(k in text for k in ACT_KEYWORDS):
+            return
+        # 文本里写了日期、而且明显是旧文章（早于 cutoff）→ 丢掉
+        found, ok = date_in_text(text, today, cutoff_days)
+        if not ok:
+            print(f"[{city_name}] skip stale({found}):", text[:40])
+            return
+        for brand in BRAND_NAMES:
+            if brand not in text:
+                continue
+            if any(k in brand for k in NON_BRAND_KEYWORDS):
+                continue
+            add(brand, text, found or date_hint or today, text)
+            return  # 一段文本只归给第一个命中的品牌
+
+    # ① 饮品报最新文章标题（带发布日期，用它当活动开始日期）
+    for art in news:
+        title = art.get("title", "")
+        if not title:
+            continue
+        d = normalize_dates(str(art.get("date", "")), "", today)
+        scan(title, d[0] if d else today)
+
+    # ② 每个品牌一次免费搜索，从结果标题 + 摘要里提取
+    for brand in BRAND_NAMES:
+        try:
+            hits = free_web_search(f"{brand} 新品 上新 联名", 5)
+        except Exception as e:
+            print(f"[{city_name}] free search fail {brand}:", e)
+            continue
+        for (t, snip) in hits:
+            if brand not in f"{t}{snip}":
+                continue
+            scan(t, today)
+            if snip:
+                scan(snip, today)
+    print(f"[{city_name}] free mode items:", len(items))
+    return items
 
 
 if __name__ == "__main__":
