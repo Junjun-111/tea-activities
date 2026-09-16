@@ -14,6 +14,42 @@
       "lastSeen": "2026-09-15"
     },
     {
+      "brand": "霸王茶姬",
+      "title": "抹茶系列×CLOT联名上新",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "2026-09-22",
+      "description": "上新3款抹茶系列新品，购指定产品赠CLOT联名周边",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "沪上阿姨",
+      "title": "沪上阿姨×韩束车厘红宝石联名",
+      "category": "茶饮",
+      "startDate": "2026-09-15",
+      "endDate": "",
+      "description": "联名韩束推出车厘红宝石套餐，点单赠韩束红蛮腰小样",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "爷爷不泡茶×西岸美术馆联名",
+      "category": "茶饮",
+      "startDate": "2026-09-14",
+      "endDate": "",
+      "description": "联名西岸美术馆推出法式油画主题活动，赠主题周边",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "瑞幸",
+      "title": "咸芝士豆乳系列×时光代理人联名",
+      "category": "咖啡",
+      "startDate": "2026-09-14",
+      "endDate": "",
+      "description": "上新咸芝士豆乳系列饮品，联名时光代理人推限定包装",
+      "lastSeen": "2026-09-16"
+    },
+    {
       "brand": "爷爷不泡茶",
       "title": "泰奶珍珠冰泰式奶香限定新品上市",
       "category": "茶饮",
@@ -47,6 +83,15 @@
       "lastSeen": "2026-09-16"
     },
     {
+      "brand": "茶百道",
+      "title": "茶百道×天官赐福动画联名活动",
+      "category": "茶饮",
+      "startDate": "2026-09-12",
+      "endDate": "",
+      "description": "联名天官赐福动画，上线联名饮品，配套主题门店打卡活动",
+      "lastSeen": "2026-09-16"
+    },
+    {
       "brand": "700cc",
       "title": "新品预热线索公布",
       "category": "茶饮",
@@ -56,6 +101,15 @@
       "description": "公布新品三条线索，谜底将于9月15日正式揭晓",
       "ratio": 1.2,
       "lastSeen": "2026-09-14"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪的茶×明日方舟终末地联名",
+      "category": "茶饮",
+      "startDate": "2026-09-11",
+      "endDate": "",
+      "description": "官宣联名游戏IP明日方舟终末地，将上线联名饮品及套餐",
+      "lastSeen": "2026-09-16"
     },
     {
       "brand": "700cc",
@@ -146,6 +200,15 @@
       "lastSeen": "2026-09-13"
     },
     {
+      "brand": "甜啦啦",
+      "title": "黄山毛峰青提系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-09",
+      "endDate": "",
+      "description": "黄山毛峰搭配阳光玫瑰青提推出鲜果茶，配国风周边",
+      "lastSeen": "2026-09-16"
+    },
+    {
       "brand": "爷爷不泡茶",
       "title": "美图秀秀联名周边上线",
       "category": "茶饮",
@@ -199,6 +262,15 @@
       "description": "沈阳参与的主题门店学生购新品可领限量收藏护照",
       "ratio": 1.2,
       "lastSeen": "2026-09-13"
+    },
+    {
+      "brand": "喜茶",
+      "title": "龙眼系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-01",
+      "endDate": "",
+      "description": "椰山龙眼冰回归，上线雪毫桂花龙眼等新品及龙眼主题甜品",
+      "lastSeen": "2026-09-16"
     },
     {
       "brand": "茉莉奶白",
