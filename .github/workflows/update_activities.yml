@@ -40,6 +40,9 @@ jobs:
         env:
           ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
           CITY_KEYS: ${{ github.event.inputs.cities || 'shenyang' }}
+          # 免费模式：不调用付费模型/联网搜索（改抓公开网页 + 关键词规则）。
+          # 方舟余额充好了想切回模型模式（更准），把下面这行删掉或改成 '0'。
+          FREE_MODE: '1'
         run: python scripts/update_activities.py
 
       # 同步到 OSS（App 的首选数据源）。失败不阻塞后面的提交，

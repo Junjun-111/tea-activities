@@ -3,380 +3,526 @@
   "city": "沈阳",
   "activities": [
     {
-      "brand": "奈雪的茶",
-      "title": "奈雪×明日方舟终末地联名",
-      "category": "茶饮",
-      "startDate": "2026-09-23",
-      "endDate": "",
-      "description": "与游戏IP明日方舟终末地联名，将上线联名饮品及瓶装联名产品",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "700cc",
-      "title": "700CC沈阳赵继伟一日店长活动",
-      "category": "茶饮",
-      "startDate": "2026-09-20",
-      "endDate": "2026-09-20",
-      "description": "沈阳恒隆门店举办赵继伟一日店长活动，首发限量周边同步推新品",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "700cc",
-      "title": "赵继伟一日店长限定周边首发+新品尝鲜",
-      "category": "茶饮",
-      "startDate": "2026-09-20",
-      "endDate": "2026-09-20",
-      "image": "",
-      "description": "沈阳皇城恒隆广场店办一日店长活动，首发限定周边、推新品",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-15"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪泰橘系列升级回归上新",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "泰橘3倍超C小橙瓶升级回归，同步上新初雪柠酪泰橘，配主题周边",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬抹茶系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "全国上新3款抹茶系列新品，含花香、果香、浓醇不同风味",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "抹茶系列×CLOT联名上新",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "2026-09-22",
-      "description": "上新3款抹茶系列新品，购指定产品赠CLOT联名周边",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "喜茶",
-      "title": "超多肉椰椰芒芒新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-15",
-      "endDate": "",
-      "description": "喜茶新品「超多肉椰椰芒芒」上新，全国门店陆续上线",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "沪上阿姨",
-      "title": "沪上阿姨×韩束车厘红宝石联名",
-      "category": "茶饮",
-      "startDate": "2026-09-15",
-      "endDate": "",
-      "description": "联名韩束推出车厘红宝石套餐，点单赠韩束红蛮腰小样",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "爷爷不泡茶",
-      "title": "爷爷不泡茶×西岸美术馆联名",
-      "category": "茶饮",
-      "startDate": "2026-09-14",
-      "endDate": "",
-      "description": "联名西岸美术馆推出法式油画主题活动，赠主题周边",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "瑞幸",
-      "title": "咸芝士豆乳系列×时光代理人联名",
-      "category": "咖啡",
-      "startDate": "2026-09-14",
-      "endDate": "",
-      "description": "上新咸芝士豆乳系列饮品，联名时光代理人推限定包装",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "爷爷不泡茶",
-      "title": "泰奶珍珠冰泰式奶香限定新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-14",
-      "endDate": "",
-      "image": "",
-      "description": "泰式红茶搭配奶感冰沙裹国王珍珠，呈现南洋风味",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "爷爷不泡茶",
-      "title": "×花西子联名活动上线",
-      "category": "茶饮",
-      "startDate": "2026-09-14",
-      "endDate": "2026-09-29",
-      "image": "",
-      "description": "与花西子跨界联动，全国门店上线联名产品及主题包装",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-15"
-    },
-    {
-      "brand": "茶百道",
-      "title": "茶百道×天官赐福动画联名",
-      "category": "茶饮",
-      "startDate": "2026-09-12",
-      "endDate": "",
-      "description": "联名上线6款饮品，购套餐得联名周边，设主题门店享专属活动",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "700cc",
-      "title": "新品预热线索公布",
-      "category": "茶饮",
-      "startDate": "2026-09-12",
-      "endDate": "2026-09-15",
-      "image": "",
-      "description": "公布新品三条线索，谜底将于9月15日正式揭晓",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-14"
-    },
-    {
-      "brand": "柠季",
-      "title": "柠季莓果系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-11",
-      "endDate": "",
-      "description": "推出莓果缤纷冰柠茶、莓果可可奶两款莓果主题新品",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "cubic3立方咖啡",
-      "title": "cubic3立方咖啡秋季限定系列上市",
-      "category": "咖啡",
-      "startDate": "2026-09-11",
-      "endDate": "",
-      "description": "推出秋季主题季节限定咖啡饮品，主打丝滑秋日风味",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "cubic3立方咖啡",
-      "title": "入秋季节限定咖啡新品上市",
-      "category": "咖啡",
-      "startDate": "2026-09-11",
-      "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-16_3.jpg",
-      "description": "推出秋季季节限定咖啡新品，主打丝滑入秋风味，当季限定",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "cubic3立方咖啡",
-      "title": "秋季季节限定新品预告",
-      "category": "咖啡",
-      "startDate": "2026-09-11",
-      "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-14_4.jpg",
-      "description": "推出秋季季节限定咖啡新品，适配入秋风味",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-14"
-    },
-    {
-      "brand": "柠季",
-      "title": "莓果系列新品上市 购套餐赠周边",
-      "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "",
-      "description": "上新莓果系列两款新品，购指定套餐赠贴纸、拼豆套组等周边",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "茉莉奶白",
-      "title": "花香茶咖2.0系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-16_1.jpg",
-      "description": "上新两款花茶拼咖啡新品，搭配雪莉SOE、维也纳奶油等",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "茉莉奶白",
-      "title": "针王与维也纳、白兰与维也纳新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-16_0.jpg",
-      "description": "两款花香茶咖新品全国同步上线",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "茉莉奶白",
-      "title": "针王与维也纳等两款花香茶咖新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "",
-      "description": "全国上线两款花香茶咖新品，9月10日持教师资格证可免费领新品",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-15"
-    },
-    {
-      "brand": "茉莉奶白",
-      "title": "茉莉奶白花香味茶咖新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-10",
-      "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-13_1.jpg",
-      "description": "推出针王与维也纳、白兰与维也纳两款花香茶咖新品",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-13"
-    },
-    {
-      "brand": "爷爷不泡茶",
-      "title": "爷爷不泡茶开学季color drink活动",
-      "category": "茶饮",
-      "startDate": "2026-09-09",
-      "endDate": "",
-      "description": "推出开学季限定选品活动，包含三款限定搭配饮品",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "沪上阿姨",
-      "title": "沪上阿姨超糯溏心木薯糖水上市",
-      "category": "茶饮",
-      "startDate": "2026-09-09",
-      "endDate": "",
-      "description": "新品选用黄心木薯搭配桃胶、银耳等，呈现经典糖水多重口感",
-      "lastSeen": "2026-09-16"
-    },
-    {
       "brand": "甜啦啦",
-      "title": "黄山毛峰青提系列新品上市",
+      "title": "甜啦啦荔枝系列上新，七夕享13.14限定福利",
       "category": "茶饮",
-      "startDate": "2026-09-09",
+      "startDate": "2026-09-16",
       "endDate": "",
-      "description": "黄山毛峰搭配阳光玫瑰青提推出鲜果茶，配国风周边",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "爷爷不泡茶",
-      "title": "美图秀秀联名周边上线",
-      "category": "茶饮",
-      "startDate": "2026-09-09",
-      "endDate": "",
-      "image": "",
-      "description": "联名推出化妆包、气垫梳周边，辽宁区域门店可获取",
-      "ratio": 1.2,
+      "description": "甜啦啦荔枝系列上新，七夕享13.14限定福利",
       "lastSeen": "2026-09-16"
     },
     {
       "brand": "喜茶",
-      "title": "喜茶喜柿多多系列回归",
+      "title": "满嘴土味!喜茶新品上市!中国咖啡网09月16日更新",
       "category": "茶饮",
-      "startDate": "2026-09-08",
+      "startDate": "2026-09-16",
       "endDate": "",
-      "description": "喜柿多多时令回归，同步上新喜柿多多蛋糕，蛋糕+茶无券买1送1",
+      "description": "满嘴土味!喜茶新品上市!中国咖啡网09月16日更新",
       "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "柠季",
-      "title": "×大力水手联名系列上新",
-      "category": "茶饮",
-      "startDate": "2026-09-08",
-      "endDate": "",
-      "image": "",
-      "description": "全国门店上线联名包装港式冻柠茶等联名产品",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-15"
-    },
-    {
-      "brand": "爷爷不泡茶",
-      "title": "泰式浓情限时新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-08",
-      "endDate": "",
-      "image": "",
-      "description": "推出两款泰式风味新品，复刻东南亚特色风味",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-13"
-    },
-    {
-      "brand": "茶百道",
-      "title": "茶百道岭南龙眼冰奶上市",
-      "category": "茶饮",
-      "startDate": "2026-09-07",
-      "endDate": "",
-      "description": "选用岭南龙眼搭配栀兰茶与奶香，推出秋日新品岭南龙眼冰奶",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "瑞幸",
-      "title": "瑞幸瑰夏白冷萃上市",
-      "category": "咖啡",
-      "startDate": "2026-09-07",
-      "endDate": "",
-      "description": "选用埃塞瑰夏豆双处理法冷萃，搭配咸甜奶酪，风味层次丰富",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "蜜雪冰城",
-      "title": "蜜雪冰城奶麻薯系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-04",
-      "endDate": "",
-      "description": "糯糯奶麻薯系列新品全国上新，口感香甜软糯",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "爷爷不泡茶",
-      "title": "爷爷不泡茶橙香玉露系列上新",
-      "category": "茶饮",
-      "startDate": "2026-09-04",
-      "endDate": "",
-      "description": "开学季上新橙香玉露系列，含奶油玉露、冰茶两款产品",
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "爷爷不泡茶",
-      "title": "橙香玉露系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-04",
-      "endDate": "",
-      "image": "",
-      "description": "推出两款秋日橙香主题新品，含鲜橙、香柚冻等原料",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-16"
-    },
-    {
-      "brand": "爷爷不泡茶",
-      "title": "开学季主题门店打卡赠礼",
-      "category": "茶饮",
-      "startDate": "2026-09-04",
-      "endDate": "",
-      "image": "",
-      "description": "沈阳参与的主题门店学生购新品可领限量收藏护照",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-13"
     },
     {
       "brand": "喜茶",
-      "title": "龙眼系列新品上市",
+      "title": "喜茶官宣称，本次上新的这款超级植物茶名叫&quot",
       "category": "茶饮",
-      "startDate": "2026-09-01",
+      "startDate": "2026-09-16",
       "endDate": "",
-      "description": "椰山龙眼冰回归，上线雪毫桂花龙眼等新品及龙眼主题甜品",
+      "description": "喜茶官宣称，本次上新的这款超级植物茶名叫&quot;红菜头美颜瓶&quot;，除",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "喜茶",
+      "title": "喜茶上新品!员工果蔬整不完!中国咖啡网09月16日",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "喜茶上新品!员工果蔬整不完!中国咖啡网09月16日更新",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "喜茶",
+      "title": "彼时正值暑假，巴黎奥运会掀起了大众健康运动的热潮，",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "彼时正值暑假，巴黎奥运会掀起了大众健康运动的热潮，喜茶联名安踏冠军推出了&quo",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "喜茶",
+      "title": "取餐等3小时!喜茶chiikawa联名活动火爆咖啡",
+      "category": "茶饮",
+      "startDate": "2026-09-12",
+      "endDate": "",
+      "description": "取餐等3小时!喜茶chiikawa联名活动火爆咖啡网09月12日更新",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "喜茶",
+      "title": "今日早上，喜茶与人气价高的日本动漫《Chiikaw",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "今日早上，喜茶与人气价高的日本动漫《Chiikawa（译名：吉伊卡哇）》的联名合",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "喜茶",
+      "title": "喜茶联名wps!&quot;周一去喜吧&quot;",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "喜茶联名wps!&quot;周一去喜吧&quot;先让网友想歪咖啡网09月16日",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "喜茶",
+      "title": "昨日，喜茶与WPSOffice联合推出&quot;",
+      "category": "茶饮",
+      "startDate": "2026-11-14",
+      "endDate": "",
+      "description": "昨日，喜茶与WPSOffice联合推出&quot;周一&quot;系列限定惊喜，",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "近期，位于深圳宝安大仟里的奈雪门店以&quot;全",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "近期，位于深圳宝安大仟里的奈雪门店以&quot;全国第二家奈雪的茶·green轻",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "在奈雪的茶官网、微信公众号、微博等官方渠道，现在依",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "在奈雪的茶官网、微信公众号、微博等官方渠道，现在依然使用「NAIXUE」作为英文",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪的茶上新「泰橘系列」两款新品_壹览商业",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "奈雪的茶上新「泰橘系列」两款新品_壹览商业",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "专业的消费及科技领域服务平台9月16日，奈雪的茶上",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "专业的消费及科技领域服务平台9月16日，奈雪的茶上新「泰橘系列」，包含泰橘3倍超",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬xCLOT推出联名抹茶系列|Hypebea",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "霸王茶姬xCLOT推出联名抹茶系列|Hypebeast",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬携手CLOT推出抹茶主题合作企划，并围绕三",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "霸王茶姬携手CLOT推出抹茶主题合作企划，并围绕三款全新抹茶饮品，进一步延伸出联",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬联名clot抹茶系列9月16日全国上新-观",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "霸王茶姬联名clot抹茶系列9月16日全国上新-观点网",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬9月16日推出与CLOT联名的全新抹茶系列",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "霸王茶姬9月16日推出与CLOT联名的全新抹茶系列，含三款新品，同步上线联名主题",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬xCLOT联名明日正式上线!竟然还是Nik",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "霸王茶姬xCLOT联名明日正式上线!竟然还是Nike丝绸同款设计玩法？_官方_来",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬联名clot抹茶系列9月16日全国上新-凤",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "霸王茶姬联名clot抹茶系列9月16日全国上新-凤凰网",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "观点网讯：9月16日，霸王茶姬推出与潮流品牌CLO",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "观点网讯：9月16日，霸王茶姬推出与潮流品牌CLOT联名的全新抹茶系列，三款抹茶",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬聯名clot抹茶系列9月16日全國上新-觀",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "霸王茶姬聯名clot抹茶系列9月16日全國上新-觀點網",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "觀點網訊：9月16日，霸王茶姬推出與潮流品牌CLO",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "觀點網訊：9月16日，霸王茶姬推出與潮流品牌CLOT聯名的全新抹茶系列，三款抹茶",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "古茗",
+      "title": "古茗×凡人修仙传上新-淘宝逛一逛-guangtao",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "古茗×凡人修仙传上新-淘宝逛一逛-guangtao.taobao.com",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "古茗",
+      "title": "昨晚刷到古茗门店打卡照，手边那张夜光光栅画随角度变",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "昨晚刷到古茗门店打卡照，手边那张夜光光栅画随角度变幻，瞬间被拉回追更《凡人修仙传",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "古茗",
+      "title": "没活硬整？!古茗上新早安鲜牛奶!咖啡网09月16日",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "没活硬整？!古茗上新早安鲜牛奶!咖啡网09月16日更新",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "新品精选：佳宝推出大葱味酸奶；霸王茶姬有了茶叶蛋；",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "新品精选：佳宝推出大葱味酸奶；霸王茶姬有了茶叶蛋；古茗上新啤酒饮品……",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "古茗",
+      "title": "上新价13.9？!古茗新品大柚作为拿铁#古茗#古茗",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "上新价13.9？!古茗新品大柚作为拿铁#古茗#古茗新品#咖啡#拿铁#仙女都在喝什",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "甜啦啦与全网粉丝超5000万的校园动画IP《茶啊二",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "甜啦啦与全网粉丝超5000万的校园动画IP《茶啊二中》联名，推出老红糖风味系列；",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "沪上阿姨",
+      "title": "沪上阿姨新品上新#沪上阿姨新品推荐#沪上阿姨推荐必",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "沪上阿姨新品上新#沪上阿姨新品推荐#沪上阿姨推荐必喝#沪上阿姨",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "沪上阿姨",
+      "title": "状况百出!沪上阿姨联名体验太差劲？中国咖啡网09月",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "状况百出!沪上阿姨联名体验太差劲？中国咖啡网09月16日更新",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "沪上阿姨",
+      "title": "#沪上阿姨新品#木薯糖水#锐评一下最近喝到的奶茶今",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "#沪上阿姨新品#木薯糖水#锐评一下最近喝到的奶茶今天沪上阿姨上新木薯糖水，上新第",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "沪上阿姨",
+      "title": "有网友脑洞大开，喊话沪上阿姨，期待二者可以出一波联",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "有网友脑洞大开，喊话沪上阿姨，期待二者可以出一波联名。没过多久，不少用户打开点单",
       "lastSeen": "2026-09-16"
     },
     {
       "brand": "茉莉奶白",
-      "title": "针王葡萄系列新品上新",
+      "title": "从花香茶到花香茶咖：茉莉奶白用一杯咖啡延展&quo",
       "category": "茶饮",
-      "startDate": "2026-08-07",
+      "startDate": "2026-09-16",
       "endDate": "",
-      "image": "https://tea-wuliao-ocr-ps.oss-cn-beijing.aliyuncs.com/images/poster_shenyang_2026-09-14_1.jpg",
-      "description": "与施华洛世奇联名推葡萄风味果奶，配限定周边热卖",
-      "ratio": 1.2,
-      "lastSeen": "2026-09-14"
+      "description": "从花香茶到花香茶咖：茉莉奶白用一杯咖啡延展&quot;东方摩登茶&quot;_产",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "茉莉奶白",
+      "title": "9月10日，茉莉奶白两款花香茶咖新品&quot;针",
+      "category": "茶饮",
+      "startDate": "2026-09-10",
+      "endDate": "",
+      "description": "9月10日，茉莉奶白两款花香茶咖新品&quot;针王与维也纳&quot;&quo",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "茉莉奶白",
+      "title": "要啥没啥!茉莉奶白联名《永夜星河》翻车致歉!咖啡网",
+      "category": "茶饮",
+      "startDate": "2026-09-15",
+      "endDate": "",
+      "description": "要啥没啥!茉莉奶白联名《永夜星河》翻车致歉!咖啡网09月15日更新",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "茉莉奶白",
+      "title": "点击关注|每日精品咖啡文化杂志咖啡工房近日，随着电",
+      "category": "茶饮",
+      "startDate": "2026-11-13",
+      "endDate": "",
+      "description": "点击关注|每日精品咖啡文化杂志咖啡工房近日，随着电视剧《永夜星河》热播，不少品牌",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "茉莉奶白",
+      "title": "与第一次试水咖啡相比，这次茉莉奶白进一步强化了自身",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "与第一次试水咖啡相比，这次茉莉奶白进一步强化了自身的花香茶特色。两款新品均采用洪",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "茶饮界如何撬动怀旧流量，爷爷不泡茶联名俘获年轻人的",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "茶饮界如何撬动怀旧流量，爷爷不泡茶联名俘获年轻人的底层逻辑_品牌_消费者_湖北省",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "联名热潮背后的行业逻辑爷爷不泡茶的联名策略并非孤立",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "联名热潮背后的行业逻辑爷爷不泡茶的联名策略并非孤立现象。2026年六一前后，肯德",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "爷爷不泡茶2026新品图鉴：非遗茶底如何玩出新花样",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "爷爷不泡茶2026新品图鉴：非遗茶底如何玩出新花样？|新茶|绿茶|武夷岩茶|恩施",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "真有你的️爷爷不泡茶20块出头不仅有好喝的饮品还有",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "真有你的️爷爷不泡茶20块出头不仅有好喝的饮品还有好看的联名冰箱贴#爷爷不泡茶#",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "爷爷不泡茶新品抹茶系列上新，买一送一啦!快囤啊!#",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "爷爷不泡茶新品抹茶系列上新，买一送一啦!快囤啊!#爷爷不泡茶浓抹升级回归#一口浓",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "爷爷不泡茶",
+      "title": "爷爷不泡茶超3000家门店覆盖全国31个省级行政区",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "爷爷不泡茶超3000家门店覆盖全国31个省级行政区，意味着一次全国上新就是一次覆",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "瑞幸",
+      "title": "瑞幸咖啡新联名战略：颠覆传统营销的「爆款公式」解析",
+      "category": "咖啡",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "瑞幸咖啡新联名战略：颠覆传统营销的「爆款公式」解析-咖啡知识网",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "瑞幸",
+      "title": "瑞幸将上新酸角美式!网友：酸豆角配咖啡？!咖啡网0",
+      "category": "咖啡",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "瑞幸将上新酸角美式!网友：酸豆角配咖啡？!咖啡网09月16日更新",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "瑞幸",
+      "title": "点击关注|每日精品咖啡文化杂志咖啡工房前几天，瑞幸",
+      "category": "咖啡",
+      "startDate": "2026-10-13",
+      "endDate": "",
+      "description": "点击关注|每日精品咖啡文化杂志咖啡工房前几天，瑞幸官方放出消息，宣称10月13日",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "瑞幸咖啡出联名新品，被指跟霸王茶姬&quot;撞味",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "瑞幸咖啡出联名新品，被指跟霸王茶姬&quot;撞味&quot;了咖啡网09月16",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "瑞幸",
+      "title": "点击关注|每日精品咖啡文化杂志咖啡工房这几天，瑞幸",
+      "category": "咖啡",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "点击关注|每日精品咖啡文化杂志咖啡工房这几天，瑞幸可太忙了，又是线上邀请艺人檀健",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "瑞幸",
+      "title": "速报!时光代理人瑞幸联名来啦!周边有惊喜_哔哩哔哩",
+      "category": "咖啡",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "速报!时光代理人瑞幸联名来啦!周边有惊喜_哔哩哔哩_bilibili",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "瑞幸",
+      "title": "⌚时光回溯｜瑞幸咖啡×时光代理人联名正式上线!时光",
+      "category": "咖啡",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "⌚时光回溯｜瑞幸咖啡×时光代理人联名正式上线!时光咖啡馆开启营业，程小时、陆光、",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "瑞幸",
+      "title": "瑞幸咖啡上新「咸芝士豆乳系列」_壹览商业",
+      "category": "咖啡",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "瑞幸咖啡上新「咸芝士豆乳系列」_壹览商业",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "瑞幸",
+      "title": "9月14日，瑞幸咖啡上新「咸芝士豆乳系列」，包括「",
+      "category": "咖啡",
+      "startDate": "2026-09-14",
+      "endDate": "",
+      "description": "9月14日，瑞幸咖啡上新「咸芝士豆乳系列」，包括「咸芝士豆乳拿铁」、「咸芝士豆乳",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "星巴克",
+      "title": "星巴克×史努比联名上新，9月15日全球正式登场-今",
+      "category": "咖啡",
+      "startDate": "2026-09-15",
+      "endDate": "",
+      "description": "星巴克×史努比联名上新，9月15日全球正式登场-今日头条",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "星巴克",
+      "title": "9月15日，星巴克和史努比的联名周边系列正式在全球",
+      "category": "咖啡",
+      "startDate": "2026-09-15",
+      "endDate": "",
+      "description": "9月15日，星巴克和史努比的联名周边系列正式在全球多地门店上线。这次合作是为了纪",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "星巴克",
+      "title": "全球咖啡联盟首次产品发布!雀巢全球推出24款星巴克",
+      "category": "咖啡",
+      "startDate": "2026-09-15",
+      "endDate": "",
+      "description": "全球咖啡联盟首次产品发布!雀巢全球推出24款星巴克系列新品!中国咖啡网09月15",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "星巴克",
+      "title": "星巴克联名周边提前炸街？员工暗箱操作实锤了？09月",
+      "category": "咖啡",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "星巴克联名周边提前炸街？员工暗箱操作实锤了？09月16日更新_茶饮趋势",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "星巴克",
+      "title": "茶饮趋势编辑2026年09月16日最后更新星巴克联",
+      "category": "咖啡",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "茶饮趋势编辑2026年09月16日最后更新星巴克联名周边提前炸街？员工暗箱操作实",
+      "lastSeen": "2026-09-16"
+    },
+    {
+      "brand": "星巴克",
+      "title": "2026星巴克×史努比聯名台灣也開賣!必買「史努比",
+      "category": "咖啡",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "2026星巴克×史努比聯名台灣也開賣!必買「史努比玻璃杯」星巴克真的太犯規!20",
+      "lastSeen": "2026-09-16"
     }
   ]
 }
