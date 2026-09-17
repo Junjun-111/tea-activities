@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T17:04:12+08:00",
+  "updated_at": "2026-09-18T03:24:01+08:00",
   "activities": [
     {
       "brand": "奈雪的茶",
@@ -14,28 +14,37 @@
       "brand": "喜茶",
       "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
-      "startDate": "2026-09-17",
+      "startDate": "2026-09-18",
       "endDate": "",
-      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨搭配苹果凤梨汁",
-      "lastSeen": "2026-09-17"
+      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨，主打美颜纤体",
+      "lastSeen": "2026-09-18"
     },
     {
       "brand": "喜茶",
-      "title": "喜茶Chiikawa联名活动",
+      "title": "喜茶×Chiikawa联名活动",
       "category": "茶饮",
-      "startDate": "2026-09-17",
+      "startDate": "2026-09-18",
       "endDate": "",
-      "description": "与日本动漫Chiikawa联名，发售限量联名周边，门店火爆",
-      "lastSeen": "2026-09-17"
+      "description": "与日本动漫Chiikawa联名，发售限量联名周边，门店火爆排队",
+      "lastSeen": "2026-09-18"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪×哈利波特联名",
+      "category": "茶饮",
+      "startDate": "2026-09-18",
+      "endDate": "",
+      "description": "推出四款学院限定饮品及特殊打包杯，对应霍格沃茨四大学院",
+      "lastSeen": "2026-09-18"
     },
     {
       "brand": "古茗",
       "title": "早安鲜牛奶上新",
       "category": "茶饮",
-      "startDate": "2026-09-17",
+      "startDate": "2026-09-18",
       "endDate": "",
-      "description": "小程序新推鲜牛奶饮品，可选冷牛奶或温牛奶",
-      "lastSeen": "2026-09-17"
+      "description": "小程序上新纯鲜牛奶饮品，可选冷牛奶或温牛奶",
+      "lastSeen": "2026-09-18"
     },
     {
       "brand": "甜啦啦",
@@ -56,30 +65,30 @@
       "lastSeen": "2026-09-17"
     },
     {
+      "brand": "奈雪的茶",
+      "title": "泰橘双品焕新",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "泰橘3倍超C小橙瓶升级回归，同步推出初雪柠酪泰橘果奶",
+      "lastSeen": "2026-09-18"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬×CLOT联名抹茶系列",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "联名CLOT推出三款抹茶新品，含联名包材、中奖杯及五款主题周边",
+      "lastSeen": "2026-09-18"
+    },
+    {
       "brand": "喜茶",
       "title": "去火纤体瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "",
       "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪泰橘双品焕新",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "小橙瓶升级回归，全新果奶同步亮相",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬xCLOT联名抹茶系列",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "联名CLOT推三款抹茶新品，含联名包材及五款主题周边",
       "lastSeen": "2026-09-17"
     },
     {
@@ -98,25 +107,25 @@
       "startDate": "2026-09-15",
       "endDate": "",
       "description": "9月15日上新椰椰芒芒Pro（芒果果肉加倍、椰乳加量），当天门店买一送一",
-      "lastSeen": "2026-09-17"
+      "lastSeen": "2026-09-18"
     },
     {
       "brand": "茶百道",
-      "title": "茶百道x天官赐福动画联名",
+      "title": "茶百道×天官赐福动画联名",
       "category": "茶饮",
       "startDate": "2026-09-12",
       "endDate": "",
-      "description": "推四款限定包装与五款周边，含镭射票徽章杯套贴纸",
-      "lastSeen": "2026-09-17"
+      "description": "推出四款限定包装与五款周边，含镭射票、徽章套组及DIY杯贴",
+      "lastSeen": "2026-09-18"
     },
     {
       "brand": "茶百道",
       "title": "柠檬巴巴露亚拿铁上新",
       "category": "咖啡",
       "startDate": "2026-09-11",
-      "endDate": "",
-      "description": "灵感源自法式巴巴露亚甜品，可喝的柠檬液体蛋糕",
-      "lastSeen": "2026-09-17"
+      "endDate": "2026-09-13",
+      "description": "灵感源自法式巴巴露亚甜品，柠檬液体蛋糕风味拿铁清爽上新",
+      "lastSeen": "2026-09-18"
     },
     {
       "brand": "霸王茶姬",
@@ -125,7 +134,7 @@
       "startDate": "2026-09-11",
       "endDate": "2026-09-11",
       "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减",
-      "lastSeen": "2026-09-17"
+      "lastSeen": "2026-09-18"
     },
     {
       "brand": "蜜雪冰城",
@@ -151,8 +160,8 @@
       "category": "茶饮",
       "startDate": "2026-09-04",
       "endDate": "",
-      "description": "清风茉白鲜奶茶茶底升级，首周售出超80万杯",
-      "lastSeen": "2026-09-17"
+      "description": "清风茉白鲜奶茶茶底升级，首周售出超80万杯，周环比增长33.3%",
+      "lastSeen": "2026-09-18"
     },
     {
       "brand": "甜啦啦",
