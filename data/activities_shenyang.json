@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-09-17T03:11:51+08:00",
+  "updated_at": "2026-09-17T17:04:12+08:00",
   "city": "沈阳",
   "activities": [
     {
       "brand": "奈雪的茶",
-      "title": "明日方舟终末地联动",
+      "title": "奈雪x明日方舟终末地联名",
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "与游戏明日方舟终末地联动，推出饮品套餐及瓶装饮料",
+      "description": "与明日方舟终末地联名，含瓶装饮料及对应角色周边",
       "lastSeen": "2026-09-17"
     },
     {
@@ -17,25 +17,16 @@
       "category": "茶饮",
       "startDate": "2026-09-17",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
+      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨搭配苹果凤梨汁",
       "lastSeen": "2026-09-17"
     },
     {
       "brand": "喜茶",
-      "title": "去火纤体瓶新品上市",
+      "title": "喜茶Chiikawa联名活动",
       "category": "茶饮",
       "startDate": "2026-09-17",
       "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
-      "lastSeen": "2026-09-17"
-    },
-    {
-      "brand": "喜茶",
-      "title": "喜茶Chiikawa联名",
-      "category": "茶饮",
-      "startDate": "2026-09-17",
-      "endDate": "",
-      "description": "联名Chiikawa推出限量周边，门店取餐等3小时",
+      "description": "与日本动漫Chiikawa联名，发售限量联名周边，门店火爆",
       "lastSeen": "2026-09-17"
     },
     {
@@ -44,7 +35,7 @@
       "category": "茶饮",
       "startDate": "2026-09-17",
       "endDate": "",
-      "description": "小程序上新，仅用鲜牛奶，可选冷牛奶或温牛奶",
+      "description": "小程序新推鲜牛奶饮品，可选冷牛奶或温牛奶",
       "lastSeen": "2026-09-17"
     },
     {
@@ -66,12 +57,21 @@
       "lastSeen": "2026-09-17"
     },
     {
-      "brand": "奈雪的茶",
-      "title": "泰橘双品焕新",
+      "brand": "喜茶",
+      "title": "去火纤体瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "",
-      "description": "泰橘3倍超C小橙瓶升级回归，新品初雪柠酪泰橘亮相",
+      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "lastSeen": "2026-09-17"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪泰橘双品焕新",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "小橙瓶升级回归，全新果奶同步亮相",
       "lastSeen": "2026-09-17"
     },
     {
@@ -80,7 +80,7 @@
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "",
-      "description": "联名CLOT推三款抹茶新品，含主题包材及五款周边",
+      "description": "联名CLOT推三款抹茶新品，含联名包材及五款主题周边",
       "lastSeen": "2026-09-17"
     },
     {
@@ -107,7 +107,7 @@
       "category": "茶饮",
       "startDate": "2026-09-12",
       "endDate": "",
-      "description": "联名天官赐福推四款限定包装与五款周边，含镭射票徽章",
+      "description": "推四款限定包装与五款周边，含镭射票徽章杯套贴纸",
       "lastSeen": "2026-09-17"
     },
     {
@@ -115,8 +115,8 @@
       "title": "柠檬巴巴露亚拿铁上新",
       "category": "咖啡",
       "startDate": "2026-09-11",
-      "endDate": "2026-09-13",
-      "description": "灵感源自法式巴巴露亚甜品，柠檬液体蛋糕风味",
+      "endDate": "",
+      "description": "灵感源自法式巴巴露亚甜品，可喝的柠檬液体蛋糕",
       "lastSeen": "2026-09-17"
     },
     {
