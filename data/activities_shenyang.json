@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T16:38:39+08:00",
+  "updated_at": "2026-09-19T02:44:03+08:00",
   "city": "沈阳",
   "activities": [
     {
@@ -12,22 +12,49 @@
       "lastSeen": "2026-09-17"
     },
     {
-      "brand": "喜茶",
-      "title": "红菜头美颜瓶新品上市",
+      "brand": "奈雪的茶",
+      "title": "泰橘上新买一送一",
       "category": "茶饮",
-      "startDate": "2026-09-18",
+      "startDate": "2026-09-19",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
-      "lastSeen": "2026-09-18"
+      "description": "泰橘系列上新期间门店买一送一",
+      "lastSeen": "2026-09-19"
     },
     {
       "brand": "喜茶",
-      "title": "去火·纤体瓶新品上市",
+      "title": "红菜头美颜瓶上新",
       "category": "茶饮",
-      "startDate": "2026-09-18",
+      "startDate": "2026-09-19",
       "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
-      "lastSeen": "2026-09-18"
+      "description": "超级植物茶系列第三款，红菜头鲜榨果蔬茶",
+      "lastSeen": "2026-09-19"
+    },
+    {
+      "brand": "喜茶",
+      "title": "去火纤体瓶上新",
+      "category": "茶饮",
+      "startDate": "2026-09-19",
+      "endDate": "",
+      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨",
+      "lastSeen": "2026-09-19"
+    },
+    {
+      "brand": "茶百道",
+      "title": "薄荷冰奶上新",
+      "category": "茶饮",
+      "startDate": "2026-09-19",
+      "endDate": "",
+      "description": "推出薄荷冰奶新品",
+      "lastSeen": "2026-09-19"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "黄山毛峰青提系列上新",
+      "category": "茶饮",
+      "startDate": "2026-09-19",
+      "endDate": "",
+      "description": "黄山毛峰茶底配云南阳光玫瑰青提，8-12元",
+      "lastSeen": "2026-09-19"
     },
     {
       "brand": "茶百道",
@@ -45,15 +72,6 @@
       "startDate": "2026-09-18",
       "endDate": "",
       "description": "小程序上新，仅用鲜牛奶，可选冷牛奶或温牛奶",
-      "lastSeen": "2026-09-18"
-    },
-    {
-      "brand": "甜啦啦",
-      "title": "黄山毛峰青提系列上新",
-      "category": "茶饮",
-      "startDate": "2026-09-18",
-      "endDate": "",
-      "description": "黄山毛峰茶底配云南阳光玫瑰青提，8-12元定价",
       "lastSeen": "2026-09-18"
     },
     {
@@ -75,6 +93,15 @@
       "lastSeen": "2026-09-18"
     },
     {
+      "brand": "古茗",
+      "title": "大柚系列上新",
+      "category": "茶饮",
+      "startDate": "2026-09-17",
+      "endDate": "",
+      "description": "大柚作为拿铁、大柚糯米酸奶、大柚冰奶轻咸上新",
+      "lastSeen": "2026-09-19"
+    },
+    {
       "brand": "甜啦啦",
       "title": "甜啦啦x茶啊二中联名",
       "category": "茶饮",
@@ -93,13 +120,22 @@
       "lastSeen": "2026-09-17"
     },
     {
-      "brand": "霸王茶姬",
-      "title": "联名CLOT抹茶系列上新",
+      "brand": "奈雪的茶",
+      "title": "泰橘系列双品上新",
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "",
-      "description": "联名CLOT推三款抹茶新品，含主题包材、杯身及五款周边",
-      "lastSeen": "2026-09-18"
+      "description": "上新泰橘3倍超C小橙瓶与初雪柠酪泰橘两款新品",
+      "lastSeen": "2026-09-19"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "CLOT联名抹茶系列",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "联名CLOT推三款抹茶新品，含联名杯及五款主题周边",
+      "lastSeen": "2026-09-19"
     },
     {
       "brand": "蜜雪冰城",
@@ -117,16 +153,7 @@
       "startDate": "2026-09-15",
       "endDate": "",
       "description": "9月15日上新椰椰芒芒Pro（芒果果肉加倍、椰乳加量），当天门店买一送一",
-      "lastSeen": "2026-09-18"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "泰橘双品焕新买一送一",
-      "category": "茶饮",
-      "startDate": "2026-09-13",
-      "endDate": "2026-09-15",
-      "description": "泰橘3倍超C小橙瓶升级回归，初雪柠酪泰橘新品，买一赠一",
-      "lastSeen": "2026-09-18"
+      "lastSeen": "2026-09-19"
     },
     {
       "brand": "茶百道",
@@ -138,21 +165,21 @@
       "lastSeen": "2026-09-18"
     },
     {
-      "brand": "茶百道",
-      "title": "柠檬巴巴露亚拿铁上新",
-      "category": "茶饮",
-      "startDate": "2026-09-11",
-      "endDate": "2026-09-13",
-      "description": "灵感源自法式甜品，可喝的柠檬液体蛋糕，直播上线",
-      "lastSeen": "2026-09-18"
-    },
-    {
       "brand": "霸王茶姬",
       "title": "9.11全场无券直享买一送一",
       "category": "茶饮",
       "startDate": "2026-09-11",
       "endDate": "2026-09-11",
       "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减",
+      "lastSeen": "2026-09-19"
+    },
+    {
+      "brand": "茶百道",
+      "title": "柠檬巴巴露亚拿铁上新",
+      "category": "茶饮",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-13",
+      "description": "灵感源自法式甜品，可喝的柠檬液体蛋糕，直播上线",
       "lastSeen": "2026-09-18"
     },
     {
