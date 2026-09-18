@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T03:24:01+08:00",
+  "updated_at": "2026-09-18T16:38:39+08:00",
   "activities": [
     {
       "brand": "奈雪的茶",
@@ -16,7 +16,43 @@
       "category": "茶饮",
       "startDate": "2026-09-18",
       "endDate": "",
-      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨，主打美颜纤体",
+      "description": "超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
+      "lastSeen": "2026-09-18"
+    },
+    {
+      "brand": "喜茶",
+      "title": "去火·纤体瓶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-18",
+      "endDate": "",
+      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "lastSeen": "2026-09-18"
+    },
+    {
+      "brand": "茶百道",
+      "title": "奶白酒系列上新",
+      "category": "茶饮",
+      "startDate": "2026-09-18",
+      "endDate": "",
+      "description": "上新奶白酒乌龙与奶白酒麻薯奶绿，云南特色饮品",
+      "lastSeen": "2026-09-18"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶上新",
+      "category": "茶饮",
+      "startDate": "2026-09-18",
+      "endDate": "",
+      "description": "小程序上新，仅用鲜牛奶，可选冷牛奶或温牛奶",
+      "lastSeen": "2026-09-18"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "黄山毛峰青提系列上新",
+      "category": "茶饮",
+      "startDate": "2026-09-18",
+      "endDate": "",
+      "description": "黄山毛峰茶底配云南阳光玫瑰青提，8-12元定价",
       "lastSeen": "2026-09-18"
     },
     {
@@ -38,15 +74,6 @@
       "lastSeen": "2026-09-18"
     },
     {
-      "brand": "古茗",
-      "title": "早安鲜牛奶上新",
-      "category": "茶饮",
-      "startDate": "2026-09-18",
-      "endDate": "",
-      "description": "小程序上新纯鲜牛奶饮品，可选冷牛奶或温牛奶",
-      "lastSeen": "2026-09-18"
-    },
-    {
       "brand": "甜啦啦",
       "title": "甜啦啦x茶啊二中联名",
       "category": "茶饮",
@@ -65,31 +92,13 @@
       "lastSeen": "2026-09-17"
     },
     {
-      "brand": "奈雪的茶",
-      "title": "泰橘双品焕新",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "泰橘3倍超C小橙瓶升级回归，同步推出初雪柠酪泰橘果奶",
-      "lastSeen": "2026-09-18"
-    },
-    {
       "brand": "霸王茶姬",
-      "title": "霸王茶姬×CLOT联名抹茶系列",
+      "title": "联名CLOT抹茶系列上新",
       "category": "茶饮",
       "startDate": "2026-09-16",
       "endDate": "",
-      "description": "联名CLOT推出三款抹茶新品，含联名包材、中奖杯及五款主题周边",
+      "description": "联名CLOT推三款抹茶新品，含主题包材、杯身及五款周边",
       "lastSeen": "2026-09-18"
-    },
-    {
-      "brand": "喜茶",
-      "title": "去火纤体瓶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
-      "lastSeen": "2026-09-17"
     },
     {
       "brand": "蜜雪冰城",
@@ -110,6 +119,15 @@
       "lastSeen": "2026-09-18"
     },
     {
+      "brand": "奈雪的茶",
+      "title": "泰橘双品焕新买一送一",
+      "category": "茶饮",
+      "startDate": "2026-09-13",
+      "endDate": "2026-09-15",
+      "description": "泰橘3倍超C小橙瓶升级回归，初雪柠酪泰橘新品，买一赠一",
+      "lastSeen": "2026-09-18"
+    },
+    {
       "brand": "茶百道",
       "title": "茶百道×天官赐福动画联名",
       "category": "茶饮",
@@ -121,10 +139,10 @@
     {
       "brand": "茶百道",
       "title": "柠檬巴巴露亚拿铁上新",
-      "category": "咖啡",
+      "category": "茶饮",
       "startDate": "2026-09-11",
       "endDate": "2026-09-13",
-      "description": "灵感源自法式巴巴露亚甜品，柠檬液体蛋糕风味拿铁清爽上新",
+      "description": "灵感源自法式甜品，可喝的柠檬液体蛋糕，直播上线",
       "lastSeen": "2026-09-18"
     },
     {
