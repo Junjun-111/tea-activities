@@ -1,19 +1,28 @@
 {
-  "updated_at": "2026-09-23T03:22:09+08:00",
+  "updated_at": "2026-09-23T16:58:18+08:00",
   "city": "沈阳",
   "activities": [
+    {
+      "brand": "甜啦啦",
+      "title": "芋泥系列上新",
+      "category": "茶饮",
+      "startDate": "2026-09-24",
+      "endDate": "",
+      "description": "甜啦啦芋泥系列新品上市",
+      "lastSeen": "2026-09-23"
+    },
     {
       "brand": "喜茶",
       "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
+      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
       "lastSeen": "2026-09-23"
     },
     {
       "brand": "喜茶",
-      "title": "去火·纤体瓶新品上市",
+      "title": "去火纤体瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
@@ -22,20 +31,47 @@
     },
     {
       "brand": "奈雪的茶",
-      "title": "奈雪×明日方舟终末地联名",
+      "title": "明日方舟终末地联名",
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "雪凇幽梦主题，3款联名果奶及烘焙，购赠烫色卡贴纸徽章",
+      "description": "3款联名果奶，买饮品得烫色卡贴纸包徽章立牌等周边",
       "lastSeen": "2026-09-23"
     },
     {
       "brand": "霸王茶姬",
-      "title": "霸王茶姬×哪吒2联名",
+      "title": "哪吒2联名活动",
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "限定周边预售，购联名饮品得角色纸袋杯及镭射吊牌",
+      "description": "购买联名饮品得角色纸袋、打包杯及主题镭射吊牌",
+      "lastSeen": "2026-09-23"
+    },
+    {
+      "brand": "蜜雪冰城",
+      "title": "黑糖珍珠系列新品",
+      "category": "茶饮",
+      "startDate": "2026-09-23",
+      "endDate": "",
+      "description": "黑糖珍珠撞奶、黑糖珍珠大圣代，每日现煮珍珠",
+      "lastSeen": "2026-09-23"
+    },
+    {
+      "brand": "蜜雪冰城",
+      "title": "百变雪王服装盲袋睡衣系列",
+      "category": "茶饮",
+      "startDate": "2026-09-23",
+      "endDate": "",
+      "description": "百变雪王服装盲袋睡衣系列上线，京津冀黑吉辽等区域限定",
+      "lastSeen": "2026-09-23"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶上新",
+      "category": "茶饮",
+      "startDate": "2026-09-23",
+      "endDate": "",
+      "description": "仅用鲜牛奶为原料，可选冷牛奶或温牛奶",
       "lastSeen": "2026-09-23"
     },
     {
@@ -45,24 +81,6 @@
       "startDate": "2026-09-23",
       "endDate": "",
       "description": "喝岭南龙眼新品，送CBO首发周边茶少牛仔玩偶",
-      "lastSeen": "2026-09-23"
-    },
-    {
-      "brand": "蜜雪冰城",
-      "title": "百变雪王服装盲袋上线",
-      "category": "茶饮",
-      "startDate": "2026-09-23",
-      "endDate": "",
-      "description": "睡衣系列服装盲袋，京津冀黑吉辽鲁晋蒙区域限定开售",
-      "lastSeen": "2026-09-23"
-    },
-    {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-23",
-      "endDate": "",
-      "description": "仅用鲜牛奶，可选冷牛奶或加热温牛奶",
       "lastSeen": "2026-09-23"
     },
     {
@@ -175,12 +193,12 @@
     },
     {
       "brand": "茶百道",
-      "title": "茶百道蜜香金牡丹茶底上新",
+      "title": "蜜香金牡丹茶底秋日奶茶上新",
       "category": "茶饮",
       "startDate": "2026-09-17",
       "endDate": "",
-      "description": "全新蜜香金牡丹茶底，2款秋日奶茶上新",
-      "lastSeen": "2026-09-22"
+      "description": "全新蜜香金牡丹茶底，推出2款秋日奶茶",
+      "lastSeen": "2026-09-23"
     },
     {
       "brand": "古茗",
@@ -199,6 +217,15 @@
       "endDate": "",
       "description": "大柚作为拿铁、大柚糯米酸奶、大柚冰奶",
       "lastSeen": "2026-09-20"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "一抹入山林抹茶系列联名",
+      "category": "茶饮",
+      "startDate": "2026-09-16",
+      "endDate": "",
+      "description": "携手CLOT推出三款抹茶新品，撕杯可得联名中奖杯及周边",
+      "lastSeen": "2026-09-23"
     },
     {
       "brand": "奈雪的茶",
