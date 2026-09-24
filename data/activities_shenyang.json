@@ -1,33 +1,60 @@
 {
-  "updated_at": "2026-09-24T16:54:08+08:00",
+  "updated_at": "2026-09-25T03:36:09+08:00",
   "city": "沈阳",
   "activities": [
     {
       "brand": "喜茶",
       "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
-      "startDate": "2026-09-24",
+      "startDate": "2026-09-25",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
-      "lastSeen": "2026-09-24"
+      "description": "喜茶超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
+      "lastSeen": "2026-09-25"
     },
     {
       "brand": "喜茶",
-      "title": "去火·纤体瓶上新",
+      "title": "去火·纤体瓶新品上市",
       "category": "茶饮",
-      "startDate": "2026-09-24",
+      "startDate": "2026-09-25",
       "endDate": "",
       "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-25"
     },
     {
       "brand": "霸王茶姬",
       "title": "霸王茶姬×米菲联名",
       "category": "茶饮",
+      "startDate": "2026-09-25",
+      "endDate": "",
+      "description": "联名米菲推桂花系列新品，含联名周边及主题门店",
+      "lastSeen": "2026-09-25"
+    },
+    {
+      "brand": "茶百道",
+      "title": "薄荷冰奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-25",
+      "endDate": "",
+      "description": "茶百道推出薄荷冰奶新品",
+      "lastSeen": "2026-09-25"
+    },
+    {
+      "brand": "古茗",
+      "title": "古茗×人教社中秋联名",
+      "category": "茶饮",
       "startDate": "2026-09-24",
       "endDate": "",
-      "description": "三款桂花新茶上新，联名周边、主题门店及摇桂花活动",
-      "lastSeen": "2026-09-24"
+      "description": "联名人教社推桂花系列，含课本插画杯及透卡心意卡",
+      "lastSeen": "2026-09-25"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "超厚芋泥系列上新",
+      "category": "茶饮",
+      "startDate": "2026-09-24",
+      "endDate": "",
+      "description": "推出超厚芋泥大满贯、全家福、奶绿、椰乳四款新品",
+      "lastSeen": "2026-09-25"
     },
     {
       "brand": "茶百道",
@@ -45,15 +72,6 @@
       "startDate": "2026-09-24",
       "endDate": "",
       "description": "联合人民教育出版社推出中秋限定包装，含心意卡透卡",
-      "lastSeen": "2026-09-24"
-    },
-    {
-      "brand": "甜啦啦",
-      "title": "超厚芋泥系列上新",
-      "category": "茶饮",
-      "startDate": "2026-09-24",
-      "endDate": "",
-      "description": "推出超厚芋泥大满贯、全家福等四款芋泥系列新品",
       "lastSeen": "2026-09-24"
     },
     {
@@ -89,8 +107,8 @@
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "3款初雪轻酪果奶，购联名产品赠烫色卡贴纸徽章等周边",
-      "lastSeen": "2026-09-24"
+      "description": "联名推出初雪轻酪果奶，含烫色卡、浮雕徽章等限定周边",
+      "lastSeen": "2026-09-25"
     },
     {
       "brand": "霸王茶姬",
@@ -147,33 +165,6 @@
       "lastSeen": "2026-09-22"
     },
     {
-      "brand": "茶百道",
-      "title": "薄荷冰奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-21",
-      "endDate": "",
-      "description": "推出薄荷冰奶新品，主打清凉口感",
-      "lastSeen": "2026-09-21"
-    },
-    {
-      "brand": "茶百道",
-      "title": "薄荷冰奶×冰雪奇缘联名",
-      "category": "茶饮",
-      "startDate": "2026-09-21",
-      "endDate": "",
-      "description": "与冰雪奇缘联名推出冰吸薄荷冰奶新品",
-      "lastSeen": "2026-09-21"
-    },
-    {
-      "brand": "甜啦啦",
-      "title": "×茶啊二中联名老红糖系列",
-      "category": "茶饮",
-      "startDate": "2026-09-21",
-      "endDate": "",
-      "description": "与校园动画IP茶啊二中联名，推出老红糖风味系列",
-      "lastSeen": "2026-09-21"
-    },
-    {
       "brand": "喜茶",
       "title": "喜茶茶冰淇淋北京首上新",
       "category": "茶饮",
@@ -181,6 +172,15 @@
       "endDate": "",
       "description": "北京三里屯太古里店焕新开业，茶冰淇淋系列首次上新北京",
       "lastSeen": "2026-09-22"
+    },
+    {
+      "brand": "喜茶",
+      "title": "三里屯店焕新茶冰淇淋上新",
+      "category": "茶饮",
+      "startDate": "2026-09-19",
+      "endDate": "",
+      "description": "北京三里屯太古里店焕新，茶冰淇淋系列首次亮相北京",
+      "lastSeen": "2026-09-25"
     },
     {
       "brand": "喜茶",
@@ -192,15 +192,6 @@
       "lastSeen": "2026-09-24"
     },
     {
-      "brand": "喜茶",
-      "title": "三里屯店焕新冰淇淋上新",
-      "category": "茶饮",
-      "startDate": "2026-09-19",
-      "endDate": "2026-09-24",
-      "description": "茶冰淇淋买一送一，社群打卡领限定冰箱贴，每日限500个",
-      "lastSeen": "2026-09-23"
-    },
-    {
       "brand": "茶百道",
       "title": "蜜香金牡丹茶底秋日奶茶上新",
       "category": "茶饮",
@@ -208,15 +199,6 @@
       "endDate": "",
       "description": "全新蜜香金牡丹茶底，推出2款秋日奶茶",
       "lastSeen": "2026-09-23"
-    },
-    {
-      "brand": "古茗",
-      "title": "大柚作为拿铁全国限量上线",
-      "category": "茶饮",
-      "startDate": "2026-09-17",
-      "endDate": "",
-      "description": "轻咸新口味拿铁，进口香柚汁融合金奖豆与冷链鲜奶",
-      "lastSeen": "2026-09-21"
     },
     {
       "brand": "霸王茶姬",
@@ -252,7 +234,7 @@
       "startDate": "2026-09-15",
       "endDate": "",
       "description": "9月15日上新椰椰芒芒Pro（芒果果肉加倍、椰乳加量），当天门店买一送一",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-25"
     },
     {
       "brand": "霸王茶姬",
@@ -261,7 +243,7 @@
       "startDate": "2026-09-11",
       "endDate": "2026-09-11",
       "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-25"
     }
   ]
 }
