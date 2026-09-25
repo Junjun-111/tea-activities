@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T03:36:09+08:00",
+  "updated_at": "2026-09-25T17:14:55+08:00",
   "city": "沈阳",
   "activities": [
     {
@@ -8,7 +8,7 @@
       "category": "茶饮",
       "startDate": "2026-09-25",
       "endDate": "",
-      "description": "喜茶超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
+      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨，主打美颜纤体",
       "lastSeen": "2026-09-25"
     },
     {
@@ -17,16 +17,34 @@
       "category": "茶饮",
       "startDate": "2026-09-25",
       "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜为主，主打去火纤体",
       "lastSeen": "2026-09-25"
     },
     {
       "brand": "霸王茶姬",
-      "title": "霸王茶姬×米菲联名",
+      "title": "霸王茶姬×米菲联名桂花系列",
       "category": "茶饮",
       "startDate": "2026-09-25",
       "endDate": "",
-      "description": "联名米菲推桂花系列新品，含联名周边及主题门店",
+      "description": "上新三款桂花新茶，推出联名周边、主题门店及摇桂花活动",
+      "lastSeen": "2026-09-25"
+    },
+    {
+      "brand": "茶百道",
+      "title": "奶白酒系列上新",
+      "category": "茶饮",
+      "startDate": "2026-09-25",
+      "endDate": "",
+      "description": "推出奶白酒乌龙与奶白酒麻薯奶绿，云南特色酒酿饮品",
+      "lastSeen": "2026-09-25"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶上新",
+      "category": "茶饮",
+      "startDate": "2026-09-25",
+      "endDate": "",
+      "description": "仅用鲜牛奶制作，可选冷热，售价8元",
       "lastSeen": "2026-09-25"
     },
     {
@@ -39,21 +57,21 @@
       "lastSeen": "2026-09-25"
     },
     {
+      "brand": "甜啦啦",
+      "title": "芋泥系列上新超厚芋泥桶",
+      "category": "茶饮",
+      "startDate": "2026-09-24",
+      "endDate": "",
+      "description": "推出超厚芋泥大满贯、全家福、奶绿、椰乳四款芋泥新品",
+      "lastSeen": "2026-09-25"
+    },
+    {
       "brand": "古茗",
       "title": "古茗×人教社中秋联名",
       "category": "茶饮",
       "startDate": "2026-09-24",
       "endDate": "",
       "description": "联名人教社推桂花系列，含课本插画杯及透卡心意卡",
-      "lastSeen": "2026-09-25"
-    },
-    {
-      "brand": "甜啦啦",
-      "title": "超厚芋泥系列上新",
-      "category": "茶饮",
-      "startDate": "2026-09-24",
-      "endDate": "",
-      "description": "推出超厚芋泥大满贯、全家福、奶绿、椰乳四款新品",
       "lastSeen": "2026-09-25"
     },
     {
@@ -93,21 +111,12 @@
       "lastSeen": "2026-09-24"
     },
     {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-24",
-      "endDate": "",
-      "description": "古茗小程序上新早安鲜牛奶，可选冷热",
-      "lastSeen": "2026-09-24"
-    },
-    {
       "brand": "奈雪的茶",
       "title": "奈雪×明日方舟终末地联名",
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "联名推出初雪轻酪果奶，含烫色卡、浮雕徽章等限定周边",
+      "description": "推出3款初雪轻酪果奶，全国140家主题店，赠烫色卡徽章立牌等周边",
       "lastSeen": "2026-09-25"
     },
     {
