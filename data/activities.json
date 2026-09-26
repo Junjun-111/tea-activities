@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-26T03:40:53+08:00",
+  "updated_at": "2026-09-26T16:57:40+08:00",
   "activities": [
     {
       "brand": "喜茶",
@@ -12,11 +12,11 @@
     },
     {
       "brand": "喜茶",
-      "title": "去火·纤体瓶新品上市",
+      "title": "去火纤体瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-09-26",
       "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝配苦瓜，100大卡",
+      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
       "lastSeen": "2026-09-26"
     },
     {
@@ -25,16 +25,7 @@
       "category": "茶饮",
       "startDate": "2026-09-26",
       "endDate": "",
-      "description": "联名Chiikawa，发售限量联名周边，门店取餐等3小时",
-      "lastSeen": "2026-09-26"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×米菲联名",
-      "category": "茶饮",
-      "startDate": "2026-09-26",
-      "endDate": "",
-      "description": "联名米菲上新桂花系列，含联名周边与主题门店",
+      "description": "联名Chiikawa推出限量周边，门店取餐等3小时",
       "lastSeen": "2026-09-26"
     },
     {
@@ -74,6 +65,24 @@
       "lastSeen": "2026-09-25"
     },
     {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬×米菲联名",
+      "category": "茶饮",
+      "startDate": "2026-09-24",
+      "endDate": "",
+      "description": "中秋桂花系列上新，含贴纸冰箱贴毛绒周边及主题门店",
+      "lastSeen": "2026-09-26"
+    },
+    {
+      "brand": "古茗",
+      "title": "古茗×人教社中秋限定包装",
+      "category": "茶饮",
+      "startDate": "2026-09-24",
+      "endDate": "",
+      "description": "联合人民教育出版社推出中秋限定包装，含心意卡透卡",
+      "lastSeen": "2026-09-26"
+    },
+    {
       "brand": "甜啦啦",
       "title": "超厚芋泥系列上新",
       "category": "茶饮",
@@ -83,30 +92,12 @@
       "lastSeen": "2026-09-26"
     },
     {
-      "brand": "古茗",
-      "title": "古茗×人教社中秋联名",
-      "category": "茶饮",
-      "startDate": "2026-09-24",
-      "endDate": "",
-      "description": "联名人教社推桂花系列，含课本插画杯及透卡心意卡",
-      "lastSeen": "2026-09-25"
-    },
-    {
       "brand": "茶百道",
       "title": "龙眼新品送CBO首发周边",
       "category": "茶饮",
       "startDate": "2026-09-24",
       "endDate": "",
       "description": "喝岭南龙眼新品，送茶少牛仔玩偶首发周边",
-      "lastSeen": "2026-09-24"
-    },
-    {
-      "brand": "古茗",
-      "title": "中秋限定包装上线",
-      "category": "茶饮",
-      "startDate": "2026-09-24",
-      "endDate": "",
-      "description": "联合人民教育出版社推出中秋限定包装，含心意卡透卡",
       "lastSeen": "2026-09-24"
     },
     {
@@ -133,7 +124,7 @@
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "联名上新3款初雪轻酪果奶，全国140家主题门店",
+      "description": "推出3款初雪轻酪果奶，140家主题店，含徽章立牌周边",
       "lastSeen": "2026-09-26"
     },
     {
