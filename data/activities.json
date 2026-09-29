@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T05:27:51+08:00",
+  "updated_at": "2026-09-29T18:17:21+08:00",
   "activities": [
     {
       "brand": "喜茶",
@@ -12,16 +12,25 @@
     },
     {
       "brand": "喜茶",
-      "title": "去火·纤体瓶新品上市",
+      "title": "喜茶×Chiikawa联名",
       "category": "茶饮",
       "startDate": "2026-09-29",
       "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "description": "联名热门IP Chiikawa，发售限量联名周边，门店排队火爆",
+      "lastSeen": "2026-09-29"
+    },
+    {
+      "brand": "喜茶",
+      "title": "去火纤体瓶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-29",
+      "endDate": "",
+      "description": "超级植物茶系列第二款，羽衣甘蓝配苦瓜，100%鲜榨",
       "lastSeen": "2026-09-29"
     },
     {
       "brand": "茶百道",
-      "title": "冰吸薄荷冰奶联名上新",
+      "title": "薄荷冰奶新品上市",
       "category": "茶饮",
       "startDate": "2026-09-29",
       "endDate": "",
@@ -29,22 +38,13 @@
       "lastSeen": "2026-09-29"
     },
     {
-      "brand": "喜茶",
-      "title": "喜茶×Chiikawa联名活动",
-      "category": "茶饮",
-      "startDate": "2026-09-28",
-      "endDate": "",
-      "description": "联名热门IP Chiikawa，推出限量联名周边，门店排队火爆",
-      "lastSeen": "2026-09-28"
-    },
-    {
       "brand": "古茗",
       "title": "早安鲜牛奶新品上市",
       "category": "茶饮",
-      "startDate": "2026-09-28",
+      "startDate": "2026-09-29",
       "endDate": "",
-      "description": "推出仅含鲜牛奶的新品，可选冷热，售价8元",
-      "lastSeen": "2026-09-28"
+      "description": "推出早安鲜牛奶，仅用鲜牛奶，可选冷热",
+      "lastSeen": "2026-09-29"
     },
     {
       "brand": "茶百道",
@@ -70,7 +70,7 @@
       "category": "茶饮",
       "startDate": "2026-09-25",
       "endDate": "2026-10-07",
-      "description": "携手非遗传承人汪天稳，小程序参与得皮影联名周边",
+      "description": "携手非遗传承人汪天稳，小程序参与活动得皮影联名周边",
       "lastSeen": "2026-09-29"
     },
     {
@@ -79,7 +79,7 @@
       "category": "茶饮",
       "startDate": "2026-09-24",
       "endDate": "",
-      "description": "中秋桂花系列上新，含贴纸冰箱贴毛绒零钱包等周边",
+      "description": "联名米菲推中秋桂花系列，赠贴纸冰箱贴毛绒零钱包等周边",
       "lastSeen": "2026-09-29"
     },
     {
@@ -88,7 +88,7 @@
       "category": "茶饮",
       "startDate": "2026-09-24",
       "endDate": "",
-      "description": "联合人民教育出版社推出中秋限定包装，含心意卡透卡",
+      "description": "联合人民教育出版社推中秋限定包装，含心意卡面透卡",
       "lastSeen": "2026-09-29"
     },
     {
@@ -115,7 +115,7 @@
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "推出3款初雪轻酪果奶，140家主题店，含徽章立牌等周边",
+      "description": "联名推出3款初雪轻酪果奶，140家主题店，赠烫色卡徽章立牌",
       "lastSeen": "2026-09-29"
     },
     {
