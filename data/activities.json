@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T04:19:27+08:00",
+  "updated_at": "2026-09-30T18:09:40+08:00",
   "activities": [
     {
       "brand": "喜茶",
@@ -7,16 +7,43 @@
       "category": "茶饮",
       "startDate": "2026-09-30",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
+      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨搭配苹果凤梨汁",
       "lastSeen": "2026-09-30"
     },
     {
       "brand": "喜茶",
-      "title": "去火·纤体瓶新品上市",
+      "title": "喜茶×Chiikawa联名",
+      "category": "茶饮",
+      "startDate": "2026-09-30",
+      "endDate": "",
+      "description": "与日本动漫Chiikawa联名，推出限量联名周边引发排队抢购",
+      "lastSeen": "2026-09-30"
+    },
+    {
+      "brand": "喜茶",
+      "title": "去火纤体瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-09-30",
       "endDate": "",
       "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "lastSeen": "2026-09-30"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬×哪吒2联名",
+      "category": "茶饮",
+      "startDate": "2026-09-30",
+      "endDate": "",
+      "description": "联名限定包装及主题镭射吊牌，周边采取预售制",
+      "lastSeen": "2026-09-30"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-30",
+      "endDate": "",
+      "description": "推出早安鲜牛奶，仅用鲜牛奶，可选冷热",
       "lastSeen": "2026-09-30"
     },
     {
@@ -38,22 +65,13 @@
       "lastSeen": "2026-09-30"
     },
     {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-30",
-      "endDate": "",
-      "description": "仅用鲜牛奶，可选冷牛奶或温牛奶",
-      "lastSeen": "2026-09-30"
-    },
-    {
-      "brand": "喜茶",
-      "title": "喜茶×Chiikawa联名",
+      "brand": "茶百道",
+      "title": "卢浮宫店限定饮品上市",
       "category": "茶饮",
       "startDate": "2026-09-29",
       "endDate": "",
-      "description": "联名热门IP Chiikawa，发售限量联名周边，门店排队火爆",
-      "lastSeen": "2026-09-29"
+      "description": "卢浮宫商廊店推出薰衣草蓝莓雪顶、可可浆果三重奏限定饮品",
+      "lastSeen": "2026-09-30"
     },
     {
       "brand": "茶百道",
@@ -63,6 +81,24 @@
       "endDate": "",
       "description": "推出奶白酒乌龙与奶白酒麻薯奶绿两款云南特色饮品",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "brand": "古茗",
+      "title": "桂花联名限定杯",
+      "category": "茶饮",
+      "startDate": "2026-09-26",
+      "endDate": "",
+      "description": "推出桂花香联名限定杯及新品",
+      "lastSeen": "2026-09-30"
+    },
+    {
+      "brand": "蜜雪冰城",
+      "title": "黑糖珍珠鲜牛乳新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-25",
+      "endDate": "",
+      "description": "推出黑糖珍珠鲜牛乳及黑糖珍珠圣代新品",
+      "lastSeen": "2026-09-30"
     },
     {
       "brand": "蜜雪冰城",
@@ -75,11 +111,11 @@
     },
     {
       "brand": "霸王茶姬",
-      "title": "霸王茶姬×miffy中秋桂花联名",
+      "title": "霸王茶姬×米菲中秋桂花系列",
       "category": "茶饮",
       "startDate": "2026-09-24",
       "endDate": "",
-      "description": "联名米菲，赠毛毡贴纸、冰箱贴、毛绒零钱包等周边",
+      "description": "联名米菲推出中秋桂花系列，含贴纸冰箱贴毛绒零钱包等周边",
       "lastSeen": "2026-09-30"
     },
     {
@@ -115,7 +151,7 @@
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "推出3款初雪轻酪果奶，140家主题店，赠徽章立牌等周边",
+      "description": "推出初雪轻酪果奶新品，140家主题店，含烫色卡徽章等周边",
       "lastSeen": "2026-09-30"
     },
     {
