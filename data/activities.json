@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T04:23:51+08:00",
+  "updated_at": "2026-10-01T18:37:25+08:00",
   "activities": [
     {
       "brand": "喜茶",
@@ -7,7 +7,16 @@
       "category": "茶饮",
       "startDate": "2026-10-01",
       "endDate": "",
-      "description": "喜茶超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
+      "description": "喜茶超级植物茶系列第三款单品，100%红菜头鲜榨，主打美颜纤体",
+      "lastSeen": "2026-10-01"
+    },
+    {
+      "brand": "喜茶",
+      "title": "去火·纤体瓶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-01",
+      "endDate": "",
+      "description": "超级植物茶系列第二款，羽衣甘蓝加苦瓜现榨，仅100大卡",
       "lastSeen": "2026-10-01"
     },
     {
@@ -16,7 +25,34 @@
       "category": "茶饮",
       "startDate": "2026-10-01",
       "endDate": "",
-      "description": "喜茶与日本动漫Chiikawa联名，推出限量联名周边引发抢购",
+      "description": "与日本动漫Chiikawa联名，发售限量联名周边，门店取餐等3小时",
+      "lastSeen": "2026-10-01"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬哪吒2联名上新",
+      "category": "茶饮",
+      "startDate": "2026-10-01",
+      "endDate": "",
+      "description": "与哪吒2联名，买联名饮品送角色纸袋、打包杯及主题镭射吊牌",
+      "lastSeen": "2026-10-01"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-01",
+      "endDate": "",
+      "description": "古茗推出早安鲜牛奶，仅用鲜牛奶，可选冷热",
+      "lastSeen": "2026-10-01"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "芋泥大满贯新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-01",
+      "endDate": "",
+      "description": "甜啦啦推出芋泥大满贯新品",
       "lastSeen": "2026-10-01"
     },
     {
@@ -38,12 +74,12 @@
       "lastSeen": "2026-10-01"
     },
     {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬地域限定饮品上新",
       "category": "茶饮",
-      "startDate": "2026-10-01",
+      "startDate": "2026-09-30",
       "endDate": "",
-      "description": "古茗推出早安鲜牛奶，仅用鲜牛奶可选冷热两种喝法",
+      "description": "一次性推出19个系列区域限定产品，累计上新超40款",
       "lastSeen": "2026-10-01"
     },
     {
@@ -65,24 +101,6 @@
       "lastSeen": "2026-10-01"
     },
     {
-      "brand": "喜茶",
-      "title": "去火纤体瓶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-30",
-      "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
-      "lastSeen": "2026-09-30"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×哪吒2联名",
-      "category": "茶饮",
-      "startDate": "2026-09-30",
-      "endDate": "",
-      "description": "联名限定包装及主题镭射吊牌，周边采取预售制",
-      "lastSeen": "2026-09-30"
-    },
-    {
       "brand": "霸王茶姬",
       "title": "归云南熟普系列上新",
       "category": "茶饮",
@@ -102,11 +120,20 @@
     },
     {
       "brand": "茶百道",
-      "title": "卢浮宫店专属限定饮品",
+      "title": "茶百道卢浮宫店限定饮品",
       "category": "茶饮",
       "startDate": "2026-09-29",
       "endDate": "",
-      "description": "巴黎卢浮宫商廊店开业，推出薰衣草蓝莓雪顶等专属限定饮品",
+      "description": "卢浮宫商廊店专属限定饮品薰衣草蓝莓雪顶、可可浆果三重奏",
+      "lastSeen": "2026-10-01"
+    },
+    {
+      "brand": "蜜雪冰城",
+      "title": "蜜瓜冰淇淋新品上市",
+      "category": "茶饮",
+      "startDate": "2026-09-27",
+      "endDate": "",
+      "description": "蜜雪冰城推出蜜瓜冰淇淋新品",
       "lastSeen": "2026-10-01"
     },
     {
@@ -147,21 +174,12 @@
     },
     {
       "brand": "霸王茶姬",
-      "title": "miffy联名中秋桂花系列",
+      "title": "霸王茶姬米菲联名中秋桂花系列",
       "category": "茶饮",
       "startDate": "2026-09-24",
       "endDate": "",
-      "description": "与米菲联名推出毛毡贴纸、冰箱贴、毛绒零钱包等周边及中秋系列",
+      "description": "与米菲联名，推出毛毡贴纸、冰箱贴、毛绒零钱包等周边",
       "lastSeen": "2026-10-01"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×米菲中秋桂花系列",
-      "category": "茶饮",
-      "startDate": "2026-09-24",
-      "endDate": "",
-      "description": "联名米菲推出中秋桂花系列，含贴纸冰箱贴毛绒零钱包等周边",
-      "lastSeen": "2026-09-30"
     },
     {
       "brand": "古茗",
