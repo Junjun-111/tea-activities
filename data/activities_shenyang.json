@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T04:14:14+08:00",
+  "updated_at": "2026-10-03T17:34:28+08:00",
   "city": "沈阳",
   "activities": [
     {
@@ -8,7 +8,16 @@
       "category": "茶饮",
       "startDate": "2026-10-03",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
+      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨，主打美颜纤体",
+      "lastSeen": "2026-10-03"
+    },
+    {
+      "brand": "喜茶",
+      "title": "喜茶×Chiikawa联名活动",
+      "category": "茶饮",
+      "startDate": "2026-10-03",
+      "endDate": "",
+      "description": "与日本动漫Chiikawa联名，发售限量联名周边，门店取餐等3小时",
       "lastSeen": "2026-10-03"
     },
     {
@@ -17,7 +26,34 @@
       "category": "茶饮",
       "startDate": "2026-10-03",
       "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "description": "超级植物茶系列第二款单品，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "lastSeen": "2026-10-03"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪×终末地联名果蔬瓶",
+      "category": "茶饮",
+      "startDate": "2026-10-03",
+      "endDate": "",
+      "description": "与终末地联名推出果蔬瓶，含联名周边",
+      "lastSeen": "2026-10-03"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "区域限定新品20+款上新",
+      "category": "茶饮",
+      "startDate": "2026-10-03",
+      "endDate": "",
+      "description": "推出20+款各具特色的区域限定新品",
+      "lastSeen": "2026-10-03"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-03",
+      "endDate": "",
+      "description": "推出仅用鲜牛奶的新品，可选冷牛奶或温牛奶",
       "lastSeen": "2026-10-03"
     },
     {
@@ -37,33 +73,6 @@
       "endDate": "",
       "description": "购联名饮品得角色纸袋、打包杯及主题镭射吊牌",
       "lastSeen": "2026-10-03"
-    },
-    {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-03",
-      "endDate": "",
-      "description": "纯鲜牛奶饮品，可选冷牛奶或加热温牛奶",
-      "lastSeen": "2026-10-03"
-    },
-    {
-      "brand": "喜茶",
-      "title": "喜茶×Chiikawa联名活动",
-      "category": "茶饮",
-      "startDate": "2026-10-02",
-      "endDate": "",
-      "description": "与Chiikawa联名，推出限量联名周边",
-      "lastSeen": "2026-10-02"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "区域限定新品20+款上新",
-      "category": "茶饮",
-      "startDate": "2026-10-02",
-      "endDate": "",
-      "description": "各区域推出20+款限定新品",
-      "lastSeen": "2026-10-02"
     },
     {
       "brand": "霸王茶姬",
@@ -166,6 +175,15 @@
     },
     {
       "brand": "霸王茶姬",
+      "title": "19系列区域限定集中上新",
+      "category": "茶饮",
+      "startDate": "2026-09-30",
+      "endDate": "",
+      "description": "一次性推出19个系列区域限定，累计超40款，绑定当地特色茶种",
+      "lastSeen": "2026-10-03"
+    },
+    {
+      "brand": "霸王茶姬",
       "title": "霸王茶姬一天上新超40款，节前地域限定饮品密集上新",
       "category": "茶饮",
       "startDate": "2026-09-30",
@@ -183,6 +201,24 @@
       "lastSeen": "2026-09-30"
     },
     {
+      "brand": "茶百道",
+      "title": "卢浮宫店专属限定饮品",
+      "category": "茶饮",
+      "startDate": "2026-09-29",
+      "endDate": "",
+      "description": "卢浮宫商廊店推出薰衣草蓝莓雪顶、可可浆果三重奏两款限定",
+      "lastSeen": "2026-10-03"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "超厚芋泥三杯茶饮套餐",
+      "category": "茶饮",
+      "startDate": "2026-09-29",
+      "endDate": "",
+      "description": "新品超厚芋泥三杯茶饮套餐，可两人分享",
+      "lastSeen": "2026-10-03"
+    },
+    {
       "brand": "甜啦啦",
       "title": "超厚芋泥系列新品上市",
       "category": "茶饮",
@@ -190,24 +226,6 @@
       "endDate": "",
       "description": "上新超厚芋泥三杯茶饮套餐，主打芋泥大满贯",
       "lastSeen": "2026-10-03"
-    },
-    {
-      "brand": "茶百道",
-      "title": "卢浮宫店限定饮品",
-      "category": "茶饮",
-      "startDate": "2026-09-29",
-      "endDate": "",
-      "description": "卢浮宫商廊店推出薰衣草蓝莓雪顶等限定饮品",
-      "lastSeen": "2026-10-02"
-    },
-    {
-      "brand": "甜啦啦",
-      "title": "超厚芋泥三杯茶饮上新",
-      "category": "茶饮",
-      "startDate": "2026-09-29",
-      "endDate": "",
-      "description": "超厚芋泥三杯茶饮套餐新品上市",
-      "lastSeen": "2026-10-02"
     },
     {
       "brand": "蜜雪冰城",
@@ -246,13 +264,13 @@
       "lastSeen": "2026-10-01"
     },
     {
-      "brand": "奈雪的茶",
-      "title": "奈雪×明日方舟终末地联名",
+      "brand": "蜜雪冰城",
+      "title": "雪王×得力联名文具",
       "category": "茶饮",
-      "startDate": "2026-09-23",
+      "startDate": "2026-09-16",
       "endDate": "",
-      "description": "联名推出限定饮品套餐及瓶装联名周边",
-      "lastSeen": "2026-10-02"
+      "description": "与得力文具联名推出新雪生系列，含捏捏橡皮擦、心动笔等",
+      "lastSeen": "2026-10-03"
     },
     {
       "brand": "喜茶",
