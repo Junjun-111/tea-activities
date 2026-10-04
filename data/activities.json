@@ -1,22 +1,76 @@
 {
-  "updated_at": "2026-10-04T02:53:10+08:00",
+  "updated_at": "2026-10-04T18:20:01+08:00",
   "activities": [
-    {
-      "brand": "喜茶",
-      "title": "红菜头美颜瓶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-04",
-      "endDate": "",
-      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨，主打美颜纤体",
-      "lastSeen": "2026-10-04"
-    },
     {
       "brand": "喜茶",
       "title": "喜茶×Chiikawa联名活动",
       "category": "茶饮",
       "startDate": "2026-10-04",
       "endDate": "",
-      "description": "与日本动漫Chiikawa联名，推出限量联名周边，门店火爆排队",
+      "description": "喜茶与Chiikawa联名，推出限量联名周边，门店火爆取餐等3小时",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "brand": "喜茶",
+      "title": "红菜头美颜瓶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-04",
+      "endDate": "",
+      "description": "喜茶超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪×明日方舟联名初雪轻酪果奶",
+      "category": "茶饮",
+      "startDate": "2026-10-04",
+      "endDate": "",
+      "description": "奈雪联名上新3款初雪轻酪果奶，周边秒罄，多店等候超500杯",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪×哈利波特联名活动",
+      "category": "茶饮",
+      "startDate": "2026-10-04",
+      "endDate": "",
+      "description": "奈雪与哈利波特联名，推出四学院限定饮品及特殊打包杯",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬×CLOT抹茶系列上新",
+      "category": "茶饮",
+      "startDate": "2026-10-04",
+      "endDate": "",
+      "description": "霸王茶姬联名CLOT推出抹茶系列，含浓抹香草籽等三款新品",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬×哪吒2联名活动",
+      "category": "茶饮",
+      "startDate": "2026-10-04",
+      "endDate": "",
+      "description": "霸王茶姬与哪吒2联名，推出限定包装及主题镭射吊牌周边",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-04",
+      "endDate": "",
+      "description": "古茗上新早安鲜牛奶，仅用鲜牛奶原料，可选冷热",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "超厚芋泥系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-04",
+      "endDate": "",
+      "description": "甜啦啦推出超厚芋泥三杯茶饮套餐，芋泥控新品",
       "lastSeen": "2026-10-04"
     },
     {
@@ -27,42 +81,6 @@
       "endDate": "",
       "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
       "lastSeen": "2026-10-04"
-    },
-    {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-04",
-      "endDate": "",
-      "description": "新品仅用鲜牛奶为原料，可选冷牛奶或温牛奶",
-      "lastSeen": "2026-10-04"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪×哈利波特联名活动",
-      "category": "茶饮",
-      "startDate": "2026-10-03",
-      "endDate": "",
-      "description": "推出四大学院限定饮品及特殊打包杯，对应霍格沃茨四学院",
-      "lastSeen": "2026-10-04"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×哪吒2联名活动",
-      "category": "茶饮",
-      "startDate": "2026-10-03",
-      "endDate": "",
-      "description": "联名限定周边预售，购买联名饮品获角色纸袋、打包杯及镭射吊牌",
-      "lastSeen": "2026-10-04"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×CLOT抹茶系列联名",
-      "category": "茶饮",
-      "startDate": "2026-10-03",
-      "endDate": "",
-      "description": "联名CLOT推出浓抹香草籽、一抹茉莉花、浓抹花田三款",
-      "lastSeen": "2026-10-03"
     },
     {
       "brand": "霸王茶姬",
@@ -98,15 +116,6 @@
       "startDate": "2026-10-02",
       "endDate": "",
       "description": "喜茶海外首家lab2.0开业全球首发全新\"茶云\"产品形态事实上，在泰国首店开业之",
-      "lastSeen": "2026-10-02"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬珍珠系列新品上新了",
-      "category": "茶饮",
-      "startDate": "2026-10-02",
-      "endDate": "",
-      "description": "霸王茶姬珍珠系列新品上新了，还有广西限定周边#茶姬限定周边#chagee霸王茶姬",
       "lastSeen": "2026-10-02"
     },
     {
@@ -209,15 +218,6 @@
       "lastSeen": "2026-10-03"
     },
     {
-      "brand": "甜啦啦",
-      "title": "超厚芋泥系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-09-29",
-      "endDate": "",
-      "description": "上新超厚芋泥三杯茶饮套餐，主打芋泥大满贯",
-      "lastSeen": "2026-10-03"
-    },
-    {
       "brand": "蜜雪冰城",
       "title": "蜜瓜冰淇淋新品上市",
       "category": "茶饮",
@@ -252,15 +252,6 @@
       "endDate": "",
       "description": "蜜雪冰城黑糖系列新品黑糖珍珠鲜牛乳及黑糖珍珠圣代上市",
       "lastSeen": "2026-10-01"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪×明日方舟终末地联名",
-      "category": "茶饮",
-      "startDate": "2026-09-23",
-      "endDate": "",
-      "description": "联名推出3款初雪轻酪果奶新品，多店等候杯数超500杯",
-      "lastSeen": "2026-10-04"
     },
     {
       "brand": "蜜雪冰城",
