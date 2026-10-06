@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T06:14:54+08:00",
+  "updated_at": "2026-10-06T18:56:58+08:00",
   "city": "沈阳",
   "activities": [
     {
@@ -8,7 +8,7 @@
       "category": "茶饮",
       "startDate": "2026-10-06",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
+      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨搭配苹果汁凤梨汁",
       "lastSeen": "2026-10-06"
     },
     {
@@ -17,16 +17,7 @@
       "category": "茶饮",
       "startDate": "2026-10-06",
       "endDate": "",
-      "description": "与热门IP Chiikawa联名，推出限量联名周边，门店火爆排队",
-      "lastSeen": "2026-10-06"
-    },
-    {
-      "brand": "喜茶",
-      "title": "去火·纤体瓶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-06",
-      "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "description": "与热门动漫Chiikawa联名，推出限量联名周边，门店取餐等3小时",
       "lastSeen": "2026-10-06"
     },
     {
@@ -44,16 +35,52 @@
       "category": "茶饮",
       "startDate": "2026-10-06",
       "endDate": "",
-      "description": "联名限定周边预售，购联名饮品送角色纸袋、打包杯及镭射吊牌",
+      "description": "联名限定周边预售，购买联名饮品得角色纸袋、打包杯及镭射吊牌",
       "lastSeen": "2026-10-06"
     },
     {
       "brand": "霸王茶姬",
-      "title": "归云南系列新品上市",
+      "title": "归云南系列上新",
       "category": "茶饮",
       "startDate": "2026-10-06",
       "endDate": "",
-      "description": "上新归云南系列，奶茶杯规格变小引发关注",
+      "description": "上新归云南系列奶茶，杯型较以往明显变小引发讨论",
+      "lastSeen": "2026-10-06"
+    },
+    {
+      "brand": "茶百道",
+      "title": "茶百道×T1联名合作",
+      "category": "茶饮",
+      "startDate": "2026-10-06",
+      "endDate": "",
+      "description": "韩国茶百道发布五人剪影海报，口号TogetherAsTea，与T1联名",
+      "lastSeen": "2026-10-06"
+    },
+    {
+      "brand": "蜜雪冰城",
+      "title": "蜜雪冰城×得力文具联名",
+      "category": "茶饮",
+      "startDate": "2026-10-06",
+      "endDate": "",
+      "description": "雪王IP与得力联名推出新雪生系列文具，含捏捏橡皮擦等",
+      "lastSeen": "2026-10-06"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-06",
+      "endDate": "",
+      "description": "推出仅用鲜牛奶的新品，可选冷牛奶或加热温牛奶",
+      "lastSeen": "2026-10-06"
+    },
+    {
+      "brand": "喜茶",
+      "title": "去火·纤体瓶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-06",
+      "endDate": "",
+      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
       "lastSeen": "2026-10-06"
     },
     {
@@ -72,15 +99,6 @@
       "startDate": "2026-10-06",
       "endDate": "",
       "description": "上新奶白酒乌龙与奶白酒麻薯奶绿，云南特色饮品",
-      "lastSeen": "2026-10-06"
-    },
-    {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-06",
-      "endDate": "",
-      "description": "推出纯鲜牛奶饮品，可选冷热，拓展早餐场景",
       "lastSeen": "2026-10-06"
     },
     {
@@ -116,8 +134,8 @@
       "category": "茶饮",
       "startDate": "2026-10-03",
       "endDate": "",
-      "description": "十月初推出焦糖饼干奶茶，全国门店上新",
-      "lastSeen": "2026-10-05"
+      "description": "十月初推出焦糖饼干奶茶新品，全国门店同步上新",
+      "lastSeen": "2026-10-06"
     },
     {
       "brand": "霸王茶姬",
@@ -190,15 +208,6 @@
       "endDate": "",
       "description": "联名限定饮品套餐及瓶装联名周边，专属下午茶补给",
       "lastSeen": "2026-10-05"
-    },
-    {
-      "brand": "蜜雪冰城",
-      "title": "蜜雪冰城×得力文具联名",
-      "category": "茶饮",
-      "startDate": "2026-09-16",
-      "endDate": "",
-      "description": "雪王IP联名得力文具，推出捏捏橡皮擦、心动笔等文创产品",
-      "lastSeen": "2026-10-06"
     },
     {
       "brand": "喜茶",
