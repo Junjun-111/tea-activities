@@ -1,86 +1,95 @@
 {
-  "updated_at": "2026-10-07T18:44:43+08:00",
+  "updated_at": "2026-10-08T04:53:32+08:00",
   "activities": [
     {
       "brand": "喜茶",
       "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
-      "startDate": "2026-10-07",
+      "startDate": "2026-10-08",
       "endDate": "",
-      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨，主打美颜纤体",
-      "lastSeen": "2026-10-07"
+      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
+      "lastSeen": "2026-10-08"
     },
     {
       "brand": "喜茶",
-      "title": "喜茶×Chiikawa联名",
+      "title": "喜茶Chiikawa联名活动",
       "category": "茶饮",
-      "startDate": "2026-10-07",
+      "startDate": "2026-10-08",
       "endDate": "",
-      "description": "与日本人气动漫Chiikawa联名，推出限量联名周边",
-      "lastSeen": "2026-10-07"
+      "description": "与热门IP Chiikawa联名，发售限量联名周边，门店火爆",
+      "lastSeen": "2026-10-08"
     },
     {
       "brand": "喜茶",
       "title": "去火纤体瓶新品上市",
       "category": "茶饮",
-      "startDate": "2026-10-07",
+      "startDate": "2026-10-08",
       "endDate": "",
       "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
-      "lastSeen": "2026-10-07"
+      "lastSeen": "2026-10-08"
     },
     {
       "brand": "奈雪的茶",
       "title": "奈雪×哈利波特联名",
       "category": "茶饮",
-      "startDate": "2026-10-07",
+      "startDate": "2026-10-08",
       "endDate": "",
-      "description": "推出四大学院限定饮品及特殊打包杯",
-      "lastSeen": "2026-10-07"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪×终末地联名",
-      "category": "茶饮",
-      "startDate": "2026-10-07",
-      "endDate": "",
-      "description": "与终末地联名推出限定联名杯",
-      "lastSeen": "2026-10-07"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×哪吒2联名",
-      "category": "茶饮",
-      "startDate": "2026-10-07",
-      "endDate": "",
-      "description": "联名限定包装及主题镭射吊牌周边，小程序预售",
-      "lastSeen": "2026-10-07"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×CLOT抹茶系列上新",
-      "category": "茶饮",
-      "startDate": "2026-10-07",
-      "endDate": "",
-      "description": "联名CLOT推出浓抹香草籽、一抹茉莉花、浓抹花田三款",
-      "lastSeen": "2026-10-07"
+      "description": "推出四款学院限定饮品及特殊打包杯，对应霍格沃茨四学院",
+      "lastSeen": "2026-10-08"
     },
     {
       "brand": "霸王茶姬",
       "title": "归云南熟普系列上新",
       "category": "茶饮",
-      "startDate": "2026-10-07",
+      "startDate": "2026-10-08",
       "endDate": "",
-      "description": "推出归云南系列三款新品，含云卷松风等",
-      "lastSeen": "2026-10-07"
+      "description": "一口气上线三款新品，含云卷松风等，杯型变小引热议",
+      "lastSeen": "2026-10-08"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬×哪吒2联名",
+      "category": "茶饮",
+      "startDate": "2026-10-08",
+      "endDate": "",
+      "description": "与《哪吒2》联名，限定周边采取预售制，物料短缺引混乱",
+      "lastSeen": "2026-10-08"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬×CLOT抹茶系列",
+      "category": "茶饮",
+      "startDate": "2026-10-08",
+      "endDate": "",
+      "description": "联名CLOT推出浓抹香草籽、一抹茉莉花、浓抹花田三款",
+      "lastSeen": "2026-10-08"
     },
     {
       "brand": "茶百道",
       "title": "薄荷冰奶新品上市",
       "category": "茶饮",
-      "startDate": "2026-10-07",
+      "startDate": "2026-10-08",
       "endDate": "",
-      "description": "推出薄荷冰奶新品",
-      "lastSeen": "2026-10-07"
+      "description": "茶百道推出薄荷冰奶新品",
+      "lastSeen": "2026-10-08"
+    },
+    {
+      "brand": "蜜雪冰城",
+      "title": "雪王皮影周边活动",
+      "category": "茶饮",
+      "startDate": "2026-10-08",
+      "endDate": "",
+      "description": "推出雪王皮影周边，可搭戏台在家玩非遗皮影戏",
+      "lastSeen": "2026-10-08"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-08",
+      "endDate": "",
+      "description": "古茗小程序上新，仅用鲜牛奶，可选冷牛奶或温牛奶",
+      "lastSeen": "2026-10-08"
     },
     {
       "brand": "茶百道",
@@ -89,15 +98,6 @@
       "startDate": "2026-10-07",
       "endDate": "",
       "description": "推出奶白酒乌龙与奶白酒麻薯奶绿两款云南特色饮品",
-      "lastSeen": "2026-10-07"
-    },
-    {
-      "brand": "古茗",
-      "title": "早安鲜牛奶上新",
-      "category": "茶饮",
-      "startDate": "2026-10-07",
-      "endDate": "",
-      "description": "推出仅用鲜牛奶的新品，可选冷热",
       "lastSeen": "2026-10-07"
     },
     {
@@ -111,21 +111,12 @@
     },
     {
       "brand": "茶百道",
-      "title": "韩国茶百道×T1联名合作",
+      "title": "韩国茶百道×T1联名",
       "category": "茶饮",
-      "startDate": "2026-10-07",
+      "startDate": "2026-10-06",
       "endDate": "",
-      "description": "韩国茶百道发布五人剪影海报，口号TogetherAsTea，与T1联名",
-      "lastSeen": "2026-10-07"
-    },
-    {
-      "brand": "蜜雪冰城",
-      "title": "雪王皮影周边活动",
-      "category": "茶饮",
-      "startDate": "2026-10-07",
-      "endDate": "",
-      "description": "蜜雪冰城推出雪王皮影周边，可搭戏台在家玩非遗皮影戏",
-      "lastSeen": "2026-10-07"
+      "description": "韩国茶百道发布五人剪影海报，口号TogetherAsTea，联名T1",
+      "lastSeen": "2026-10-08"
     },
     {
       "brand": "蜜雪冰城",
@@ -144,15 +135,6 @@
       "endDate": "",
       "description": "新店开业期间指定饮品买一送一活动",
       "lastSeen": "2026-10-05"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪×明日方舟联名初雪轻酪果奶",
-      "category": "茶饮",
-      "startDate": "2026-10-04",
-      "endDate": "",
-      "description": "奈雪联名上新3款初雪轻酪果奶，周边秒罄，多店等候超500杯",
-      "lastSeen": "2026-10-04"
     },
     {
       "brand": "茶百道",
@@ -210,12 +192,12 @@
     },
     {
       "brand": "奈雪的茶",
-      "title": "奈雪的茶×明日方舟终末地联动",
+      "title": "奈雪×明日方舟终末地联动",
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "联名限定饮品套餐及瓶装联名周边，专属下午茶补给",
-      "lastSeen": "2026-10-05"
+      "description": "推出3款联名果奶与1款烘焙，可获干员周边及DIY杯贴",
+      "lastSeen": "2026-10-08"
     },
     {
       "brand": "喜茶",
@@ -224,7 +206,7 @@
       "startDate": "2026-09-15",
       "endDate": "",
       "description": "9月15日上新椰椰芒芒Pro（芒果果肉加倍、椰乳加量），当天门店买一送一",
-      "lastSeen": "2026-10-07"
+      "lastSeen": "2026-10-08"
     },
     {
       "brand": "霸王茶姬",
@@ -233,7 +215,7 @@
       "startDate": "2026-09-11",
       "endDate": "2026-09-11",
       "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减",
-      "lastSeen": "2026-10-07"
+      "lastSeen": "2026-10-08"
     }
   ]
 }
