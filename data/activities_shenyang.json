@@ -1,41 +1,59 @@
 {
-  "updated_at": "2026-10-07T04:38:25+08:00",
+  "updated_at": "2026-10-07T18:44:43+08:00",
   "city": "沈阳",
   "activities": [
-    {
-      "brand": "喜茶",
-      "title": "喜茶×Chiikawa联名活动",
-      "category": "茶饮",
-      "startDate": "2026-10-07",
-      "endDate": "",
-      "description": "喜茶与Chiikawa联名，推出限量联名周边，活动火爆取餐等3小时",
-      "lastSeen": "2026-10-07"
-    },
     {
       "brand": "喜茶",
       "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-10-07",
       "endDate": "",
-      "description": "喜茶超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
+      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨，主打美颜纤体",
       "lastSeen": "2026-10-07"
     },
     {
       "brand": "喜茶",
-      "title": "去火·纤体瓶新品上市",
+      "title": "喜茶×Chiikawa联名",
       "category": "茶饮",
       "startDate": "2026-10-07",
       "endDate": "",
-      "description": "喜茶超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "description": "与日本人气动漫Chiikawa联名，推出限量联名周边",
+      "lastSeen": "2026-10-07"
+    },
+    {
+      "brand": "喜茶",
+      "title": "去火纤体瓶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-07",
+      "endDate": "",
+      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
       "lastSeen": "2026-10-07"
     },
     {
       "brand": "奈雪的茶",
-      "title": "奈雪×哈利波特联名活动",
+      "title": "奈雪×哈利波特联名",
       "category": "茶饮",
       "startDate": "2026-10-07",
       "endDate": "",
-      "description": "奈雪与哈利波特联名，推出四大学院限定饮品及特殊打包杯",
+      "description": "推出四大学院限定饮品及特殊打包杯",
+      "lastSeen": "2026-10-07"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪×终末地联名",
+      "category": "茶饮",
+      "startDate": "2026-10-07",
+      "endDate": "",
+      "description": "与终末地联名推出限定联名杯",
+      "lastSeen": "2026-10-07"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬×哪吒2联名",
+      "category": "茶饮",
+      "startDate": "2026-10-07",
+      "endDate": "",
+      "description": "联名限定包装及主题镭射吊牌周边，小程序预售",
       "lastSeen": "2026-10-07"
     },
     {
@@ -44,25 +62,52 @@
       "category": "茶饮",
       "startDate": "2026-10-07",
       "endDate": "",
-      "description": "霸王茶姬联名CLOT推出抹茶系列，含浓抹香草籽等三款新品",
+      "description": "联名CLOT推出浓抹香草籽、一抹茉莉花、浓抹花田三款",
       "lastSeen": "2026-10-07"
     },
     {
       "brand": "霸王茶姬",
-      "title": "霸王茶姬×哪吒2联名活动",
+      "title": "归云南熟普系列上新",
       "category": "茶饮",
       "startDate": "2026-10-07",
       "endDate": "",
-      "description": "霸王茶姬与哪吒2联名，购买联名饮品送纸袋、打包杯及镭射吊牌",
+      "description": "推出归云南系列三款新品，含云卷松风等",
       "lastSeen": "2026-10-07"
     },
     {
-      "brand": "霸王茶姬",
-      "title": "归云南系列新品上市",
+      "brand": "茶百道",
+      "title": "薄荷冰奶新品上市",
       "category": "茶饮",
       "startDate": "2026-10-07",
       "endDate": "",
-      "description": "霸王茶姬上新归云南系列，奶茶杯变小引发熟客讨论",
+      "description": "推出薄荷冰奶新品",
+      "lastSeen": "2026-10-07"
+    },
+    {
+      "brand": "茶百道",
+      "title": "奶白酒系列上新",
+      "category": "茶饮",
+      "startDate": "2026-10-07",
+      "endDate": "",
+      "description": "推出奶白酒乌龙与奶白酒麻薯奶绿两款云南特色饮品",
+      "lastSeen": "2026-10-07"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶上新",
+      "category": "茶饮",
+      "startDate": "2026-10-07",
+      "endDate": "",
+      "description": "推出仅用鲜牛奶的新品，可选冷热",
+      "lastSeen": "2026-10-07"
+    },
+    {
+      "brand": "古茗",
+      "title": "古茗×魔道祖师联名",
+      "category": "茶饮",
+      "startDate": "2026-10-07",
+      "endDate": "",
+      "description": "与人气IP魔道祖师开展联名活动",
       "lastSeen": "2026-10-07"
     },
     {
@@ -84,39 +129,12 @@
       "lastSeen": "2026-10-07"
     },
     {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-07",
-      "endDate": "",
-      "description": "古茗上新早安鲜牛奶，仅用鲜牛奶，可选冷牛奶或温牛奶",
-      "lastSeen": "2026-10-07"
-    },
-    {
       "brand": "蜜雪冰城",
       "title": "蜜雪冰城×得力文具联名",
       "category": "茶饮",
       "startDate": "2026-10-06",
       "endDate": "",
       "description": "雪王IP与得力联名推出新雪生系列文具，含捏捏橡皮擦等",
-      "lastSeen": "2026-10-06"
-    },
-    {
-      "brand": "茶百道",
-      "title": "薄荷冰奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-06",
-      "endDate": "",
-      "description": "推出薄荷冰奶新品，主打清凉口感",
-      "lastSeen": "2026-10-06"
-    },
-    {
-      "brand": "茶百道",
-      "title": "奶白酒系列新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-06",
-      "endDate": "",
-      "description": "上新奶白酒乌龙与奶白酒麻薯奶绿，云南特色饮品",
       "lastSeen": "2026-10-06"
     },
     {
