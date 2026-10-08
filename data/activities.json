@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T04:53:32+08:00",
+  "updated_at": "2026-10-08T19:04:09+08:00",
   "activities": [
     {
       "brand": "喜茶",
@@ -7,21 +7,21 @@
       "category": "茶饮",
       "startDate": "2026-10-08",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
+      "description": "超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
       "lastSeen": "2026-10-08"
     },
     {
       "brand": "喜茶",
-      "title": "喜茶Chiikawa联名活动",
+      "title": "喜茶×Chiikawa联名",
       "category": "茶饮",
       "startDate": "2026-10-08",
       "endDate": "",
-      "description": "与热门IP Chiikawa联名，发售限量联名周边，门店火爆",
+      "description": "联名Chiikawa，发售限量联名周边，门店火爆取餐等3小时",
       "lastSeen": "2026-10-08"
     },
     {
       "brand": "喜茶",
-      "title": "去火纤体瓶新品上市",
+      "title": "去火·纤体瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-10-08",
       "endDate": "",
@@ -34,16 +34,7 @@
       "category": "茶饮",
       "startDate": "2026-10-08",
       "endDate": "",
-      "description": "推出四款学院限定饮品及特殊打包杯，对应霍格沃茨四学院",
-      "lastSeen": "2026-10-08"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "归云南熟普系列上新",
-      "category": "茶饮",
-      "startDate": "2026-10-08",
-      "endDate": "",
-      "description": "一口气上线三款新品，含云卷松风等，杯型变小引热议",
+      "description": "推出四学院限定饮品及特殊打包杯，对应霍格沃茨四学院",
       "lastSeen": "2026-10-08"
     },
     {
@@ -52,7 +43,16 @@
       "category": "茶饮",
       "startDate": "2026-10-08",
       "endDate": "",
-      "description": "与《哪吒2》联名，限定周边采取预售制，物料短缺引混乱",
+      "description": "联名哪吒2，限定周边预售，购联名饮品送纸袋杯及镭射吊牌",
+      "lastSeen": "2026-10-08"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "归云南熟普系列上新",
+      "category": "茶饮",
+      "startDate": "2026-10-08",
+      "endDate": "",
+      "description": "一口气上线三款新品，含风干牛肉碎与黑松露奶茶",
       "lastSeen": "2026-10-08"
     },
     {
@@ -61,7 +61,7 @@
       "category": "茶饮",
       "startDate": "2026-10-08",
       "endDate": "",
-      "description": "联名CLOT推出浓抹香草籽、一抹茉莉花、浓抹花田三款",
+      "description": "联名CLOT抹茶系列全国上新，含浓抹香草籽等三款",
       "lastSeen": "2026-10-08"
     },
     {
@@ -70,25 +70,25 @@
       "category": "茶饮",
       "startDate": "2026-10-08",
       "endDate": "",
-      "description": "茶百道推出薄荷冰奶新品",
+      "description": "推出薄荷冰奶新品",
       "lastSeen": "2026-10-08"
     },
     {
       "brand": "蜜雪冰城",
-      "title": "雪王皮影周边活动",
+      "title": "雪王皮影周边",
       "category": "茶饮",
       "startDate": "2026-10-08",
       "endDate": "",
-      "description": "推出雪王皮影周边，可搭戏台在家玩非遗皮影戏",
+      "description": "雪王皮影周边，可搭戏台在家玩非遗皮影戏",
       "lastSeen": "2026-10-08"
     },
     {
       "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
+      "title": "早安鲜牛奶上新",
       "category": "茶饮",
       "startDate": "2026-10-08",
       "endDate": "",
-      "description": "古茗小程序上新，仅用鲜牛奶，可选冷牛奶或温牛奶",
+      "description": "新品仅用鲜牛奶，可选冷牛奶或温牛奶",
       "lastSeen": "2026-10-08"
     },
     {
