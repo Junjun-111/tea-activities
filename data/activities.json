@@ -1,31 +1,94 @@
 {
-  "updated_at": "2026-10-09T04:54:49+08:00",
+  "updated_at": "2026-10-09T19:03:34+08:00",
   "activities": [
     {
       "brand": "喜茶",
-      "title": "红菜头美颜瓶新品上市",
+      "title": "喜茶×Chiikawa联名",
       "category": "茶饮",
       "startDate": "2026-10-09",
       "endDate": "",
-      "description": "超级植物茶系列第三款单品，100%红菜头鲜榨，主打美颜纤体",
+      "description": "喜茶与Chiikawa联名，推出限量联名周边，活动火爆取餐等3小时",
       "lastSeen": "2026-10-09"
     },
     {
       "brand": "喜茶",
-      "title": "喜茶×Chiikawa联名活动",
+      "title": "红菜头美颜瓶上新",
       "category": "茶饮",
       "startDate": "2026-10-09",
       "endDate": "",
-      "description": "与热门动漫Chiikawa联名，发售限量联名周边，门店火爆排队",
+      "description": "喜茶超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
+      "lastSeen": "2026-10-09"
+    },
+    {
+      "brand": "喜茶",
+      "title": "去火·纤体瓶上新",
+      "category": "茶饮",
+      "startDate": "2026-10-09",
+      "endDate": "",
+      "description": "喜茶超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "lastSeen": "2026-10-09"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪×哈利波特联名",
+      "category": "茶饮",
+      "startDate": "2026-10-09",
+      "endDate": "",
+      "description": "奈雪与哈利波特联名，推出四学院限定饮品及特殊打包杯",
+      "lastSeen": "2026-10-09"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪×魔卡少女樱联名",
+      "category": "茶饮",
+      "startDate": "2026-10-09",
+      "endDate": "",
+      "description": "二度联名推出霸气雪顶子系列新品及主题杯、打包袋等周边",
       "lastSeen": "2026-10-09"
     },
     {
       "brand": "霸王茶姬",
-      "title": "归云南熟普系列新品上市",
+      "title": "霸王茶姬×哪吒2联名",
       "category": "茶饮",
       "startDate": "2026-10-09",
       "endDate": "",
-      "description": "推出三款云南风味新品，含风干牛肉碎与黑松露特色奶茶",
+      "description": "联名限定周边预售，购买联名饮品送角色纸袋、打包杯及镭射吊牌",
+      "lastSeen": "2026-10-09"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "归云南系列上新",
+      "category": "茶饮",
+      "startDate": "2026-10-09",
+      "endDate": "",
+      "description": "携手全球风味品牌代言人李现，归云南系列全国上新",
+      "lastSeen": "2026-10-09"
+    },
+    {
+      "brand": "茶百道",
+      "title": "茶百道×T1联名",
+      "category": "茶饮",
+      "startDate": "2026-10-09",
+      "endDate": "",
+      "description": "T1与茶百道特别联动，推出选手Pick饮品及联名周边",
+      "lastSeen": "2026-10-09"
+    },
+    {
+      "brand": "蜜雪冰城",
+      "title": "雪王皮影周边",
+      "category": "茶饮",
+      "startDate": "2026-10-09",
+      "endDate": "",
+      "description": "蜜雪冰城推出雪王皮影周边，可搭戏台在家玩非遗",
+      "lastSeen": "2026-10-09"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶上新",
+      "category": "茶饮",
+      "startDate": "2026-10-09",
+      "endDate": "",
+      "description": "古茗上新早安鲜牛奶，仅用鲜牛奶，可选冷热",
       "lastSeen": "2026-10-09"
     },
     {
@@ -47,51 +110,6 @@
       "lastSeen": "2026-10-09"
     },
     {
-      "brand": "蜜雪冰城",
-      "title": "雪王皮影周边活动",
-      "category": "茶饮",
-      "startDate": "2026-10-09",
-      "endDate": "",
-      "description": "推出雪王皮影周边，可搭戏台在家玩非遗皮影戏",
-      "lastSeen": "2026-10-09"
-    },
-    {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-09",
-      "endDate": "",
-      "description": "古茗推出早安鲜牛奶，原料仅鲜牛奶，可选冷热",
-      "lastSeen": "2026-10-09"
-    },
-    {
-      "brand": "喜茶",
-      "title": "去火·纤体瓶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-08",
-      "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝与苦瓜现榨，仅100大卡",
-      "lastSeen": "2026-10-09"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×哪吒2联名活动",
-      "category": "茶饮",
-      "startDate": "2026-10-08",
-      "endDate": "",
-      "description": "联名限定周边预售，购买联名饮品获角色纸袋、杯及镭射吊牌",
-      "lastSeen": "2026-10-09"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪×哈利波特联名",
-      "category": "茶饮",
-      "startDate": "2026-10-08",
-      "endDate": "",
-      "description": "推出四学院限定饮品及特殊打包杯，对应霍格沃茨四学院",
-      "lastSeen": "2026-10-08"
-    },
-    {
       "brand": "茶百道",
       "title": "奶白酒系列上新",
       "category": "茶饮",
@@ -108,15 +126,6 @@
       "endDate": "",
       "description": "与人气IP魔道祖师开展联名活动",
       "lastSeen": "2026-10-07"
-    },
-    {
-      "brand": "茶百道",
-      "title": "韩国茶百道×T1联名",
-      "category": "茶饮",
-      "startDate": "2026-10-06",
-      "endDate": "",
-      "description": "韩国茶百道发布五人剪影海报，口号TogetherAsTea，联名T1",
-      "lastSeen": "2026-10-08"
     },
     {
       "brand": "蜜雪冰城",
