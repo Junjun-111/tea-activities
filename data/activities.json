@@ -1,31 +1,49 @@
 {
-  "updated_at": "2026-10-10T04:23:48+08:00",
+  "updated_at": "2026-10-10T18:19:55+08:00",
   "activities": [
     {
       "brand": "喜茶",
-      "title": "喜茶×Chiikawa联名",
+      "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-10-10",
       "endDate": "",
-      "description": "喜茶与Chiikawa联名，推出限量联名周边，门店火爆取餐等3小时",
+      "description": "喜茶超级植物茶系列第三款单品，100%红菜头鲜榨搭配苹果凤梨汁",
       "lastSeen": "2026-10-10"
     },
     {
       "brand": "喜茶",
-      "title": "红菜头美颜瓶上市",
+      "title": "喜茶×Chiikawa联名活动",
       "category": "茶饮",
       "startDate": "2026-10-10",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
+      "description": "喜茶与热门IP Chiikawa联名，推出限量联名周边，门店火爆",
       "lastSeen": "2026-10-10"
     },
     {
-      "brand": "喜茶",
-      "title": "去火·纤体瓶上市",
+      "brand": "奈雪的茶",
+      "title": "奈雪的茶×哈利波特联名",
       "category": "茶饮",
       "startDate": "2026-10-10",
       "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝加苦瓜现榨，仅100大卡",
+      "description": "推出四款学院限定饮品及特殊打包杯，对应霍格沃茨四大学院",
+      "lastSeen": "2026-10-10"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪×明日方舟终末地联名",
+      "category": "茶饮",
+      "startDate": "2026-10-10",
+      "endDate": "",
+      "description": "奈雪的茶与明日方舟终末地合作，推出联名饮品及周边",
+      "lastSeen": "2026-10-10"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-10",
+      "endDate": "",
+      "description": "古茗推出纯鲜牛奶饮品，可选冷牛奶或温牛奶",
       "lastSeen": "2026-10-10"
     },
     {
@@ -56,21 +74,30 @@
       "lastSeen": "2026-10-10"
     },
     {
-      "brand": "茶百道",
-      "title": "T1×茶百道联名",
+      "brand": "喜茶",
+      "title": "去火·纤体瓶新品上市",
       "category": "茶饮",
-      "startDate": "2026-10-10",
+      "startDate": "2026-10-09",
       "endDate": "",
-      "description": "T1与茶百道特别联动，推出T1选手Pick的联名饮品",
+      "description": "喜茶超级植物茶系列第二款，羽衣甘蓝苦瓜为主料，仅100大卡",
       "lastSeen": "2026-10-10"
     },
     {
-      "brand": "古茗",
-      "title": "早安鲜牛奶上新",
+      "brand": "霸王茶姬",
+      "title": "归云南系列主题周边上市",
       "category": "茶饮",
-      "startDate": "2026-10-10",
+      "startDate": "2026-10-09",
       "endDate": "",
-      "description": "古茗小程序上新，仅用鲜牛奶，可选冷牛奶或温牛奶",
+      "description": "推出日照金山款包材及冰箱贴摆件、漫游手札套组等周边",
+      "lastSeen": "2026-10-10"
+    },
+    {
+      "brand": "茶百道",
+      "title": "T1×茶百道韩国特别联动",
+      "category": "茶饮",
+      "startDate": "2026-10-09",
+      "endDate": "",
+      "description": "T1与茶百道韩国联动，推出选手Pick饮品及特别联名周边",
       "lastSeen": "2026-10-10"
     },
     {
@@ -81,15 +108,6 @@
       "endDate": "2026-10-09",
       "description": "归云南系列新品上线，会员任选新品2杯享限时买一送一",
       "lastSeen": "2026-10-10"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪×哈利波特联名",
-      "category": "茶饮",
-      "startDate": "2026-10-09",
-      "endDate": "",
-      "description": "奈雪与哈利波特联名，推出四学院限定饮品及特殊打包杯",
-      "lastSeen": "2026-10-09"
     },
     {
       "brand": "蜜雪冰城",
@@ -135,15 +153,6 @@
       "endDate": "",
       "description": "与人气IP魔道祖师开展联名活动",
       "lastSeen": "2026-10-07"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪×明日方舟终末地联名",
-      "category": "茶饮",
-      "startDate": "2026-09-23",
-      "endDate": "",
-      "description": "推出3款联名果奶与1款烘焙，可获干员周边及DIY专属杯贴",
-      "lastSeen": "2026-10-09"
     },
     {
       "brand": "喜茶",
