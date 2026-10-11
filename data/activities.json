@@ -1,23 +1,41 @@
 {
-  "updated_at": "2026-10-11T18:28:26+08:00",
+  "updated_at": "2026-10-12T03:47:46+08:00",
   "activities": [
     {
       "brand": "喜茶",
       "title": "喜茶×Chiikawa联名活动",
       "category": "茶饮",
-      "startDate": "2026-10-11",
+      "startDate": "2026-10-12",
       "endDate": "",
-      "description": "喜茶与Chiikawa联名，推出限量联名周边，门店火爆取餐等3小时",
-      "lastSeen": "2026-10-11"
+      "description": "喜茶与Chiikawa联名开启，推出限定联名周边，门店火爆取餐需等3小时",
+      "lastSeen": "2026-10-12"
     },
     {
       "brand": "喜茶",
       "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
-      "startDate": "2026-10-11",
+      "startDate": "2026-10-12",
       "endDate": "",
-      "description": "喜茶超级植物茶系列第三款，100%红菜头鲜榨，主打美颜纤体",
-      "lastSeen": "2026-10-11"
+      "description": "喜茶超级植物茶系列第三款单品，100%红菜头鲜榨搭配苹果汁凤梨汁",
+      "lastSeen": "2026-10-12"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬×哪吒2联名活动",
+      "category": "茶饮",
+      "startDate": "2026-10-12",
+      "endDate": "",
+      "description": "联名限定周边采取预售制，购买联名饮品可获角色纸袋、打包杯及主题镭射吊牌",
+      "lastSeen": "2026-10-12"
+    },
+    {
+      "brand": "茶百道",
+      "title": "焦糖饼干奶茶全国上新",
+      "category": "茶饮",
+      "startDate": "2026-10-12",
+      "endDate": "",
+      "description": "茶百道秋日新品，酥脆饼干碎搭配芝香奶盖与升级红茶底",
+      "lastSeen": "2026-10-12"
     },
     {
       "brand": "喜茶",
@@ -30,29 +48,11 @@
     },
     {
       "brand": "奈雪的茶",
-      "title": "奈雪×明日方舟终末地联名",
-      "category": "茶饮",
-      "startDate": "2026-10-11",
-      "endDate": "",
-      "description": "奈雪的茶与明日方舟终末地合作，推出联名饮品及周边",
-      "lastSeen": "2026-10-11"
-    },
-    {
-      "brand": "奈雪的茶",
       "title": "奈雪×哈利波特联名活动",
       "category": "茶饮",
       "startDate": "2026-10-11",
       "endDate": "",
       "description": "推出四款学院限定饮品及特殊打包杯，对应霍格沃茨四学院",
-      "lastSeen": "2026-10-11"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×哪吒2联名活动",
-      "category": "茶饮",
-      "startDate": "2026-10-11",
-      "endDate": "",
-      "description": "联名限定周边预售，购买联名饮品获纸袋、打包杯及镭射吊牌",
       "lastSeen": "2026-10-11"
     },
     {
@@ -83,40 +83,22 @@
       "lastSeen": "2026-10-10"
     },
     {
-      "brand": "茶百道",
-      "title": "焦糖饼干奶茶全国上新",
-      "category": "茶饮",
-      "startDate": "2026-10-10",
-      "endDate": "",
-      "description": "秋日新品，酥脆饼干碎加芝香奶盖与升级红茶底",
-      "lastSeen": "2026-10-10"
-    },
-    {
       "brand": "霸王茶姬",
-      "title": "归云南系列全国上新",
+      "title": "归云南系列新品上市",
       "category": "茶饮",
       "startDate": "2026-10-09",
       "endDate": "",
-      "description": "携手李现推出归云南系列新品，含小黄油熟普等三款及联名周边",
-      "lastSeen": "2026-10-11"
+      "description": "携手代言人李现推出归云南系列，含小黄油熟普、云漫普洱、云焦卡美罗及联名周边",
+      "lastSeen": "2026-10-12"
     },
     {
       "brand": "茶百道",
-      "title": "T1×茶百道韩国特别联动",
+      "title": "茶百道×T1联名活动",
       "category": "茶饮",
       "startDate": "2026-10-09",
       "endDate": "",
-      "description": "T1与茶百道韩国联动，推出选手Pick饮品及特别联名周边",
-      "lastSeen": "2026-10-11"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "归云南系列主题周边上市",
-      "category": "茶饮",
-      "startDate": "2026-10-09",
-      "endDate": "",
-      "description": "推出日照金山款包材及冰箱贴摆件、漫游手札套组等周边",
-      "lastSeen": "2026-10-10"
+      "description": "茶百道与T1特别联动，推出T1选手Pick饮品及特别联名周边",
+      "lastSeen": "2026-10-12"
     },
     {
       "brand": "蜜雪冰城",
@@ -146,13 +128,22 @@
       "lastSeen": "2026-10-09"
     },
     {
+      "brand": "奈雪的茶",
+      "title": "奈雪×明日方舟终末地联名",
+      "category": "茶饮",
+      "startDate": "2026-09-23",
+      "endDate": "",
+      "description": "推出3款初雪轻酪果奶及联名烘焙甜品，含烫色卡、贴纸包、浮雕徽章等周边",
+      "lastSeen": "2026-10-12"
+    },
+    {
       "brand": "喜茶",
       "title": "椰椰芒芒Pro上新+买一送一",
       "category": "茶饮",
       "startDate": "2026-09-15",
       "endDate": "",
       "description": "9月15日上新椰椰芒芒Pro（芒果果肉加倍、椰乳加量），当天门店买一送一",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-12"
     },
     {
       "brand": "霸王茶姬",
@@ -161,7 +152,7 @@
       "startDate": "2026-09-11",
       "endDate": "2026-09-11",
       "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-12"
     }
   ]
 }
