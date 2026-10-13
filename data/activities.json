@@ -1,32 +1,68 @@
 {
-  "updated_at": "2026-10-13T19:19:20+08:00",
+  "updated_at": "2026-10-14T04:53:20+08:00",
   "activities": [
     {
       "brand": "喜茶",
       "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
-      "startDate": "2026-10-13",
+      "startDate": "2026-10-14",
       "endDate": "",
-      "description": "超级植物茶系列第三款，红菜头鲜榨搭配苹果凤梨汁",
-      "lastSeen": "2026-10-13"
+      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
+      "lastSeen": "2026-10-14"
     },
     {
       "brand": "喜茶",
-      "title": "喜茶×Chiikawa联名",
+      "title": "喜茶×Chiikawa联名活动",
       "category": "茶饮",
-      "startDate": "2026-10-13",
+      "startDate": "2026-10-14",
       "endDate": "",
-      "description": "联名Chiikawa推出限定周边，门店取餐排队火爆",
-      "lastSeen": "2026-10-13"
+      "description": "与人气动漫Chiikawa联名，推出限量联名周边引发抢购",
+      "lastSeen": "2026-10-14"
+    },
+    {
+      "brand": "喜茶",
+      "title": "去火纤体瓶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-14",
+      "endDate": "",
+      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨，仅100大卡",
+      "lastSeen": "2026-10-14"
+    },
+    {
+      "brand": "奈雪的茶",
+      "title": "奈雪×哈利波特联名活动",
+      "category": "茶饮",
+      "startDate": "2026-10-14",
+      "endDate": "",
+      "description": "以霍格沃茨四学院为灵感推出四款限定饮品及特殊打包杯",
+      "lastSeen": "2026-10-14"
     },
     {
       "brand": "霸王茶姬",
-      "title": "霸王茶姬×哪吒2联名",
+      "title": "霸王茶姬×哪吒2联名活动",
       "category": "茶饮",
-      "startDate": "2026-10-13",
+      "startDate": "2026-10-14",
       "endDate": "",
-      "description": "联名哪吒2推限定周边，买联名饮品送主题包材吊牌",
-      "lastSeen": "2026-10-13"
+      "description": "联名限定周边预售，购买联名饮品获主题纸袋杯及镭射吊牌",
+      "lastSeen": "2026-10-14"
+    },
+    {
+      "brand": "茶百道",
+      "title": "薄荷冰奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-14",
+      "endDate": "",
+      "description": "推出薄荷冰奶新品",
+      "lastSeen": "2026-10-14"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "超厚芋泥系列新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-14",
+      "endDate": "",
+      "description": "上新超厚芋泥奶绿、超厚芋泥大满贯和超厚芋泥全家福",
+      "lastSeen": "2026-10-14"
     },
     {
       "brand": "茶百道",
@@ -47,33 +83,6 @@
       "lastSeen": "2026-10-13"
     },
     {
-      "brand": "奈雪的茶",
-      "title": "奈雪×哈利波特联名",
-      "category": "茶饮",
-      "startDate": "2026-10-13",
-      "endDate": "",
-      "description": "推出四款学院限定饮品及特殊打包杯",
-      "lastSeen": "2026-10-13"
-    },
-    {
-      "brand": "喜茶",
-      "title": "去火纤体瓶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-12",
-      "endDate": "",
-      "description": "超级植物茶系列第二款单品，羽衣甘蓝苦瓜现榨，仅100大卡",
-      "lastSeen": "2026-10-12"
-    },
-    {
-      "brand": "茶百道",
-      "title": "薄荷冰奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-12",
-      "endDate": "",
-      "description": "茶百道推出薄荷冰奶新品",
-      "lastSeen": "2026-10-12"
-    },
-    {
       "brand": "蜜雪冰城",
       "title": "黑糖珍珠系列新品上市",
       "category": "茶饮",
@@ -83,22 +92,13 @@
       "lastSeen": "2026-10-11"
     },
     {
-      "brand": "奈雪的茶",
-      "title": "奈雪×魔卡少女樱二度联名",
-      "category": "茶饮",
-      "startDate": "2026-10-10",
-      "endDate": "",
-      "description": "推出霸气雪顶子系列新品及主题杯、打包袋、亚克力立牌等周边",
-      "lastSeen": "2026-10-10"
-    },
-    {
       "brand": "霸王茶姬",
-      "title": "归云南系列上新",
+      "title": "归云南系列新品上市",
       "category": "茶饮",
       "startDate": "2026-10-09",
-      "endDate": "2026-10-23",
-      "description": "李现代言，归云南系列全国上新，活动持续至10月23日",
-      "lastSeen": "2026-10-13"
+      "endDate": "",
+      "description": "以云南熟普为茶底，搭配黄油牛乳焦糖芝士轻乳",
+      "lastSeen": "2026-10-14"
     },
     {
       "brand": "茶百道",
@@ -115,8 +115,8 @@
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "推3款初雪轻酪果奶及联名周边，全国140家主题店",
-      "lastSeen": "2026-10-13"
+      "description": "推出3款初雪轻酪果奶及联名周边，全国140家主题店",
+      "lastSeen": "2026-10-14"
     },
     {
       "brand": "喜茶",
@@ -125,7 +125,7 @@
       "startDate": "2026-09-15",
       "endDate": "",
       "description": "9月15日上新椰椰芒芒Pro（芒果果肉加倍、椰乳加量），当天门店买一送一",
-      "lastSeen": "2026-10-13"
+      "lastSeen": "2026-10-14"
     },
     {
       "brand": "霸王茶姬",
@@ -134,7 +134,7 @@
       "startDate": "2026-09-11",
       "endDate": "2026-09-11",
       "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减",
-      "lastSeen": "2026-10-13"
+      "lastSeen": "2026-10-14"
     }
   ]
 }
