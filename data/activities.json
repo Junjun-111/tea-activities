@@ -1,22 +1,76 @@
 {
-  "updated_at": "2026-10-14T04:53:20+08:00",
+  "updated_at": "2026-10-14T17:10:55+08:00",
   "activities": [
+    {
+      "brand": "奈雪的茶",
+      "title": "三国冰河时代跨界联动",
+      "category": "茶饮",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-20",
+      "description": "苹果特调限定新品搭配树莓可可流心挞，含联动周边及游戏礼包",
+      "lastSeen": "2026-10-14"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "秋季新品上新",
+      "category": "茶饮",
+      "startDate": "2026-10-16",
+      "endDate": "",
+      "description": "甜啦啦10月16日秋季新品上市",
+      "lastSeen": "2026-10-14"
+    },
     {
       "brand": "喜茶",
       "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-10-14",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
+      "description": "喜茶超级植物茶系列第三款单品，100%红菜头鲜榨搭配苹果汁凤梨汁",
       "lastSeen": "2026-10-14"
     },
     {
       "brand": "喜茶",
-      "title": "喜茶×Chiikawa联名活动",
+      "title": "喜茶Chiikawa联名活动",
       "category": "茶饮",
       "startDate": "2026-10-14",
       "endDate": "",
-      "description": "与人气动漫Chiikawa联名，推出限量联名周边引发抢购",
+      "description": "喜茶与日本人气动漫Chiikawa联名，推出限量联名周边引发抢购",
+      "lastSeen": "2026-10-14"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "哪吒2联名活动",
+      "category": "茶饮",
+      "startDate": "2026-10-14",
+      "endDate": "",
+      "description": "联名限定周边预售制，购买联名饮品送主题纸袋杯及镭射吊牌",
+      "lastSeen": "2026-10-14"
+    },
+    {
+      "brand": "茶百道",
+      "title": "焦糖饼干奶茶全国上新",
+      "category": "茶饮",
+      "startDate": "2026-10-14",
+      "endDate": "",
+      "description": "酥脆饼干碎搭配芝香奶盖与升级红茶底，秋日新品",
+      "lastSeen": "2026-10-14"
+    },
+    {
+      "brand": "茶百道",
+      "title": "薄荷冰奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-14",
+      "endDate": "",
+      "description": "茶百道推出薄荷冰奶新品",
+      "lastSeen": "2026-10-14"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶上新",
+      "category": "茶饮",
+      "startDate": "2026-10-14",
+      "endDate": "",
+      "description": "古茗推出纯鲜牛奶饮品，可选冷牛奶或温牛奶",
       "lastSeen": "2026-10-14"
     },
     {
@@ -38,24 +92,6 @@
       "lastSeen": "2026-10-14"
     },
     {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×哪吒2联名活动",
-      "category": "茶饮",
-      "startDate": "2026-10-14",
-      "endDate": "",
-      "description": "联名限定周边预售，购买联名饮品获主题纸袋杯及镭射吊牌",
-      "lastSeen": "2026-10-14"
-    },
-    {
-      "brand": "茶百道",
-      "title": "薄荷冰奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-14",
-      "endDate": "",
-      "description": "推出薄荷冰奶新品",
-      "lastSeen": "2026-10-14"
-    },
-    {
       "brand": "甜啦啦",
       "title": "超厚芋泥系列新品上市",
       "category": "茶饮",
@@ -63,24 +99,6 @@
       "endDate": "",
       "description": "上新超厚芋泥奶绿、超厚芋泥大满贯和超厚芋泥全家福",
       "lastSeen": "2026-10-14"
-    },
-    {
-      "brand": "茶百道",
-      "title": "焦糖饼干奶茶全国上新",
-      "category": "茶饮",
-      "startDate": "2026-10-13",
-      "endDate": "",
-      "description": "秋日新品，焦糖饼干碎搭配芝香奶盖与升级红茶底",
-      "lastSeen": "2026-10-13"
-    },
-    {
-      "brand": "古茗",
-      "title": "早安鲜牛奶上新",
-      "category": "茶饮",
-      "startDate": "2026-10-13",
-      "endDate": "",
-      "description": "新品仅用鲜牛奶，可选冷牛奶或温牛奶",
-      "lastSeen": "2026-10-13"
     },
     {
       "brand": "蜜雪冰城",
@@ -93,11 +111,11 @@
     },
     {
       "brand": "霸王茶姬",
-      "title": "归云南系列新品上市",
+      "title": "归云南系列上新",
       "category": "茶饮",
       "startDate": "2026-10-09",
-      "endDate": "",
-      "description": "以云南熟普为茶底，搭配黄油牛乳焦糖芝士轻乳",
+      "endDate": "2026-10-23",
+      "description": "云南熟普茶底搭配黄油牛乳焦糖芝士轻乳，李现代言",
       "lastSeen": "2026-10-14"
     },
     {
@@ -111,11 +129,11 @@
     },
     {
       "brand": "奈雪的茶",
-      "title": "奈雪×明日方舟终末地联名",
+      "title": "明日方舟终末地联名",
       "category": "茶饮",
       "startDate": "2026-09-23",
       "endDate": "",
-      "description": "推出3款初雪轻酪果奶及联名周边，全国140家主题店",
+      "description": "推出3款初雪轻酪果奶及联名烘焙，含徽章贴纸立牌等周边",
       "lastSeen": "2026-10-14"
     },
     {
