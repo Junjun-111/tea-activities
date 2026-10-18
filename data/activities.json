@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-10-18T16:27:18+08:00",
+  "updated_at": "2026-10-19T02:21:06+08:00",
   "activities": [
+    {
+      "brand": "喜茶",
+      "title": "红菜头美颜瓶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-19",
+      "endDate": "",
+      "description": "喜茶超级植物茶系列第三款，100%红菜头鲜榨搭配苹果汁凤梨汁",
+      "lastSeen": "2026-10-19"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-19",
+      "endDate": "",
+      "description": "古茗推出纯鲜牛奶饮品，可选冷热，原料仅鲜牛奶",
+      "lastSeen": "2026-10-19"
+    },
     {
       "brand": "喜茶",
       "title": "喜茶×Chiikawa联名活动",
@@ -8,34 +26,16 @@
       "startDate": "2026-10-18",
       "endDate": "",
       "description": "喜茶与Chiikawa联名，推出限量联名周边，门店火爆排队取餐",
-      "lastSeen": "2026-10-18"
-    },
-    {
-      "brand": "喜茶",
-      "title": "红菜头美颜瓶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-18",
-      "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果汁凤梨汁",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-19"
     },
     {
       "brand": "霸王茶姬",
-      "title": "霸王茶姬×哪吒2联名活动",
+      "title": "霸王茶姬×哪吒2联名周边",
       "category": "茶饮",
       "startDate": "2026-10-18",
       "endDate": "",
-      "description": "联名限定周边预售，购买联名饮品得角色纸袋、打包杯及镭射吊牌",
-      "lastSeen": "2026-10-18"
-    },
-    {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-18",
-      "endDate": "",
-      "description": "古茗小程序上新早安鲜牛奶，仅用鲜牛奶，可选冷热",
-      "lastSeen": "2026-10-18"
+      "description": "购买联名饮品获角色纸袋、打包杯及主题镭射吊牌周边",
+      "lastSeen": "2026-10-19"
     },
     {
       "brand": "茶百道",
@@ -57,12 +57,12 @@
     },
     {
       "brand": "奈雪的茶",
-      "title": "三国冰河时代×奈雪跨界联动",
+      "title": "三国冰河时代×奈雪联名",
       "category": "茶饮",
       "startDate": "2026-10-16",
       "endDate": "2026-10-20",
-      "description": "推出限定联名新品套餐及联动周边，苹果特调搭配树莓可可流心挞",
-      "lastSeen": "2026-10-18"
+      "description": "限定联名新品套餐及联动周边，覆盖13城400家门店",
+      "lastSeen": "2026-10-19"
     },
     {
       "brand": "甜啦啦",
@@ -70,8 +70,8 @@
       "category": "茶饮",
       "startDate": "2026-10-16",
       "endDate": "",
-      "description": "现打奶麻薯软糯丝滑，携四款新品集中引爆秋季市场",
-      "lastSeen": "2026-10-18"
+      "description": "以现打奶麻薯为卖点，推出四款新品集中引爆秋季市场",
+      "lastSeen": "2026-10-19"
     },
     {
       "brand": "甜啦啦",
@@ -81,15 +81,6 @@
       "endDate": "",
       "description": "现打奶麻薯新品，买新品赠清风茉白茶包及限定插画杯贴",
       "lastSeen": "2026-10-16"
-    },
-    {
-      "brand": "甜啦啦",
-      "title": "秋季新品上新",
-      "category": "茶饮",
-      "startDate": "2026-10-16",
-      "endDate": "",
-      "description": "甜啦啦10月16日推出秋季新品",
-      "lastSeen": "2026-10-15"
     },
     {
       "brand": "喜茶",
@@ -120,30 +111,12 @@
     },
     {
       "brand": "霸王茶姬",
-      "title": "归云南系列新品上市",
+      "title": "归云南系列全国上新",
       "category": "茶饮",
       "startDate": "2026-10-09",
       "endDate": "",
-      "description": "全国上线归云南系列，云南熟普茶底搭配黄油牛乳、焦糖等",
-      "lastSeen": "2026-10-18"
-    },
-    {
-      "brand": "茶百道",
-      "title": "T1×茶百道联名活动",
-      "category": "茶饮",
-      "startDate": "2026-10-09",
-      "endDate": "",
-      "description": "茶百道与T1战队联名，推出选手Pick饮品及特别联名周边",
-      "lastSeen": "2026-10-15"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "奈雪×明日方舟终末地联名",
-      "category": "茶饮",
-      "startDate": "2026-09-23",
-      "endDate": "",
-      "description": "推出初雪轻酪果奶及联名烘焙，含烫色卡贴纸徽章等周边",
-      "lastSeen": "2026-10-15"
+      "description": "以云南熟普为茶底，搭配黄油牛乳、焦糖、芝士轻乳等新品",
+      "lastSeen": "2026-10-19"
     },
     {
       "brand": "喜茶",
@@ -152,7 +125,7 @@
       "startDate": "2026-09-15",
       "endDate": "",
       "description": "9月15日上新椰椰芒芒Pro（芒果果肉加倍、椰乳加量），当天门店买一送一",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-19"
     },
     {
       "brand": "霸王茶姬",
@@ -161,7 +134,7 @@
       "startDate": "2026-09-11",
       "endDate": "2026-09-11",
       "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-19"
     }
   ]
 }
