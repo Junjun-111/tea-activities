@@ -1,7 +1,16 @@
 {
-  "updated_at": "2026-10-18T02:01:42+08:00",
+  "updated_at": "2026-10-18T16:27:18+08:00",
   "city": "沈阳",
   "activities": [
+    {
+      "brand": "喜茶",
+      "title": "喜茶×Chiikawa联名活动",
+      "category": "茶饮",
+      "startDate": "2026-10-18",
+      "endDate": "",
+      "description": "喜茶与Chiikawa联名，推出限量联名周边，门店火爆排队取餐",
+      "lastSeen": "2026-10-18"
+    },
     {
       "brand": "喜茶",
       "title": "红菜头美颜瓶新品上市",
@@ -13,11 +22,11 @@
     },
     {
       "brand": "霸王茶姬",
-      "title": "哪吒2联名活动",
+      "title": "霸王茶姬×哪吒2联名活动",
       "category": "茶饮",
       "startDate": "2026-10-18",
       "endDate": "",
-      "description": "与哪吒2联名，限定周边采取预售制，上线即现物料短缺",
+      "description": "联名限定周边预售，购买联名饮品得角色纸袋、打包杯及镭射吊牌",
       "lastSeen": "2026-10-18"
     },
     {
@@ -26,16 +35,7 @@
       "category": "茶饮",
       "startDate": "2026-10-18",
       "endDate": "",
-      "description": "小程序上新早安鲜牛奶，仅用鲜牛奶可选冷热",
-      "lastSeen": "2026-10-18"
-    },
-    {
-      "brand": "喜茶",
-      "title": "Chiikawa联名活动",
-      "category": "茶饮",
-      "startDate": "2026-10-17",
-      "endDate": "",
-      "description": "与热门动漫Chiikawa联名，推出限量联名周边引发抢购",
+      "description": "古茗小程序上新早安鲜牛奶，仅用鲜牛奶，可选冷热",
       "lastSeen": "2026-10-18"
     },
     {
@@ -58,11 +58,11 @@
     },
     {
       "brand": "奈雪的茶",
-      "title": "三国冰河时代联名活动",
+      "title": "三国冰河时代×奈雪跨界联动",
       "category": "茶饮",
       "startDate": "2026-10-16",
       "endDate": "2026-10-20",
-      "description": "与手游三国冰河时代联动，限定苹果特调加联动周边",
+      "description": "推出限定联名新品套餐及联动周边，苹果特调搭配树莓可可流心挞",
       "lastSeen": "2026-10-18"
     },
     {
@@ -71,7 +71,7 @@
       "category": "茶饮",
       "startDate": "2026-10-16",
       "endDate": "",
-      "description": "推出奶麻薯系列四款新品，主打现打奶麻薯软糯丝滑",
+      "description": "现打奶麻薯软糯丝滑，携四款新品集中引爆秋季市场",
       "lastSeen": "2026-10-18"
     },
     {
@@ -94,10 +94,10 @@
     },
     {
       "brand": "喜茶",
-      "title": "Lisa联名芒椰糯米饭上新",
+      "title": "Lisa×喜茶芒椰糯米饭上新",
       "category": "茶饮",
       "startDate": "2026-10-15",
-      "endDate": "2026-10-15",
+      "endDate": "",
       "description": "与Lisa联名全球上新芒椰糯米饭，上新当天买一送一",
       "lastSeen": "2026-10-18"
     },
@@ -107,7 +107,7 @@
       "category": "茶饮",
       "startDate": "2026-10-15",
       "endDate": "2026-10-21",
-      "description": "暖暖现烤系列上新，到店买一送一赠暖暖月历桌面画",
+      "description": "暖暖现烤系列上新，到店买一送一，赠暖暖月历桌面画",
       "lastSeen": "2026-10-18"
     },
     {
@@ -125,7 +125,7 @@
       "category": "茶饮",
       "startDate": "2026-10-09",
       "endDate": "",
-      "description": "全国上线归云南系列，云南熟普茶底搭配黄油牛乳焦糖",
+      "description": "全国上线归云南系列，云南熟普茶底搭配黄油牛乳、焦糖等",
       "lastSeen": "2026-10-18"
     },
     {
