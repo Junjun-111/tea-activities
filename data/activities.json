@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-10-21T03:43:41+08:00",
+  "updated_at": "2026-10-21T17:01:21+08:00",
   "activities": [
     {
       "brand": "茶百道",
-      "title": "遗忘之海联动",
+      "title": "遗忘之海联名周边",
       "category": "茶饮",
       "startDate": "2026-10-23",
       "endDate": "",
-      "description": "与遗忘之海联动，船员角色集结探索新航线",
+      "description": "联名遗忘之海，推出联名饮品及亚克力立牌、徽章套组周边",
       "lastSeen": "2026-10-21"
     },
     {
@@ -16,16 +16,16 @@
       "category": "茶饮",
       "startDate": "2026-10-21",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
+      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果汁凤梨汁",
       "lastSeen": "2026-10-21"
     },
     {
       "brand": "霸王茶姬",
-      "title": "哪吒2联名活动",
+      "title": "哪吒2联名限定周边",
       "category": "茶饮",
       "startDate": "2026-10-21",
       "endDate": "",
-      "description": "与哪吒2联名，购买联名饮品得主题纸袋杯及镭射吊牌周边",
+      "description": "联名哪吒2，买联名饮品得角色纸袋纸杯及主题镭射吊牌周边",
       "lastSeen": "2026-10-21"
     },
     {
@@ -84,6 +84,24 @@
     },
     {
       "brand": "奈雪的茶",
+      "title": "三冰遇雪苹分秋色联名",
+      "category": "茶饮",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-20",
+      "description": "联名三国冰河时代，限定苹果特调与可可挞，含联动周边",
+      "lastSeen": "2026-10-21"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "麻薯新品赠茶包杯贴",
+      "category": "茶饮",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-22",
+      "description": "现打奶麻薯新品上线，买新品赠清风茉白茶包及限定插画杯贴",
+      "lastSeen": "2026-10-21"
+    },
+    {
+      "brand": "奈雪的茶",
       "title": "三国冰河时代联名活动",
       "category": "茶饮",
       "startDate": "2026-10-16",
@@ -102,29 +120,20 @@
     },
     {
       "brand": "奈雪的茶",
-      "title": "三冰遇雪苹分秋色联名",
-      "category": "茶饮",
-      "startDate": "2026-10-16",
-      "endDate": "2026-10-20",
-      "description": "与三国冰河时代联动，苹果特调加可可挞及联动周边",
-      "lastSeen": "2026-10-20"
-    },
-    {
-      "brand": "喜茶",
-      "title": "Lisa联名芒椰糯米饭上新",
-      "category": "茶饮",
-      "startDate": "2026-10-15",
-      "endDate": "2026-10-15",
-      "description": "Lisa联名全球上新芒椰糯米饭，上新当天买一送一",
-      "lastSeen": "2026-10-21"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "烤布蕾红苹果上新买一送一",
+      "title": "烤布蕾红苹果买一送一",
       "category": "茶饮",
       "startDate": "2026-10-15",
       "endDate": "2026-10-21",
       "description": "暖暖现烤系列上新，到店买一送一赠暖暖月历桌面画",
+      "lastSeen": "2026-10-21"
+    },
+    {
+      "brand": "喜茶",
+      "title": "芒椰糯米饭联名上新",
+      "category": "茶饮",
+      "startDate": "2026-10-15",
+      "endDate": "",
+      "description": "Lisa联名全球上新，灵感来自泰式芒果糯米饭，上新当天买一送一",
       "lastSeen": "2026-10-21"
     },
     {
