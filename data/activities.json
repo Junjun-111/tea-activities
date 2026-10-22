@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T03:45:57+08:00",
+  "updated_at": "2026-10-22T17:03:55+08:00",
   "activities": [
     {
       "brand": "茶百道",
@@ -12,15 +12,6 @@
     },
     {
       "brand": "喜茶",
-      "title": "喜茶×Lisa全球联名",
-      "category": "茶饮",
-      "startDate": "2026-10-22",
-      "endDate": "",
-      "description": "联名上线芒椰糯米饭冰沙，附贴纸、徽章、钥匙扣等限定周边",
-      "lastSeen": "2026-10-22"
-    },
-    {
-      "brand": "喜茶",
       "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-10-22",
@@ -29,12 +20,30 @@
       "lastSeen": "2026-10-22"
     },
     {
+      "brand": "喜茶",
+      "title": "喜茶×Lisa全球联名",
+      "category": "茶饮",
+      "startDate": "2026-10-22",
+      "endDate": "",
+      "description": "上线芒椰糯米饭冰沙，含贴纸徽章钥匙扣等限定周边",
+      "lastSeen": "2026-10-22"
+    },
+    {
       "brand": "霸王茶姬",
       "title": "霸王茶姬×哪吒2联名",
       "category": "茶饮",
       "startDate": "2026-10-22",
       "endDate": "",
-      "description": "限定周边预售，购联名饮品送主题纸袋纸杯及镭射吊牌",
+      "description": "限定周边预售制，购联名饮品得纸袋纸杯及镭射吊牌",
+      "lastSeen": "2026-10-22"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-22",
+      "endDate": "",
+      "description": "小程序上新，原料仅鲜牛奶，可选冷饮或加热温饮",
       "lastSeen": "2026-10-22"
     },
     {
@@ -65,15 +74,6 @@
       "lastSeen": "2026-10-21"
     },
     {
-      "brand": "古茗",
-      "title": "古茗早安鲜牛奶上新",
-      "category": "茶饮",
-      "startDate": "2026-10-20",
-      "endDate": "",
-      "description": "上新早安鲜牛奶，仅用鲜牛奶可选冷热",
-      "lastSeen": "2026-10-20"
-    },
-    {
       "brand": "茶百道",
       "title": "螺霸王联名螺蛳粉奶茶",
       "category": "茶饮",
@@ -102,11 +102,11 @@
     },
     {
       "brand": "奈雪的茶",
-      "title": "三国冰河时代×奈雪联名",
+      "title": "三冰遇雪苹分秋色联名",
       "category": "茶饮",
       "startDate": "2026-10-16",
       "endDate": "2026-10-20",
-      "description": "苹果特调配可可挞，含联动周边与游戏礼包，13城400店参与",
+      "description": "与三国冰河时代联动，苹果特调加可可挞及联动周边",
       "lastSeen": "2026-10-22"
     },
     {
@@ -115,17 +115,17 @@
       "category": "茶饮",
       "startDate": "2026-10-16",
       "endDate": "",
-      "description": "以现打奶麻薯为卖点，携四款新品集中引爆秋季市场",
+      "description": "以现打奶麻薯软糯丝滑为卖点，四款新品集中上市",
       "lastSeen": "2026-10-22"
     },
     {
       "brand": "奈雪的茶",
-      "title": "三冰遇雪苹分秋色联名",
+      "title": "三国冰河时代×奈雪联名",
       "category": "茶饮",
       "startDate": "2026-10-16",
       "endDate": "2026-10-20",
-      "description": "联名三国冰河时代，限定苹果特调与可可挞，含联动周边",
-      "lastSeen": "2026-10-21"
+      "description": "苹果特调配可可挞，含联动周边与游戏礼包，13城400店参与",
+      "lastSeen": "2026-10-22"
     },
     {
       "brand": "甜啦啦",
