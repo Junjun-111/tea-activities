@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T03:36:45+08:00",
+  "updated_at": "2026-10-23T16:58:43+08:00",
   "activities": [
     {
       "brand": "喜茶",
@@ -16,7 +16,7 @@
       "category": "茶饮",
       "startDate": "2026-10-23",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
+      "description": "超级植物茶系列第三款，红菜头鲜榨搭配苹果汁凤梨汁",
       "lastSeen": "2026-10-23"
     },
     {
@@ -25,7 +25,16 @@
       "category": "茶饮",
       "startDate": "2026-10-23",
       "endDate": "",
-      "description": "联名限定包装及镭射吊牌、徽章、冰箱贴等周边，周边采取预售制",
+      "description": "联名限定包装，购联名饮品送主题纸袋、打包杯及镭射吊牌",
+      "lastSeen": "2026-10-23"
+    },
+    {
+      "brand": "茶百道",
+      "title": "茶百道×遗忘之海联名",
+      "category": "茶饮",
+      "startDate": "2026-10-23",
+      "endDate": "",
+      "description": "点套餐得联名主题杯、镭射船票、徽章套组及亚克力立牌",
       "lastSeen": "2026-10-23"
     },
     {
@@ -38,21 +47,12 @@
       "lastSeen": "2026-10-23"
     },
     {
-      "brand": "茶百道",
-      "title": "茶百道×遗忘之海联名",
-      "category": "茶饮",
-      "startDate": "2026-10-23",
-      "endDate": "",
-      "description": "推出联名饮品及亚克力立牌、徽章套组等限定周边",
-      "lastSeen": "2026-10-23"
-    },
-    {
       "brand": "奈雪的茶",
       "title": "奈雪×卡斯波和丽莎秋冬限定",
       "category": "茶饮",
       "startDate": "2026-10-22",
       "endDate": "",
-      "description": "联名推出草莓法式可可与熔岩法式可可慕斯，主打可喝的慕斯蛋糕",
+      "description": "联名推出草莓法式可可与熔岩法式可可慕斯，主打可以喝的慕斯蛋糕",
       "lastSeen": "2026-10-23"
     },
     {
@@ -97,7 +97,7 @@
       "category": "茶饮",
       "startDate": "2026-10-18",
       "endDate": "",
-      "description": "鲜打奶麻薯系列新品上市，主打软糯丝滑秋冬奶茶",
+      "description": "现打奶麻薯系列新品，软糯丝滑的秋冬奶茶",
       "lastSeen": "2026-10-23"
     },
     {
