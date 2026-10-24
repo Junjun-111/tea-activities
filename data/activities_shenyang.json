@@ -1,33 +1,51 @@
 {
-  "updated_at": "2026-10-24T16:32:18+08:00",
+  "updated_at": "2026-10-25T02:26:36+08:00",
   "city": "沈阳",
   "activities": [
     {
       "brand": "喜茶",
       "title": "喜茶×Lisa全球联名",
       "category": "茶饮",
-      "startDate": "2026-10-24",
+      "startDate": "2026-10-25",
       "endDate": "",
       "description": "联名上新芒椰糯米饭冰沙，附贴纸、徽章、钥匙扣等限定周边",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "brand": "喜茶",
-      "title": "红菜头美颜瓶新品上市",
+      "title": "红菜头美颜瓶上新",
       "category": "茶饮",
-      "startDate": "2026-10-24",
+      "startDate": "2026-10-25",
       "endDate": "",
-      "description": "超级植物茶系列第三款，100%红菜头鲜榨搭配苹果凤梨汁",
-      "lastSeen": "2026-10-24"
+      "description": "超级植物茶系列第三款，100%红菜头鲜榨果蔬茶",
+      "lastSeen": "2026-10-25"
     },
     {
       "brand": "霸王茶姬",
       "title": "霸王茶姬×哪吒2联名",
       "category": "茶饮",
-      "startDate": "2026-10-24",
+      "startDate": "2026-10-25",
       "endDate": "",
-      "description": "联名限定包装，随袋送主题镭射吊牌，另有徽章冰箱贴等周边",
-      "lastSeen": "2026-10-24"
+      "description": "限定包装及双面镭射票、徽章、冰箱贴等周边预售",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "brand": "茶百道",
+      "title": "茶百道×遗忘之海联名",
+      "category": "茶饮",
+      "startDate": "2026-10-25",
+      "endDate": "",
+      "description": "联名推出全套周边",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶上新",
+      "category": "茶饮",
+      "startDate": "2026-10-25",
+      "endDate": "",
+      "description": "小程序上新纯鲜牛奶饮品，可选冷热",
+      "lastSeen": "2026-10-25"
     },
     {
       "brand": "茶百道",
@@ -48,13 +66,22 @@
       "lastSeen": "2026-10-24"
     },
     {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
+      "brand": "霸王茶姬",
+      "title": "香港限定绵绵茶冰上新",
       "category": "茶饮",
-      "startDate": "2026-10-24",
+      "startDate": "2026-10-23",
       "endDate": "",
-      "description": "仅用鲜牛奶，可选冷牛奶或加热温牛奶",
-      "lastSeen": "2026-10-24"
+      "description": "港澳四店上新伯爵红茶珍珠等两款绵绵茶冰",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "brand": "茶百道",
+      "title": "可可季三款上新",
+      "category": "茶饮",
+      "startDate": "2026-10-23",
+      "endDate": "",
+      "description": "可可季一次上新三款新品，含都灵可可拿铁等",
+      "lastSeen": "2026-10-25"
     },
     {
       "brand": "霸王茶姬",
@@ -66,31 +93,13 @@
       "lastSeen": "2026-10-24"
     },
     {
-      "brand": "茶百道",
-      "title": "茶百道×遗忘之海联名",
-      "category": "茶饮",
-      "startDate": "2026-10-23",
-      "endDate": "",
-      "description": "推出联名斜插立体亚克力立牌与联名徽章套组周边",
-      "lastSeen": "2026-10-24"
-    },
-    {
-      "brand": "霸王茶姬",
-      "title": "香港限定绵绵茶冰上新",
-      "category": "茶饮",
-      "startDate": "2026-10-23",
-      "endDate": "",
-      "description": "港澳四店上新伯爵红茶珍珠等两款绵绵茶冰限定口味",
-      "lastSeen": "2026-10-23"
-    },
-    {
       "brand": "奈雪的茶",
       "title": "奈雪×卡斯波和丽莎联名",
       "category": "茶饮",
       "startDate": "2026-10-22",
       "endDate": "",
-      "description": "秋冬限定草莓法式可可与熔岩法式可可慕斯，一杯可可一枚珍藏",
-      "lastSeen": "2026-10-24"
+      "description": "秋冬限定草莓法式可可与熔岩法式可可慕斯，可喝慕斯蛋糕",
+      "lastSeen": "2026-10-25"
     },
     {
       "brand": "霸王茶姬",
@@ -102,31 +111,13 @@
       "lastSeen": "2026-10-22"
     },
     {
-      "brand": "霸王茶姬",
-      "title": "哪吒2联名限定周边",
-      "category": "茶饮",
-      "startDate": "2026-10-21",
-      "endDate": "",
-      "description": "联名哪吒2，买联名饮品得角色纸袋纸杯及主题镭射吊牌周边",
-      "lastSeen": "2026-10-21"
-    },
-    {
-      "brand": "喜茶",
-      "title": "Chiikawa联名活动",
-      "category": "茶饮",
-      "startDate": "2026-10-20",
-      "endDate": "",
-      "description": "与热门动漫Chiikawa联名，推出限量联名周边引发抢购",
-      "lastSeen": "2026-10-21"
-    },
-    {
       "brand": "甜啦啦",
-      "title": "奶麻薯系列新品上新",
+      "title": "现打奶麻薯系列上新",
       "category": "茶饮",
-      "startDate": "2026-10-18",
+      "startDate": "2026-10-16",
       "endDate": "",
-      "description": "鲜打奶麻薯软糯丝滑，秋冬糯叽叽系列新品",
-      "lastSeen": "2026-10-24"
+      "description": "现打奶麻薯系列，草莓奶麻薯成秋冬暖饮爆款",
+      "lastSeen": "2026-10-25"
     },
     {
       "brand": "奈雪的茶",
@@ -147,40 +138,13 @@
       "lastSeen": "2026-10-22"
     },
     {
-      "brand": "甜啦啦",
-      "title": "麻薯新品赠茶包杯贴",
-      "category": "茶饮",
-      "startDate": "2026-10-16",
-      "endDate": "2026-10-22",
-      "description": "现打奶麻薯新品上线，买新品赠清风茉白茶包及限定插画杯贴",
-      "lastSeen": "2026-10-21"
-    },
-    {
-      "brand": "奈雪的茶",
-      "title": "烤布蕾红苹果买一送一",
-      "category": "茶饮",
-      "startDate": "2026-10-15",
-      "endDate": "2026-10-21",
-      "description": "暖暖现烤系列上新，到店买一送一赠暖暖月历桌面画",
-      "lastSeen": "2026-10-21"
-    },
-    {
-      "brand": "喜茶",
-      "title": "芒椰糯米饭联名上新",
-      "category": "茶饮",
-      "startDate": "2026-10-15",
-      "endDate": "",
-      "description": "Lisa联名全球上新，灵感来自泰式芒果糯米饭，上新当天买一送一",
-      "lastSeen": "2026-10-21"
-    },
-    {
       "brand": "喜茶",
       "title": "椰椰芒芒Pro上新+买一送一",
       "category": "茶饮",
       "startDate": "2026-09-15",
       "endDate": "",
       "description": "9月15日上新椰椰芒芒Pro（芒果果肉加倍、椰乳加量），当天门店买一送一",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "brand": "霸王茶姬",
@@ -189,7 +153,7 @@
       "startDate": "2026-09-11",
       "endDate": "2026-09-11",
       "description": "小程序堂食+外卖下单，任意双杯及以上饮品（含茶拉朵gelato冰淇淋）结算自动减",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     }
   ]
 }
