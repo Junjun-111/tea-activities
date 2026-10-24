@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T03:38:01+08:00",
+  "updated_at": "2026-10-24T16:32:18+08:00",
   "activities": [
     {
       "brand": "喜茶",
@@ -7,12 +7,12 @@
       "category": "茶饮",
       "startDate": "2026-10-24",
       "endDate": "",
-      "description": "联名上线芒椰糯米饭冰沙，附贴纸、徽章、钥匙扣等限定周边",
+      "description": "联名上新芒椰糯米饭冰沙，附贴纸、徽章、钥匙扣等限定周边",
       "lastSeen": "2026-10-24"
     },
     {
       "brand": "喜茶",
-      "title": "红菜头美颜瓶上市",
+      "title": "红菜头美颜瓶新品上市",
       "category": "茶饮",
       "startDate": "2026-10-24",
       "endDate": "",
@@ -25,16 +25,43 @@
       "category": "茶饮",
       "startDate": "2026-10-24",
       "endDate": "",
-      "description": "联名限定包装及镭射吊牌、徽章、冰箱贴等周边，周边采取预售制",
+      "description": "联名限定包装，随袋送主题镭射吊牌，另有徽章冰箱贴等周边",
+      "lastSeen": "2026-10-24"
+    },
+    {
+      "brand": "茶百道",
+      "title": "茶百道×绝区零联名",
+      "category": "茶饮",
+      "startDate": "2026-10-24",
+      "endDate": "",
+      "description": "联名杯与双杯纸袋，附镭射票、徽章套组、亚克力套组周边",
+      "lastSeen": "2026-10-24"
+    },
+    {
+      "brand": "古茗",
+      "title": "古茗榴莲系列全国上新",
+      "category": "茶饮",
+      "startDate": "2026-10-24",
+      "endDate": "",
+      "description": "榴莲系列饮品全国上新",
+      "lastSeen": "2026-10-24"
+    },
+    {
+      "brand": "古茗",
+      "title": "早安鲜牛奶新品上市",
+      "category": "茶饮",
+      "startDate": "2026-10-24",
+      "endDate": "",
+      "description": "仅用鲜牛奶，可选冷牛奶或加热温牛奶",
       "lastSeen": "2026-10-24"
     },
     {
       "brand": "霸王茶姬",
-      "title": "绵绵茶冰限时买一送一",
+      "title": "霸王茶姬绵绵茶冰买一送一",
       "category": "茶饮",
       "startDate": "2026-10-23",
-      "endDate": "2026-10-23",
-      "description": "香港四店上新伯爵红茶珍珠与抹茶巧克力曲奇绵绵茶冰，限时买一送一",
+      "endDate": "",
+      "description": "港澳限定两款绵绵茶冰新口味，香港四店上新限时买一送一",
       "lastSeen": "2026-10-24"
     },
     {
@@ -61,17 +88,8 @@
       "category": "茶饮",
       "startDate": "2026-10-22",
       "endDate": "",
-      "description": "秋冬限定草莓法式可可与熔岩法式可可慕斯，主打可以喝的慕斯蛋糕",
+      "description": "秋冬限定草莓法式可可与熔岩法式可可慕斯，一杯可可一枚珍藏",
       "lastSeen": "2026-10-24"
-    },
-    {
-      "brand": "古茗",
-      "title": "早安鲜牛奶新品上市",
-      "category": "茶饮",
-      "startDate": "2026-10-22",
-      "endDate": "",
-      "description": "小程序上新，原料仅鲜牛奶，可选冷饮或加热温饮",
-      "lastSeen": "2026-10-22"
     },
     {
       "brand": "霸王茶姬",
@@ -101,21 +119,12 @@
       "lastSeen": "2026-10-21"
     },
     {
-      "brand": "古茗",
-      "title": "古茗榴莲系列全国上新",
-      "category": "茶饮",
-      "startDate": "2026-10-19",
-      "endDate": "",
-      "description": "上新猫山王榴莲拿铁与猫山王榴莲椰椰",
-      "lastSeen": "2026-10-24"
-    },
-    {
       "brand": "甜啦啦",
       "title": "奶麻薯系列新品上新",
       "category": "茶饮",
       "startDate": "2026-10-18",
       "endDate": "",
-      "description": "鲜打奶麻薯软糯丝滑，主打糯叽叽秋冬奶茶",
+      "description": "鲜打奶麻薯软糯丝滑，秋冬糯叽叽系列新品",
       "lastSeen": "2026-10-24"
     },
     {
