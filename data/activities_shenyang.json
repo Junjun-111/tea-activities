@@ -1,16 +1,7 @@
 {
-  "updated_at": "2026-10-27T04:48:17+08:00",
+  "updated_at": "2026-10-27T17:29:13+08:00",
   "city": "沈阳",
   "activities": [
-    {
-      "brand": "霸王茶姬",
-      "title": "霸王茶姬×萌趣趣联名可可系列",
-      "category": "茶饮",
-      "startDate": "2026-10-28",
-      "endDate": "",
-      "description": "上新可可系列，随杯赠主题抽拉小卡周边",
-      "lastSeen": "2026-10-27"
-    },
     {
       "brand": "茶百道",
       "title": "都灵可可系列上新",
@@ -35,7 +26,7 @@
       "category": "茶饮",
       "startDate": "2026-10-27",
       "endDate": "",
-      "description": "与热门动漫Chiikawa联名，推出限量联名周边引发抢购",
+      "description": "联名推出限量周边，门店取餐排队火爆",
       "lastSeen": "2026-10-27"
     },
     {
@@ -44,16 +35,25 @@
       "category": "茶饮",
       "startDate": "2026-10-27",
       "endDate": "",
-      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨仅100大卡",
+      "description": "超级植物茶系列第二款，羽衣甘蓝苦瓜现榨不加浓缩汁",
       "lastSeen": "2026-10-27"
     },
     {
       "brand": "霸王茶姬",
-      "title": "霸王茶姬×哪吒2联名",
+      "title": "霸王茶姬×哪吒2联名活动",
       "category": "茶饮",
       "startDate": "2026-10-27",
       "endDate": "",
-      "description": "联名限定包装，购联名饮品得角色纸袋杯及镭射吊牌",
+      "description": "联名限定包装及镭射吊牌、徽章、冰箱贴等周边",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "brand": "霸王茶姬",
+      "title": "霸王茶姬×Monchhichi可可系列",
+      "category": "茶饮",
+      "startDate": "2026-10-26",
+      "endDate": "",
+      "description": "联名推出可可系列秋冬热饮新品",
       "lastSeen": "2026-10-27"
     },
     {
@@ -130,11 +130,20 @@
     },
     {
       "brand": "奈雪的茶",
-      "title": "奈雪×卡斯波和丽莎联名",
+      "title": "奈雪×卡斯波和丽莎联名可可",
       "category": "茶饮",
       "startDate": "2026-10-22",
       "endDate": "",
-      "description": "推草莓法式可可等饮品，含邮票贴纸、冰箱贴、小钢琴周边",
+      "description": "秋冬限定草莓法式可可与熔岩法式可可慕斯，附联名周边",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "brand": "甜啦啦",
+      "title": "甜啦啦奶麻薯系列上新",
+      "category": "茶饮",
+      "startDate": "2026-10-16",
+      "endDate": "",
+      "description": "现打奶麻薯系列秋冬暖饮，草莓奶麻薯成爆款",
       "lastSeen": "2026-10-27"
     },
     {
