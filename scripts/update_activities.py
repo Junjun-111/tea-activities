@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""每天定时任务：抓公开网页 -> 提取品牌活动 -> 更新 activities.json
+"""手动任务：抓公开网页 -> 提取品牌活动 -> 更新 activities.json
 
 数据源：饮品报移动版 m.drinknewspaper.com（茶饮行业垂直媒体，日更，文章配图多为品牌官方宣传图）。
 两种模式：
@@ -27,7 +27,7 @@ FREE_MODE = (not ARK_KEY) or os.environ.get("FREE_MODE") == "1"
 LLM_BASE_URL = os.environ.get("LLM_BASE_URL", "").rstrip("/")
 LLM_KEY = os.environ.get("LLM_API_KEY", "")
 LLM_MODEL = os.environ.get("LLM_MODEL", "")
-LLM_READY = bool(LLM_BASE_URL and LLM_KEY and LLM_MODEL)
+LLM_READY = (not FREE_MODE) and bool(LLM_BASE_URL and LLM_KEY and LLM_MODEL)
 # 送给模型的资讯文本上限（字符，约等于 token 数）——这是成本天花板
 LLM_INPUT_CHAR_LIMIT = int(os.environ.get("LLM_INPUT_CHAR_LIMIT", "6000"))
 # 每个品牌最多取几条搜索结果
